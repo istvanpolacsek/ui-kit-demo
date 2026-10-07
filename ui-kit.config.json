@@ -1,0 +1,21 @@
+{
+  "framework": "react",
+  "styling": "styled-components",
+  "libraryName": "ui-kit-demo",
+  "dependencies": {
+    "install": true
+  },
+  "inputs": {
+    "design": ".figma/design.json",
+    "enriched": ".figma/design.enriched.json",
+    "assets": ".figma/assets.json"
+  },
+  "paths": {
+    "components": "src/components",
+    "assetsRoot": "src",
+    "theme": "src/providers/ThemeProvider",
+    "docs": "src/docs",
+    "storybook": ".storybook",
+    "tsconfig": "tsconfig.json"
+  }
+}
