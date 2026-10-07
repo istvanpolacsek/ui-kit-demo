@@ -1,0 +1,23 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Guidelines/Introduction" />
+
+# ui\-kit\-demo
+
+A React component library generated from the Figma design file. Components, tokens and these docs are produced by the UI Kit pipeline; do not edit generated files by hand — change the design and re-sync.
+
+## Components
+
+- **Design System**: 23 components
+
+## Setup
+
+Wrap your app in the generated provider so components can read design tokens:
+
+```tsx
+import { ThemeProvider } from "ui-kit-demo/providers/ThemeProvider";
+
+<ThemeProvider>
+  <App />
+</ThemeProvider>;
+```

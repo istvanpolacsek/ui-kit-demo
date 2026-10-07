@@ -1,0 +1,12 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Guidelines/Component conventions" />
+
+# Component conventions
+
+- **Props** come from Figma component properties, camel-cased (`Icon Start` → `iconStart`). Variant properties are string or number unions.
+- **Interaction states** (hover, focus, active, disabled) are CSS pseudo-classes, not props.
+- **Slots** are typed arrays of the preferred component's props, or `React.ReactNode` when several components are allowed.
+- **Icons** are one `Icon` component selected by `name`; they inherit text colour (`currentColor`).
+- **Styling** uses styled-components; transient `$props` never reach the DOM.
+- **Regeneration** overwrites components and foundations docs. Stories and guideline pages are kept if they already exist.
