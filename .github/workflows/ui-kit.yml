@@ -1,0 +1,94 @@
+# Added by the UI Kit Figma sync. Edit freely: later syncs never overwrite this file.
+name: ui-kit
+
+on:
+  pull_request:
+    paths:
+      - '.figma/**'
+      - 'ui-kit.config.json'
+
+# A newer push to the PR (a re-sync rewrites the branch) supersedes a running job.
+concurrency:
+  group: ui-kit-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write # commits the generated files to the PR branch
+  id-token: write # lets the CLI request a GitHub OIDC token (enrichment)
+
+jobs:
+  generate:
+    # Pull requests from forks get a read-only token and no OIDC token.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      UI_KIT_BRIDGE_URL: 'https://ui-kit-sandbox.vercel.app'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          # The push below uses its own token, not the one checkout would leave behind.
+          persist-credentials: false
+      # This job pushes the generated files as the GitHub App, and GitHub starts a run for that
+      # push too. It has nothing left to do, so every step below is skipped for it.
+      - name: Skip our own commit
+        id: own
+        run: |
+          case "$(git log -1 --format=%s)" in
+            "chore: regenerate from Figma"*) echo "skip=true" >> "$GITHUB_OUTPUT" ;;
+          esac
+      - uses: actions/setup-node@v4
+        if: steps.own.outputs.skip != 'true'
+        with:
+          node-version: 20
+      # The CLI formats its output with your own prettier config, so install your dependencies.
+      - name: Install dependencies
+        if: steps.own.outputs.skip != 'true'
+        run: |
+          if [ -f yarn.lock ]; then corepack enable && yarn install --immutable
+          elif [ -f pnpm-lock.yaml ]; then corepack enable && pnpm install --frozen-lockfile
+          elif [ -f package-lock.json ]; then npm ci
+          fi
+      - name: Generate components
+        if: steps.own.outputs.skip != 'true'
+        run: npx --yes @uikit-bridge/cli@sandbox generate
+      # A push with the built-in GITHUB_TOKEN is made by a bot actor: GitHub then creates a run
+      # for it and holds it for approval. A push as the GitHub App is not, and your own checks
+      # run on the generated commit. Without a token the next step falls back to GITHUB_TOKEN.
+      - name: Get push token
+        id: push
+        if: steps.own.outputs.skip != 'true'
+        continue-on-error: true
+        run: npx --yes @uikit-bridge/cli@sandbox ci push-token
+      - name: Commit generated files
+        if: steps.own.outputs.skip != 'true'
+        env:
+          PUSH_TOKEN: ${{ steps.push.outputs.token }}
+          PUSH_NAME: ${{ steps.push.outputs.name }}
+          PUSH_EMAIL: ${{ steps.push.outputs.email }}
+          FALLBACK_TOKEN: ${{ github.token }}
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          git add -A -- . ':(exclude)**/node_modules/**'
+          if git diff --cached --quiet; then
+            echo "Generated files are up to date."
+          elif [ -n "$PUSH_TOKEN" ]; then
+            git config user.name "$PUSH_NAME"
+            git config user.email "$PUSH_EMAIL"
+            git commit -m "chore: regenerate from Figma"
+            git push "https://x-access-token:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:refs/heads/${HEAD_REF}"
+          else
+            # [skip ci] keeps GitHub from creating the run it would hold for approval.
+            git config user.name "ui-kit[bot]"
+            git config user.email "ui-kit[bot]@users.noreply.github.com"
+            git commit -m "chore: regenerate from Figma [skip ci]"
+            git push "https://x-access-token:${FALLBACK_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:refs/heads/${HEAD_REF}"
+          fi
+      # Hosted until this pull request closes; the link shows next to the sync in the Figma plugin.
+      - name: Build Storybook
+        if: steps.own.outputs.skip != 'true'
+        run: npx storybook build --output-dir storybook-static --quiet
+      - name: Publish preview
+        if: steps.own.outputs.skip != 'true'
+        run: npx --yes @uikit-bridge/cli@sandbox preview publish --dir storybook-static
