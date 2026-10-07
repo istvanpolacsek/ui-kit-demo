@@ -1,0 +1,53 @@
+# Added by the UI Kit Figma sync. Edit freely: later syncs never overwrite this file.
+name: ui-kit
+
+on:
+  pull_request:
+    paths:
+      - '.figma/**'
+      - 'ui-kit.config.json'
+
+# A newer push to the PR (a re-sync rewrites the branch) supersedes a running job.
+concurrency:
+  group: ui-kit-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write # commits the generated files to the PR branch
+  id-token: write # lets the CLI request a GitHub OIDC token (enrichment)
+
+jobs:
+  generate:
+    # Pull requests from forks get a read-only token and no OIDC token.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      UI_KIT_BRIDGE_URL: 'https://ui-kit-sandbox.vercel.app'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # The CLI formats its output with your own prettier config, so install your dependencies.
+      - name: Install dependencies
+        run: |
+          if [ -f yarn.lock ]; then corepack enable && yarn install --immutable
+          elif [ -f pnpm-lock.yaml ]; then corepack enable && pnpm install --frozen-lockfile
+          elif [ -f package-lock.json ]; then npm ci
+          fi
+      - name: Generate components
+        run: npx --yes @uikit-bridge/cli@sandbox generate
+      - name: Commit generated files
+        run: |
+          git add -A -- . ':(exclude)**/node_modules/**'
+          if git diff --cached --quiet; then
+            echo "Generated files are up to date."
+          else
+            git config user.name "ui-kit[bot]"
+            git config user.email "ui-kit[bot]@users.noreply.github.com"
+            git commit -m "chore: regenerate from Figma"
+            git push
+          fi
