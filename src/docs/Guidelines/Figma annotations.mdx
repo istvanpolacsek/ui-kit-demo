@@ -1,0 +1,77 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Guidelines/Figma annotations" />
+
+# Figma annotations
+
+How designers steer the generated code from inside Figma. Everything here is read from the file on the next sync: nothing is configured in the repository.
+
+## Description annotations
+
+Add a line starting with `@` to a **component's description** (the component set, or the component when it has no variants). Each annotation sits on its own line; lines without an `@` are ordinary prose and are ignored.
+
+### `@ignore`
+
+Leaves the component out of the extraction, even on a selected page. Use it for drafts and experiments that live next to finished components.
+
+```
+@ignore
+```
+
+### `@continuous`
+
+Figma has no numeric property type, so a progress or amount axis is a handful of discrete variants (10, 25, 50, 75, 100). Declare the property continuous and the component takes any number in the range instead:
+
+```
+@continuous Progress 0..100
+```
+
+- The property must be a variant property whose options are all numbers. Anything else is ignored with a warning.
+- Frames that grow with the value (a bar fill) are scaled between the lowest and highest variant. Text that is the value plus fixed decoration (`10%`, `€25k`) becomes a template.
+- Design it as a plain track plus a fill frame; a fill sized by changing padding is not scaled.
+- One continuous property per component.
+
+### `@input`
+
+A search pill is just a rounded frame with an icon and a text layer, so nothing in the file says it is a form field. Declare it:
+
+```
+@input search
+@input email placeholder=Email address
+```
+
+- The type is required: text, search, email, password, number, tel or url.
+- `placeholder=` names the **text property** whose text layer is the placeholder. It can be left out when the component has exactly one text property.
+- The generated component renders a real `input` that forwards its ref and native attributes; the rest of the frame stays the visual wrapper. Focus and disabled styling follow the wrapper.
+- Not covered yet: adornments, textarea and select, error state, a clear button.
+
+## Component properties
+
+These are not annotations, just how a property is set up in Figma.
+
+| In Figma                                                                                                                 | In code                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| Text property bound to a text layer                                                                                      | A string prop. Unbound text is treated as fixed copy and stays a literal.                                                  |
+| Boolean property bound to a layer's visibility                                                                           | A boolean prop that shows or hides the layer.                                                                              |
+| Variant property                                                                                                         | A string or number union prop.                                                                                             |
+| Variant property whose options are all states (Default, Hover, Focus, Focus-visible, Active, Disabled, Checked, Visited) | Not a prop: it becomes CSS pseudo-classes. A property with a non-state option such as Icon leading stays an ordinary prop. |
+| Instance swap property over an icon set                                                                                  | An icon name prop. Swapping between unrelated components is not supported.                                                 |
+| Slot with a single preferred component                                                                                   | A typed array prop of that component's props.                                                                              |
+| Slot with several or no preferred components                                                                             | A `React.ReactNode` prop.                                                                                                  |
+| Nested instance with properties exposed                                                                                  | The nested component's properties become props of the outer one, prefixed by the layer name when there are several.        |
+| Property **description**                                                                                                 | The prop's JSDoc, shown in the Storybook controls table.                                                                   |
+
+## Variables and styles
+
+- A variable **description** is shown next to the token on the Foundations pages.
+- A variable's **scopes** decide which Foundations page it appears on: corner radius for Radius, gap for Spacing, width and height for Sizes, font scopes for Typography.
+- A variable marked **hide from publishing** is left out of the docs.
+- Bind colours, radii and spacing to variables. A raw value still renders, but it is not a token and is reported as a warning.
+
+## Pages and layers
+
+- The plugin extracts only the **pages you pick**, all unticked by default. Pages starting with an underscore, a construction sign or WIP are flagged as drafts.
+- Use auto layout. Hug and fixed sizing are honoured; wrap and negative spacing are supported.
+- Layers hidden in Figma are not generated unless their visibility is bound to a boolean property.
+- A frame that is only vector shapes (icons, logos) becomes an SVG; a page of five or more single-variant icons is merged into one Icon component with name and size properties.
+- Name layers meaningfully: repeated nested instances are told apart by layer name.
