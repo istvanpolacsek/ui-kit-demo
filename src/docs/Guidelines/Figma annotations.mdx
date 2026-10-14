@@ -1,0 +1,231 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Guidelines/Figma annotations" />
+
+# Figma annotations
+
+How designers steer the generated code from inside Figma. Everything here is read from the file on the next sync: nothing is configured in the repository.
+
+## Description annotations
+
+Add a line starting with `@` to a **component's description** (the component set, or the component when it has no variants). Each annotation sits on its own line; lines without an `@` are ordinary prose and are ignored.
+
+### `@ignore`
+
+Leaves the component out of the extraction, even on a selected page. Use it for drafts and experiments that live next to finished components.
+
+```
+@ignore
+```
+
+### `@continuous`
+
+Figma has no numeric property type, so a progress or amount axis is a handful of discrete variants (10, 25, 50, 75, 100). Declare the property continuous and the component takes any number in the range instead:
+
+```
+@continuous Progress 0..100
+```
+
+- The property must be a variant property whose options are all numbers. Anything else is ignored with a warning.
+- Frames that grow with the value (a bar fill) are scaled between the lowest and highest variant. Text that is the value plus fixed decoration (`10%`, `€25k`) becomes a template.
+- Design it as a plain track plus a fill frame; a fill sized by changing padding is not scaled.
+- One continuous property per component.
+
+### `@input`
+
+A search pill is just a rounded frame with an icon and a text layer, so nothing in the file says it is a form field. Declare it:
+
+```
+@input search
+@input email placeholder=Email address
+```
+
+- The type is required: text, search, email, password, number, tel or url.
+- `placeholder=` names the **text property** whose text layer is the placeholder. It can be left out when the component has exactly one text property.
+- The generated component renders a real `input` that forwards its ref and native attributes; the rest of the frame stays the visual wrapper. Focus and disabled styling follow the wrapper.
+- Not covered yet: adornments, textarea, error state, a clear button. (A dropdown is `@select`; a checkbox, radio button and switch are `@checkbox`, `@radio` and `@switch`; a set of them is `@choicegroup`.)
+
+### `@select`
+
+A dropdown is a frame with a value, a chevron and, in the designs that draw it, a hidden frame of option texts. Nothing in the file says so, so declare it (the line takes no argument):
+
+```
+@select
+```
+
+- The component needs a frame with an always-present text bound to a **text property** (the value), next to a frame bound to a **boolean property** (usually `Open`) whose children are all text (the options). Anything else is ignored with a warning.
+- The generated component is a focusable combobox with a listbox: `options`, `value` / `defaultValue` / `onChange`, `open` / `onOpenChange`, `placeholder` and `disabled` props, keyboard support and closing on a press outside. The option texts in the design are only placeholders and become the Storybook story's options.
+- A variant property with a Disabled option and one with a Placeholder option are not props: the component derives them from `disabled` and from whether a value is chosen. An Error option follows the boolean that shows the error text.
+- The option the design draws bold (or otherwise apart) is the style of the chosen option.
+
+### `@checkbox`
+
+A checkbox is a row with a small drawn box and a label. Nothing in the file says it is a control, so declare it (the line takes no argument):
+
+```
+@checkbox
+```
+
+- The component needs a variant property with **Checked** and **Unchecked** options (and optionally **Indeterminate**), and a frame with a drawn box (a border or a fill, no text inside) before an always-present text bound to a **text property** (the label). Anything else is ignored with a warning.
+- The generated component keeps a real, visually hidden `input type="checkbox"` inside the label row, so a click anywhere on the row, Space, the form value and `disabled` are the browser's. The drawn box is decorative. It has `checked` / `defaultChecked` / `onChange(checked)`, `indeterminate`, `disabled`, `required`, `name` and `value` props, and the description text is linked with `aria-describedby`.
+- The Checked / Unchecked property is not a prop: the component derives it from the state. Another component that draws a Checkbox Field as Checked (a checkbox group) renders it with `defaultChecked`.
+- A State property with a Disabled option follows the input's `disabled`.
+
+### `@radio` and `@switch`
+
+A radio button and a switch are built like a checkbox (a variant property with Checked and Unchecked options, a drawn control, a label bound to a text property), so they are declared the same way with a bare line:
+
+```
+@radio
+```
+
+```
+@switch
+```
+
+- `@radio` renders a hidden `input type="radio"`, `@switch` a hidden `input type="checkbox" role="switch"`; both have the checkbox's props, without `indeterminate`. A switch may hide its label behind a **boolean property**, and its track may come after the label. A switch drawn with no label has no accessible name: pass `aria-label` to name its input.
+- A radio button chosen on its own does not clear its neighbours when it is uncontrolled: put radios in a `@choicegroup`, or control `checked` yourself.
+
+### `@choicegroup`
+
+A group of radio buttons or checkboxes is a frame holding several instances of one field component. Declare it with a bare line:
+
+```
+@choicegroup
+```
+
+- Every child must be an instance of one component that is itself a `@radio` or `@checkbox`. Anything else is ignored with a warning.
+- The generated group takes an `options` array (each option is the field's props plus a `value`), owns the selection (`value` / `defaultValue` / `onChange`, a single value for radios and a list for checkboxes), gives every option the same form `name` and passes `disabled` down. The instances in the design are placeholders: they become the Storybook story's options, and the one drawn Checked is the story's initial value.
+- The group's role is `radiogroup` or `group`; name it with `aria-label` or `aria-labelledby`.
+
+### `@tab` and `@tabs`
+
+A tab is a button with an on/off variant property; a tab list is a frame holding several instances of it (directly or in a slot). Declare them with bare lines:
+
+```
+@tab
+```
+
+```
+@tabs
+```
+
+- `@tab` needs a variant property with exactly two options meaning on and off (On / Off, Selected / Unselected, Active / Inactive). It renders a `button role="tab"`; the property is not a prop but derived from `selected`, which also sets `aria-selected` and the roving `tabIndex`.
+- `@tabs` needs every child (or every instance in its slot) to be an instance of one `@tab` component. The drawn tabs are placeholders: they become the story's `items` (each the tab's props plus a `value`), and the one drawn selected is the initial value.
+- The generated list owns the selection (`value` / `defaultValue` / `onChange`; the first enabled tab when none is chosen), the ids linking each tab to its panel and the keyboard: arrow keys, Home and End move focus and choose the tab. The design draws no panels: pass `panels` (content by item value) and the chosen tab's panel renders below the list. Name the list with `aria-label`.
+
+### `@disclosure` and `@accordion`
+
+An expandable item has a variant property with Open and Closed options; an accordion is a frame holding several of them. Declare them with bare lines:
+
+```
+@disclosure
+```
+
+```
+@accordion
+```
+
+- `@disclosure` needs a variant property with exactly two options meaning open and closed (Open / Closed, Expanded / Collapsed), a header frame always drawn with a title bound to a **text property**, and a frame drawn only in the Open variant (the content). The header becomes a `button` with `aria-expanded` and `aria-controls`, the title text a `span` (a heading cannot sit inside a button; wrap the item in a heading if you need one). The Open / Closed property is not a prop: use `open` / `defaultOpen` / `onOpenChange` and `disabled`. The content is rendered only while open.
+- `@accordion` needs every child, or every instance in its slot, to be an instance of one `@disclosure` component. The drawn items are placeholders: they become the story's `items` (each the item's props plus a `value`), and the ones drawn Open are the initial `defaultValue`. The list owns which are open (`value` / `defaultValue` / `onChange`, always a list of values); opening one closes the others unless `multiple` is set.
+
+### `@dialog` and `@modal`
+
+A dialog is a card with content and an optional close button; a modal is the full-screen scrim that holds one. Declare them with bare lines:
+
+```
+@dialog
+```
+
+```
+@modal
+```
+
+- `@dialog` needs a single frame. It gets `role="dialog"` and `aria-modal`, takes focus when it appears and gives it back when it goes, keeps Tab inside and calls `onClose` on Escape. A close button drawn as an instance whose visibility is bound to a **boolean property** calls `onClose` too (`closeLabel` names it). The dialog is not named by the design: pass `aria-labelledby` or `aria-label`.
+- `@modal` needs a frame holding exactly one instance of a `@dialog` component. It renders in a portal only while open (`open` / `defaultOpen` / `onOpenChange`), covers the viewport whatever size the scrim was drawn, stops the page behind from scrolling and closes on a press on the scrim (`closeOnScrimClick`). Its `children` fill the dialog's slots. Not covered: hiding the page from assistive technology, nested modals, animation.
+
+### `@menu` and `@menuitem`
+
+A menu is a list frame with a slot; a menu item is one action in it. Declare them with bare lines:
+
+```
+@menu
+```
+
+```
+@menuitem
+```
+
+- `@menu` needs a slot for its items. The root becomes a `div role="menu"` (the items are buttons, not list items); anything the consumer puts in the slot that has `role="menuitem"` (or a checkbox / radio variant) takes part in one tab stop, the arrow keys, Home and End, typeahead, and Escape calls `onClose`. Name the menu with `aria-label`. Opening it from a trigger and positioning it is the consumer's.
+- `@menuitem` needs a text bound to a **text property** (its name). The root becomes a `button role="menuitem" type="button"` that is out of the tab order (the menu moves focus). A nested instance named like a shortcut and gated by a boolean property becomes a `shortcut` prop.
+
+### `@tooltip`
+
+A tooltip is a bubble with a beak and a slot for its content, around a target. Declare it with a bare line:
+
+```
+@tooltip
+```
+
+- `@tooltip` needs a slot (the content of the bubble). The consumer's `children` become the target: the bubble (`role="tooltip"`) renders in a portal while the target is hovered (after `delay`, 300 ms by default) or focused, the target is described by it, and Escape dismisses it (`open` / `defaultOpen` / `onOpenChange`). A variant property whose options are Top, Bottom, Left and Right stays a prop and says which side of the target the bubble sits on; the two small absolute shapes in the bubble are the beak and follow it. Not covered: flipping when there is no room, an arrow that follows a clamped bubble, touch.
+
+### `@dateinput`
+
+Day, month and year boxes that are one date. Declare it with a bare line:
+
+```
+@dateinput
+```
+
+- `@dateinput` needs three always-drawn texts bound to **text properties** named like Day, Month and Year (also DD, MM, YYYY); they become numeric inputs in the order the design draws them, and the text is the box's placeholder. The component speaks in one date, `YYYY-MM-DD`: `value` / `defaultValue` / `onChange` (an empty string while the date is incomplete or does not exist). A full box moves on to the next, a separator key does too, and Backspace in an empty box goes back. A label, description and error text gated by boolean properties name and describe the group. The State (Default / Error / Disabled) and Value Type (Default / Placeholder) properties are not props: use `disabled` and the error toggle. The boxes are named Day, Month and Year in English. Not covered: a form field name, min and max dates, other formats than the design's order.
+
+### `@calendar`, `@calendarday` and `@datepicker`
+
+A calendar is a header, weekday names and rows of day buttons; a date picker is a field that opens one. Declare them with lines in the descriptions:
+
+```
+@calendarday
+```
+
+```
+@calendar
+```
+
+```
+@datepicker Calendar
+```
+
+- `@calendarday` (the day button) needs a variant property with at least Default, Active and Hidden options (also Hover, Disabled, Range, Range Disabled). The property is not a prop: the day derives it from `selected`, `inRange`, `disabled`, `outside` and the pointer.
+- `@calendar` needs a header frame with three instances (previous button, a title, next button) and a frame of rows holding instances of the `@calendarday` component. The drawn rows are placeholders: the weeks of the month shown are computed (`value` / `defaultValue` / `onChange` as `YYYY-MM-DD`, `min`, `max`, `autoFocus`). The previous and next buttons change the month; the design's month and year pickers are replaced by a heading that names the month. Arrow keys, Home, End and Page Up / Down move between days. Weeks start on Sunday, as the weekday row does. Not covered: ranges, week numbers, other first days of the week, month and year pickers.
+- `@datepicker <Calendar>` (on the field) names the `@calendar` component it opens, and needs a text bound to a **text property** in a frame (the value). The text becomes a read-only input showing the chosen date (`formatValue` to change how it reads); the frame is the click target; the calendar opens under it, closes on a choice, Escape or a press outside, and returns focus to the input. The design's value text is replaced by `placeholder`, and its State and Value Type properties are derived. The field is not typed into: use `@dateinput` for that.
+
+## Component properties
+
+These are not annotations, just how a property is set up in Figma.
+
+| In Figma                                                                                                                 | In code                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| Text property bound to a text layer                                                                                      | A string prop. Unbound text is treated as fixed copy and stays a literal.                                                  |
+| Boolean property bound to a layer's visibility                                                                           | A boolean prop that shows or hides the layer.                                                                              |
+| Variant property                                                                                                         | A string or number union prop.                                                                                             |
+| Variant property whose options are all states (Default, Hover, Focus, Focus-visible, Active, Disabled, Checked, Visited) | Not a prop: it becomes CSS pseudo-classes. A property with a non-state option such as Icon leading stays an ordinary prop. |
+| Instance swap property over an icon set                                                                                  | An icon name prop. Swapping between unrelated components is not supported.                                                 |
+| Slot with a single preferred component                                                                                   | A typed array prop of that component's props.                                                                              |
+| Slot with several or no preferred components                                                                             | A `React.ReactNode` prop.                                                                                                  |
+| Nested instance with properties exposed                                                                                  | The nested component's properties become props of the outer one, prefixed by the layer name when there are several.        |
+| Property **description**                                                                                                 | The prop's JSDoc, shown in the Storybook controls table.                                                                   |
+
+## Variables and styles
+
+- A variable **description** is shown next to the token on the Foundations pages.
+- A variable's **scopes** decide which Foundations page it appears on: corner radius for Radius, gap for Spacing, width and height for Sizes, font scopes for Typography.
+- A variable marked **hide from publishing** is left out of the docs.
+- Bind colours, radii and spacing to variables. A raw value still renders, but it is not a token and is reported as a warning.
+
+## Pages and layers
+
+- The plugin extracts only the **pages you pick**, all unticked by default. Pages starting with an underscore, a construction sign or WIP are flagged as drafts.
+- Use auto layout. Hug and fixed sizing are honoured; wrap and negative spacing are supported.
+- Layers hidden in Figma are not generated unless their visibility is bound to a boolean property.
+- A frame that is only vector shapes (icons, logos) becomes an SVG; a page of five or more single-variant icons is merged into one Icon component with name and size properties.
+- Name layers meaningfully: repeated nested instances are told apart by layer name.
