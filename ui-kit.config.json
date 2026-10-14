@@ -1,0 +1,33 @@
+{
+  "framework": "react",
+  "styling": "styled-components",
+  "libraryName": "bluejay",
+  "dependencies": {
+    "install": true
+  },
+  "stories": {
+    "groupByPage": true
+  },
+  "theme": {
+    "cssReset": true,
+    "brand": {
+      "title": "bluejay",
+      "image": "src/assets/Bluejay-Logo/Bluejay-Logo.svg",
+      "colorToken": "Brand/Peach Scale/60",
+      "surfaceToken": "Brand/Grey"
+    }
+  },
+  "inputs": {
+    "design": ".figma/design.json",
+    "enriched": ".figma/design.enriched.json",
+    "assets": ".figma/assets.json"
+  },
+  "paths": {
+    "components": "src/components",
+    "assetsRoot": "src",
+    "theme": "src/providers/ThemeProvider",
+    "docs": "src/docs",
+    "storybook": ".storybook",
+    "tsconfig": "tsconfig.json"
+  }
+}
