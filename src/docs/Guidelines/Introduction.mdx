@@ -1,0 +1,43 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Guidelines/Introduction" />
+
+# simple\-ds
+
+A React component library generated from the Figma design file. Components, tokens and these docs are produced by the UI Kit pipeline; do not edit generated files by hand — change the design and re-sync.
+
+## Components
+
+- **Buttons**: Button, Icon Button, Button Group, Button Danger
+- **Icons**: 1722 components
+- **Inputs**: Checkbox Field, Date Picker Field, Date Input Field, Input Field, Radio Field, Select Field, Search, Slider Field, Switch Field, Textarea Field, Radio Group, Checkbox Group
+- **Calendar**: Calendar Button, Calendar, Calendar Select Group, Calendar Month Field, Calendar Year Field
+- **Accordion**: Accordion Item, Accordion
+- **Tabs**: Tab, Tabs
+- **Menu**: Menu Item, Menu, Menu Header, Menu Heading, Menu Separator, Menu Shortcut
+- **Tooltip**: Tooltip
+- **Dialog**: Dialog Body, Dialog
+- **Text**: 18 components
+- **Examples**: Examples \/ Home Page, Examples\/About, Examples\/Contact Us, Examples\/Pricing, Examples\/Waitlist, Examples\/Landing Page, Examples\/Article, Examples\/Shop, Examples\/Product Detail Page, Examples\/Portfolio, Examples\/AI Chat, Examples\/Slot
+- **AI Chat**: AI Chat Box, AI Sidebar, AI Chat \-\> Chat Response, AI Chat \-\> Code Block, AI \-\> Conversation, AI Chat \-\> User message
+- **Avatars**: Avatar, Avatar Group, Avatar Block
+- **Cards**: Card, Pricing Card, Product Info Card, Testimonial Card, Stats Card, Review Card, Card \(Slot\)
+- **Navigation**: Navigation Button, Navigation Button List, Navigation Pill List, Navigation Pill
+- **Notification**: Notification
+- **Pagination**: Pagination Next, Pagination Previous, Pagination Page, Pagination, Pagination Gap, Pagination List
+- **Tags**: Tag, Tag Toggle, Tag Toggle Group
+- **Forms**: Form Register, Form Log In, Form Newsletter, Form Contact, Form Shipping, Form \(Slot\), Form Forgot Password
+- **Sections**: 24 components
+- **Utilities**: \_Component Annotation, \_Component Note, \.Slot
+
+## Setup
+
+Wrap your app in the generated provider so components can read design tokens:
+
+```tsx
+import { ThemeProvider } from "simple-ds/providers/ThemeProvider";
+
+<ThemeProvider modes={{/* e.g. Color: "Dark" */}}>
+  <App />
+</ThemeProvider>;
+```
