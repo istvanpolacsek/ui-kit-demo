@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "components": {
+    "22f6cb5472009b1ec20c0ba3fe0fa4753e195ea3": "@input text placeholder=Value",
+    "562f357f73a40bde8d6bbdd7a8f03af0af5c84eb": "@input text",
+    "87fb2eae73822ce63397fc2cf2b33f77da223e3f": "@input text placeholder=Value",
+    "bcf2172cbb66623d4f9b97d82ac0d6becee42057": "@select",
+    "c2f6979c001197528d47c43f663a097db65d170f": "@calendar",
+    "fc991246642c8038836820522e6334624f7c0121": "@calendar"
+  },
+  "pages": {}
+}
