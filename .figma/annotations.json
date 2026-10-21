@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "components": {
+    "01b39e44127cdf75dba141d8a5d8c0d88d4a374e": "@input text",
+    "069b5b63c38729092c9a32c3e497e84a851ef01d": "@checkbox",
+    "14683ea5fad8996e305eb52fa3cf291fbaad271f": "@input text",
+    "2ab9bef325c5ae205891cd9da55b8fb7629c8baa": "@radio",
+    "4ab1daeb281a29f5104c3938b1089e85b91a3516": "@checkbox",
+    "932ab59454ecc947c5f5f4b64b5f9ded75838a8a": "@switch",
+    "a958db18cc8ad98bdb62eda6c5f7be8555efde76": "@switch",
+    "ad47e058f88cda3e97d23d3c4bc18bc92c4605f7": "@radio",
+    "b69266fc4996e19ed377e703ace05584c49bdd4b": "@input text",
+    "dc187b7c0f19b8f760323b9257fc70d5fb5556bc": "@input text",
+    "f2f8ada2edabd5ca5f04ed5de54e7745c1307801": "@input text"
+  },
+  "pages": {}
+}
