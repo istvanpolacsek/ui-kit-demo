@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 import { SubheaderLarge } from "../SubheaderLarge";
 import { PresetPreviewTemplate } from "../PresetPreviewTemplate";
 import { PaletteSwatchSelectorDefault } from "../PaletteSwatchSelectorDefault";
-import { OptionPreviewMediumSquareCaseStudyLayout } from "../OptionPreviewMediumSquareCaseStudyLayout";
 
 export interface MenuItemDesignSidebarProps extends Omit<
   React.ComponentPropsWithoutRef<"button">,
@@ -340,13 +339,13 @@ const StyledFontPreview = styled.div<{
   `,
 );
 
-const StyledLatoForTitles = styled.div(
+const StyledLatoForTitles = styled.p(
   () => css`
     color: #eeeeee;
   `,
 );
 
-const StyledLatoForAllYourParagraphs = styled.div(
+const StyledLatoForAllYourParagraphs = styled.p(
   () => css`
     color: #adadad;
   `,
@@ -858,7 +857,7 @@ const StyledSizeWrapper = styled.div(
   `,
 );
 
-const StyledSize = styled.div(
+const StyledSize = styled.p(
   () => css`
     color: #fefefe;
   `,
@@ -1357,7 +1356,7 @@ const StyledFill = styled.div(
   `,
 );
 
-const StyledLayoutPreview = styled.div(
+const StyledLayoutPreview = styled.section(
   () => css`
     display: flex;
     flex-direction: row;
@@ -1373,7 +1372,7 @@ const StyledLayoutPreview = styled.div(
   `,
 );
 
-const StyledDetails = styled.div(
+const StyledDetails = styled.section(
   () => css`
     display: flex;
     flex-direction: column;
@@ -1389,19 +1388,19 @@ const StyledDetails = styled.div(
   `,
 );
 
-const StyledPosition = styled.div(
+const StyledPosition = styled.p(
   () => css`
     color: #adadad;
   `,
 );
 
-const StyledAlignment = styled.div(
+const StyledAlignment = styled.p(
   () => css`
     color: #adadad;
   `,
 );
 
-/** A clickable menu item used in the design sidebar, representing a design category (e.g. Template, Colors, Fonts, Buttons, etc.) with a visual preview and hover state. Used to navigate between design options in a sidebar panel. */
+/** A menu item for the design sidebar that allows users to switch between different design property categories (e.g., Templates, Colors, Fonts, Buttons, Spacing, Animations). Supports Default and Hover states and renders a contextual preview based on the selected type. */
 export const MenuItemDesignSidebar = React.forwardRef<
   HTMLButtonElement,
   MenuItemDesignSidebarProps
@@ -1616,9 +1615,6 @@ export const MenuItemDesignSidebar = React.forwardRef<
       )}
       {type === "Thumbnails" && (
         <StyledLayoutPreview>
-          {type === "Thumbnails" && (
-            <OptionPreviewMediumSquareCaseStudyLayout layout={"Grid"} />
-          )}
           {type === "Thumbnails" && (
             <StyledDetails>
               {type === "Thumbnails" && (

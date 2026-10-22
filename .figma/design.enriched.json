@@ -269932,24 +269932,76 @@
       ],
       "enrichment": {
         "htmlTag": "button",
-        "jsDocDescription": "A clickable menu item used in the design sidebar, representing a design category (e.g. Template, Colors, Fonts, Buttons, etc.) with a visual preview and hover state. Used to navigate between design options in a sidebar panel.",
+        "jsDocDescription": "A menu item for the design sidebar that allows users to switch between different design property categories (e.g., Templates, Colors, Fonts, Buttons, Spacing, Animations). Supports Default and Hover states and renders a contextual preview based on the selected type.",
         "suggestedAriaAttributes": {
           "role": "menuitem",
           "aria-label": "Design sidebar menu item"
         },
         "enrichmentConfidence": "medium",
-        "notes": "This component acts as a selectable/clickable item within a sidebar menu. The visual preview content varies significantly by Type variant. Should be used inside a ul/nav container representing the full sidebar menu. Consider aria-pressed or aria-selected if it represents an active selection state.",
+        "notes": "This component acts as a selectable/clickable menu item within a design sidebar panel. The preview content (font samples, color swatches, spacing visuals, cursors, etc.) varies per Type variant. Should be used inside a menu or list container with role='menu' or as a list item in a nav.",
         "elements": [
           {
             "path": [
               "ROOT:Root",
-              "INSTANCE:Subheader / Large"
+              "FRAME:Layout preview"
             ],
-            "htmlTag": "h6"
+            "htmlTag": "section"
+          },
+          {
+            "path": [
+              "ROOT:Root",
+              "FRAME:Layout preview",
+              "FRAME:Details"
+            ],
+            "htmlTag": "section"
+          },
+          {
+            "path": [
+              "ROOT:Root",
+              "FRAME:Layout preview",
+              "FRAME:Details",
+              "TEXT:Position"
+            ],
+            "htmlTag": "p"
+          },
+          {
+            "path": [
+              "ROOT:Root",
+              "FRAME:Layout preview",
+              "FRAME:Details",
+              "TEXT:Alignment"
+            ],
+            "htmlTag": "p"
+          },
+          {
+            "path": [
+              "ROOT:Root",
+              "FRAME:Font preview",
+              "TEXT:Lato for titles"
+            ],
+            "htmlTag": "p"
+          },
+          {
+            "path": [
+              "ROOT:Root",
+              "FRAME:Font preview",
+              "TEXT:Lato for all your paragraphs"
+            ],
+            "htmlTag": "p"
+          },
+          {
+            "path": [
+              "ROOT:Root",
+              "FRAME:Font preview",
+              "FRAME:Section",
+              "FRAME:Size wrapper",
+              "TEXT:Size"
+            ],
+            "htmlTag": "p"
           }
         ]
       },
-      "enrichmentHash": "0f684ef20db42d09483ee526957e0a0edd60832f285553cae12f97efd3370fbf"
+      "enrichmentHash": "7b52c1b51d92d8136bdeee75dce2764b02bbee4a06160749a2ad9be65e2206df"
     },
     {
       "id": "220:23007",
@@ -300084,15 +300136,24 @@
       ],
       "enrichment": {
         "htmlTag": "fieldset",
-        "jsDocDescription": "A grid of selectable option boxes allowing users to choose from a set of visual or layout settings. Optionally includes a subheader label and an accessibility alert for low-visibility states.",
+        "jsDocDescription": "A grouped set of selectable option boxes presented in a grid layout, optionally preceded by a subheader and an accessibility alert. Supports multiple variant types such as layout, device style, animation, and more.",
         "suggestedAriaAttributes": {
           "role": "group",
           "aria-label": "Option grid"
         },
         "enrichmentConfidence": "high",
-        "notes": "Each child option box likely maps to a radio or checkbox input. The fieldset/group role is appropriate since this is a collection of related selection controls. The subheader (e1) acts as a legend/label for the group. The alert (e81) should use role='alert' when visible."
+        "notes": "Each child option box acts as a selectable control (likely radio or toggle). The fieldset/group semantics are appropriate since this is a collection of related choices. The optional Subheader maps to a legend or heading, and the alert message appears conditionally for low-contrast scenarios.",
+        "elements": [
+          {
+            "path": [
+              "ROOT:Root",
+              "FRAME:Grid"
+            ],
+            "htmlTag": "ul"
+          }
+        ]
       },
-      "enrichmentHash": "4b9fcab5f5367eb8687b6654408901c60f7edace09e20152b2b4b6e12ea9575f"
+      "enrichmentHash": "7faaf0fadd62aaa6acf6cb8348c10b5e9dcf718d3be306fa94e16710a5d28b44"
     },
     {
       "id": "2406:20780",
@@ -490315,15 +490376,16 @@
       ],
       "enrichment": {
         "htmlTag": "a",
-        "jsDocDescription": "A link styled as a button, used for navigation actions. Supports multiple sizes (Small, Regular, Large), visual modes (Light, Dark), and interactive states (Default, Hover, Disabled).",
+        "jsDocDescription": "A link-styled button component that navigates to a URL or triggers an action, available in multiple sizes (Small, Regular, Large) and modes (Light, Dark), with Default, Hover, and Disabled states.",
         "suggestedAriaAttributes": {
+          "role": "button",
           "aria-label": "Link button",
           "aria-disabled": false
         },
         "enrichmentConfidence": "high",
-        "notes": "Use the 'a' tag with an href attribute for navigation. When in Disabled state, set aria-disabled='true' and prevent default click behavior. Avoid using this component for non-navigation actions; use a standard button instead."
+        "notes": "Named 'Link button', this component visually resembles a hyperlink but may function as a button. Use the <a> tag when it navigates to a URL (with an href), or consider <button> if it triggers an in-page action. The 'Disabled' variant should set aria-disabled='true' and prevent interaction. Ensure sufficient color contrast for both Light and Dark modes."
       },
-      "enrichmentHash": "41d51906aabf44985b0935d132a732f0245bcd542ba43e033d4d5ff139f34ad0"
+      "enrichmentHash": "675f50218d60fd1c3d179068f3041ca886784ef047b7e648191ac19e697675c2"
     },
     {
       "id": "121:2338",

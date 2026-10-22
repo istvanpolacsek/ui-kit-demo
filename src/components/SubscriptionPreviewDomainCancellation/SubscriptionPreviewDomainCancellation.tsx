@@ -126,7 +126,7 @@ export const SubscriptionPreviewDomainCancellation = React.forwardRef<
   HTMLButtonElement,
   SubscriptionPreviewDomainCancellationProps
 >(function SubscriptionPreviewDomainCancellation({ selected, ...rest }, ref) {
-  const selected = selected ? "True" : "False";
+  const selectedState = selected ? "True" : "False";
   return (
     <StyledRoot
       type="button"
