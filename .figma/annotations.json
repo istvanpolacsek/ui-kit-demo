@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "components": {
+    "1f7a69c9f06bc68ef715f3a90138c9863f8f89e2": "@tooltip",
+    "2b1dbc29197c43a63d5fe8903b3bf6c2a9380abc": "@menuitem",
+    "2c460b4280ccc73fefc1aec967e1519b8e5b10e9": "@radio",
+    "357bdc0249de056a981abc5ff48fdbf02df201dc": "@tab",
+    "38d5342c7655b5cd5f8586d7e7b5c700a2274d12": "@menuitem",
+    "3ab9374842306cfcc3e56bebac2e07e560b4fe3a": "@menu",
+    "3c93db3154ad438dab909ac51305fa61df2e426c": "@input search",
+    "5791d24359c85ac70df75d8d78a45a516004a601": "@tab",
+    "5acd9658b15e76fa68651953375c842dbebf15e9": "@tab",
+    "7835521c1b0e68dc03d554eed7e371db5a526707": "@checkbox",
+    "78bd288ac5e7c71bd0580280ed9a2221ee3c9b7d": "@tab",
+    "8c8e5e1df61e21f69cfa18c749c3ce10a5298e4b": "@menuitem",
+    "8cf630aa23751f6cf08128742b87225dc8aef8df": "@tabs",
+    "92735c193290b1492c6ffd88e88d74ee04c70d03": "@menuitem",
+    "97f2682d22d4689e6e76203876a6afb427ef8725": "@menu",
+    "9f13a767666dd9800e7c4c71fc3f845d4b9a4ad5": "@switch",
+    "a334be9d84620856f493df20fac14a07e76d7753": "@choicegroup",
+    "a5831a05b529f52979886953e5053f37b0f4481b": "@menu",
+    "b25a3e980007fa8a947c2af0a9203c49aa231060": "@dialog",
+    "b795d064cf649b1ca392e4f23040bc3712b653cb": "@disclosure",
+    "cb98a1583d331f289bed37efbbf7e5ea9c8a3df4": "@menuitem",
+    "cc4a6e5675b4f7144e8b626c9e85cf336fa09a42": "@tooltip",
+    "df95944276db90abf920f5c5c5ba5b2c4c152546": "@tabs",
+    "e39a831c873eb5d8d132b07b021c2ce083d359a1": "@tabs",
+    "f52bc8ea501feee4a1c38bb66d2cc1ea5c468dbc": "@menu"
+  },
+  "pages": {
+    "Visual asset": "@iconset"
+  }
+}
