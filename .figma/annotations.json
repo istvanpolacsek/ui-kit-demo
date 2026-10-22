@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "components": {
+    "05003ef25c9566970ee1e279b56f401a577a6fdc": "@input tel",
+    "1741bc4521540414a05a52b015d22870792a6383": "@radio",
+    "37ea960630114f2f09c6a0d635e4dd223d753dcc": "@disclosure",
+    "43486f6d5fa041da38fc9c994296be262f957ff5": "@disclosure",
+    "6d7a68d9a400c92360be8241e20b73c9ec1701b6": "@tooltip",
+    "77b2459242513adf77a49003151d3dbe319dc589": "@tab",
+    "7c7e2436dfcc5c13cd781884c6fbf6218bf15789": "@dialog",
+    "8cc42349754c748cf3e02a2d72ad09e6c419cc45": "@disclosure",
+    "8f009cd22d0d582f42fe6324424fb4b9812dd39d": "@disclosure",
+    "b6e9b70874cc66cd0ef72d51b3b997a99aa1788e": "@menu",
+    "c01fc7a515b55a60d2ded1d436f9722fd409546e": "@disclosure",
+    "d2acb8e8dc23b3b35d488a41ac4dc731fca72310": "@calendar"
+  },
+  "pages": {}
+}
