@@ -639314,10 +639314,10 @@
           "aria-disabled": false
         },
         "enrichmentConfidence": "high",
-        "notes": "Use with an associated label element for accessibility. The intermediate state should set aria-checked to 'mixed'. Disabled variants should set aria-disabled to true. The root should render as <input type=\"checkbox\"> in implementation.",
+        "notes": "Use with an associated label element for accessibility. The 'Intermediate' variant corresponds to aria-checked='mixed'. Disabled variants should set aria-disabled=true and prevent interaction.",
         "archetype": "checkbox"
       },
-      "enrichmentHash": "ac69464396073da22b23f2fbae1d9f240a01b703120b048042b89959cb674cee"
+      "enrichmentHash": "14731db799306f31f8a46390759c51181c23c14cb0ec2fe4271ec83751c268cf"
     },
     {
       "id": "14701:51658",
@@ -669489,13 +669489,13 @@
       ],
       "enrichment": {
         "htmlTag": "div",
-        "jsDocDescription": "A mobile text field component with optional country code selector, left icon, right icon, link action, and helper text. Supports phone number input with flag and dial code prefix.",
+        "jsDocDescription": "A mobile text field component with optional country code selector, left icon, right icon, and link. Supports phone number input with flag and dial code prefix, helper text, and configurable slot visibility.",
         "suggestedAriaAttributes": {
           "role": "group",
           "aria-label": "Mobile number input field"
         },
         "enrichmentConfidence": "high",
-        "notes": "The root wraps a label, an input container with country code picker, icons, and helper text. Use a native <input type='tel'> for the actual input element inside. The country code selector (flag + dial code + chevron) should be keyboard accessible. Helper text should be linked via aria-describedby to the input.",
+        "notes": "The root wraps a label, an input container, and helper text — best rendered as a div with role=group. The actual interactive input (e2 label + e12 placeholder) should map to a real <label> and <input type='tel'> in implementation. Country code and icons are decorative/interactive sub-elements.",
         "elements": [
           {
             "path": [
@@ -669508,17 +669508,6 @@
           {
             "path": [
               "ROOT:Root",
-              "FRAME:Frame 83",
-              "FRAME:text field.Master",
-              "FRAME:Container",
-              "FRAME:Right content",
-              "TEXT:Link"
-            ],
-            "htmlTag": "span"
-          },
-          {
-            "path": [
-              "ROOT:Root",
               "FRAME:Helper Text",
               "TEXT:Helper text"
             ],
@@ -669526,7 +669515,7 @@
           }
         ]
       },
-      "enrichmentHash": "837792e273a5e8b480b32dadf6d3f47836563996c9ee718872a82ade4c64408f"
+      "enrichmentHash": "611e487b86cc89570f8bac4bb197e912035e5f0c51886e345c4904ba52c9ad1a"
     },
     {
       "id": "14524:17863",

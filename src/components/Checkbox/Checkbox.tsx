@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { Check } from "../Check";
 import { useToggle } from "./Checkbox.toggle";
 
 export interface CheckboxProps extends Omit<
@@ -162,7 +161,6 @@ const StyledRoot = styled.label<{ $state: string }>(
           return css``;
       }
     })()}
-  color: ${theme["accent"]["accentWhite"]};
   `,
 );
 
@@ -282,7 +280,6 @@ export const Checkbox = React.forwardRef<HTMLLabelElement, CheckboxProps>(
         {["Checked", "Disabled (Checked)"].includes(state) && (
           <StyledActiveCheckbox $state={state} />
         )}
-        {["Checked", "Disabled (Checked)"].includes(state) && <Check />}
         {[
           "Unchecked",
           "Hover",

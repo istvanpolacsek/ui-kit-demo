@@ -2,7 +2,6 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { Icon } from "../Icon";
 import { Flag } from "../Flag";
-import { ChevronDown } from "../ChevronDown";
 import { PlaceholderAtomsMobile } from "../PlaceholderAtomsMobile";
 
 export interface MobileTextfieldMasterProps extends Omit<
@@ -189,7 +188,7 @@ const StyledRightContent = styled.div(
   `,
 );
 
-const StyledLink = styled.span(
+const StyledLink = styled.div(
   ({ theme }) => css`
     color: ${theme["accent"]["accentBrand"]};
     font-family: "Roboto";
@@ -226,7 +225,7 @@ const StyledHelperText2 = styled.p(
   `,
 );
 
-/** A mobile text field component with optional country code selector, left icon, right icon, link action, and helper text. Supports phone number input with flag and dial code prefix. */
+/** A mobile text field component with optional country code selector, left icon, right icon, and link. Supports phone number input with flag and dial code prefix, helper text, and configurable slot visibility. */
 export const MobileTextfieldMaster = React.forwardRef<
   HTMLDivElement,
   MobileTextfieldMasterProps
@@ -258,7 +257,6 @@ export const MobileTextfieldMaster = React.forwardRef<
                   <Flag country={"IN"} />
                   <StyledFrame85>
                     <StyledatomsDefault>{"+91"}</StyledatomsDefault>
-                    <ChevronDown type={"Outlined"} />
                   </StyledFrame85>
                 </StyledCountryCode>
               )}
