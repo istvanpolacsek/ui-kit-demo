@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "components": {
+    "1f7a69c9f06bc68ef715f3a90138c9863f8f89e2": "@tooltip",
+    "2c460b4280ccc73fefc1aec967e1519b8e5b10e9": "@radio",
+    "357bdc0249de056a981abc5ff48fdbf02df201dc": "@tab",
+    "3c93db3154ad438dab909ac51305fa61df2e426c": "@input search",
+    "5acd9658b15e76fa68651953375c842dbebf15e9": "@tab",
+    "7835521c1b0e68dc03d554eed7e371db5a526707": "@checkbox",
+    "78bd288ac5e7c71bd0580280ed9a2221ee3c9b7d": "@tab",
+    "8cf630aa23751f6cf08128742b87225dc8aef8df": "@tabs",
+    "9f13a767666dd9800e7c4c71fc3f845d4b9a4ad5": "@switch",
+    "b795d064cf649b1ca392e4f23040bc3712b653cb": "@disclosure",
+    "cc4a6e5675b4f7144e8b626c9e85cf336fa09a42": "@tooltip",
+    "e39a831c873eb5d8d132b07b021c2ce083d359a1": "@choicegroup"
+  },
+  "pages": {}
+}
