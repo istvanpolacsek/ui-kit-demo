@@ -1,0 +1,15 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Guidelines/Using tokens" />
+
+# Using tokens
+
+Every token is a path into the styled-components theme, mirroring the variable name in Figma (`Neutral/Grey Scale/20` becomes `theme['Neutral']['Grey Scale']['20']`). Bracket access is used because names can contain spaces and digits.
+
+```tsx
+const Box = styled.div`
+  background-color: ${({ theme }) => theme["Neutral"]["Grey Scale"]["20"]};
+`;
+```
+
+The theme type is declared in `theme.d.ts`, so a mistyped token is a compile error. See the Foundations pages for every token and its value.
