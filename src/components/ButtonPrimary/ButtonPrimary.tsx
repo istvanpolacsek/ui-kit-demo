@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { Icon, type IconProps } from "../Icon";
 
 export interface ButtonPrimaryProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"button">,
   "text" | "hasIcon" | "hasText" | "mode" | "size" | "iconName"
 > {
   text?: string;
@@ -14,7 +14,7 @@ export interface ButtonPrimaryProps extends Omit<
   iconName?: IconProps["iconName"];
 }
 
-const StyledRoot = styled.div<{
+const StyledRoot = styled.button<{
   $size: "Default" | "L";
   $mode: "Dark" | "Light";
 }>(
@@ -24,7 +24,7 @@ const StyledRoot = styled.div<{
       switch ($size) {
         case "L":
           return css`
-            display: flex;
+            display: inline-flex;
             flex-direction: row;
             padding-top: 12px;
             padding-right: 12px;
@@ -39,7 +39,7 @@ const StyledRoot = styled.div<{
           `;
         case "Default":
           return css`
-            display: flex;
+            display: inline-flex;
             flex-direction: row;
             padding-top: 12px;
             padding-right: 12px;
@@ -174,7 +174,7 @@ const StyledText = styled.div(
   `,
 );
 
-const StyledButton = styled.div<{
+const StyledButton = styled.span<{
   $mode: "Dark" | "Light";
   $size: "Default" | "L";
 }>(
@@ -216,8 +216,9 @@ const StyledButton = styled.div<{
   `,
 );
 
+/** A primary action button supporting optional icon and text content, with multiple size, state (default, hover, disabled), and mode (light, dark) variants. */
 export const ButtonPrimary = React.forwardRef<
-  HTMLDivElement,
+  HTMLButtonElement,
   ButtonPrimaryProps
 >(function ButtonPrimary(
   {
@@ -232,7 +233,13 @@ export const ButtonPrimary = React.forwardRef<
   ref,
 ) {
   return (
-    <StyledRoot {...rest} ref={ref} $size={size} $mode={mode}>
+    <StyledRoot
+      aria-label="Button"
+      {...rest}
+      ref={ref}
+      $size={size}
+      $mode={mode}
+    >
       {hasIcon && (
         <StyledIcon $size={size}>
           <Icon iconName={iconName} />

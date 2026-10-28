@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { Tag, type TagProps } from "../Tag";
 
 export interface PipelineItemProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"article">,
   "title" | "description" | "label" | "type" | "status"
 > {
   title?: string;
@@ -13,7 +13,7 @@ export interface PipelineItemProps extends Omit<
   status?: TagProps["status"];
 }
 
-const StyledRoot = styled.div(
+const StyledRoot = styled.article(
   ({ theme }) => css`
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@ const StyledRoot = styled.div(
   `,
 );
 
-const StyledIncome = styled.div(
+const StyledIncome = styled.h3(
   ({ theme }) => css`
     color: ${theme["Text"]["Primary"]};
     font-family: "Inter Tight";
@@ -56,7 +56,7 @@ const StyledContent = styled.div(
   `,
 );
 
-const Styled10000 = styled.div(
+const Styled10000 = styled.p(
   ({ theme }) => css`
     color: ${theme["Text"]["Primary"]};
     font-family: "Inter Tight";
@@ -66,7 +66,8 @@ const Styled10000 = styled.div(
   `,
 );
 
-export const PipelineItem = React.forwardRef<HTMLDivElement, PipelineItemProps>(
+/** Displays a pipeline item with a title and a monetary description value, optionally tagged for categorization or status. */
+export const PipelineItem = React.forwardRef<HTMLElement, PipelineItemProps>(
   function PipelineItem(
     {
       title = "Income",
@@ -79,7 +80,7 @@ export const PipelineItem = React.forwardRef<HTMLDivElement, PipelineItemProps>(
     ref,
   ) {
     return (
-      <StyledRoot {...rest} ref={ref}>
+      <StyledRoot aria-label="Income: $100,00" {...rest} ref={ref}>
         <StyledIncome>{title}</StyledIncome>
         <StyledContent>
           <Styled10000>{description}</Styled10000>

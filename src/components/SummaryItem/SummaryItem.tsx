@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { Icon, type IconProps } from "../Icon";
 
 export interface SummaryItemProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.InputHTMLAttributes<HTMLInputElement>,
   "label" | "value" | "iconName"
 > {
   label?: string;
@@ -74,8 +74,19 @@ const StyledDealStage = styled.div(
   `,
 );
 
-const StyledCallScheduled = styled.div(
+const StyledCallScheduled = styled.input(
   ({ theme }) => css`
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font: inherit;
+    &::placeholder {
+      color: inherit;
+      opacity: 1;
+    }
     color: ${theme["Text"]["Primary"]};
     font-family: "Inter Tight";
     font-size: 14px;
@@ -84,7 +95,8 @@ const StyledCallScheduled = styled.div(
   `,
 );
 
-export const SummaryItem = React.forwardRef<HTMLDivElement, SummaryItemProps>(
+/** Displays a labeled key-value summary item, typically used in detail panels or summary sections to show a named property and its corresponding value. */
+export const SummaryItem = React.forwardRef<HTMLInputElement, SummaryItemProps>(
   function SummaryItem(
     {
       label = "Deal Stage",
@@ -95,13 +107,19 @@ export const SummaryItem = React.forwardRef<HTMLDivElement, SummaryItemProps>(
     ref,
   ) {
     return (
-      <StyledRoot {...rest} ref={ref}>
+      <StyledRoot>
         <StyledIcon>
           <Icon iconName={iconName} />
         </StyledIcon>
         <StyledText>
           <StyledDealStage>{label}</StyledDealStage>
-          <StyledCallScheduled>{value}</StyledCallScheduled>
+          <StyledCallScheduled
+            type="text"
+            placeholder={value}
+            aria-label={value}
+            ref={ref}
+            {...rest}
+          />
         </StyledText>
       </StyledRoot>
     );

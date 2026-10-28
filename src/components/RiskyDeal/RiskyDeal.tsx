@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { Logo, type LogoProps } from "../Logo";
 
 export interface RiskyDealProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"article">,
   "client" | "activity" | "totalValue" | "timeline" | "logo"
 > {
   client?: string;
@@ -13,7 +13,7 @@ export interface RiskyDealProps extends Omit<
   logo?: LogoProps["logo"];
 }
 
-const StyledRoot = styled.div(
+const StyledRoot = styled.article(
   () => css`
     display: flex;
     flex-direction: row;
@@ -63,7 +63,7 @@ const StyledinFP = styled.div(
   `,
 );
 
-const StyledMicrosoft = styled.div(
+const StyledMicrosoft = styled.h3(
   ({ theme }) => css`
     color: ${theme["Text"]["Primary"]};
     font-family: "Inter Tight";
@@ -73,7 +73,7 @@ const StyledMicrosoft = styled.div(
   `,
 );
 
-const StyledEnterpriseExpansion = styled.div(
+const StyledEnterpriseExpansion = styled.p(
   ({ theme }) => css`
     color: ${theme["Text"]["Primary"]};
     font-family: "Inter Tight";
@@ -83,7 +83,7 @@ const StyledEnterpriseExpansion = styled.div(
   `,
 );
 
-const Styled48500 = styled.div(
+const Styled48500 = styled.p(
   ({ theme }) => css`
     color: ${theme["Text"]["Primary"]};
     font-family: "Inter Tight";
@@ -93,7 +93,7 @@ const Styled48500 = styled.div(
   `,
 );
 
-const StyledLastActivity16DaysAgo = styled.div(
+const StyledLastActivity16DaysAgo = styled.p(
   ({ theme }) => css`
     color: ${theme["Text"]["Secondary"]};
     font-family: "Inter Tight";
@@ -103,7 +103,8 @@ const StyledLastActivity16DaysAgo = styled.div(
   `,
 );
 
-export const RiskyDeal = React.forwardRef<HTMLDivElement, RiskyDealProps>(
+/** Displays a summary card for a risky deal, showing the client name, activity type, total value, and last activity timeline. Intended for use in deal monitoring or CRM dashboards to highlight at-risk opportunities. */
+export const RiskyDeal = React.forwardRef<HTMLElement, RiskyDealProps>(
   function RiskyDeal(
     {
       client = "Microsoft",
@@ -116,7 +117,12 @@ export const RiskyDeal = React.forwardRef<HTMLDivElement, RiskyDealProps>(
     ref,
   ) {
     return (
-      <StyledRoot {...rest} ref={ref}>
+      <StyledRoot
+        role="article"
+        aria-label="Risky Deal: Microsoft - Enterprise Expansion"
+        {...rest}
+        ref={ref}
+      >
         <StyledDeal>
           <Logo logo={logo} />
           <StyledinFP>

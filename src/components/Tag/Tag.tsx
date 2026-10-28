@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 export interface TagProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"span">,
   "label" | "type" | "status"
 > {
   label?: string;
@@ -10,7 +10,7 @@ export interface TagProps extends Omit<
   status?: "Error" | "Success" | "Warning" | "Neutral";
 }
 
-const StyledRoot = styled.div<{
+const StyledRoot = styled.span<{
   $type: "Bold" | "Light";
   $status: "Error" | "Success" | "Warning" | "Neutral";
 }>(
@@ -105,7 +105,7 @@ const StyledRoot = styled.div<{
   `,
 );
 
-const StyledLabel = styled.div<{
+const StyledLabel = styled.span<{
   $type: "Bold" | "Light";
   $status: "Error" | "Success" | "Warning" | "Neutral";
 }>(
@@ -171,12 +171,20 @@ const StyledLabel = styled.div<{
   `,
 );
 
-export const Tag = React.forwardRef<HTMLDivElement, TagProps>(function Tag(
+/** A compact status tag component that displays a short label with visual styling variants (Bold/Light) and semantic status colors (Error, Success, Warning, Neutral). Used to communicate state or categorization inline. */
+export const Tag = React.forwardRef<HTMLSpanElement, TagProps>(function Tag(
   { label = "Label", type = "Bold", status = "Error", ...rest },
   ref,
 ) {
   return (
-    <StyledRoot {...rest} ref={ref} $type={type} $status={status}>
+    <StyledRoot
+      role="status"
+      aria-label="Label"
+      {...rest}
+      ref={ref}
+      $type={type}
+      $status={status}
+    >
       <StyledLabel $type={type} $status={status}>
         {label}
       </StyledLabel>

@@ -6,7 +6,7 @@ import { ProgressMain, type ProgressMainProps } from "../ProgressMain";
 import { ProfilePicture, type ProfilePictureProps } from "../ProfilePicture";
 
 export interface CRMCardProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"article">,
   | "client"
   | "showStatusTag"
   | "leadValue"
@@ -47,7 +47,7 @@ export interface CRMCardProps extends Omit<
   size?: ProfilePictureProps["size"];
 }
 
-const StyledRoot = styled.div<{
+const StyledRoot = styled.article<{
   $status:
     | "qualified"
     | "new"
@@ -111,7 +111,7 @@ const StyledRoot = styled.div<{
   `,
 );
 
-const StyledContainer = styled.div(
+const StyledContainer = styled.article(
   () => css`
     display: flex;
     flex-direction: column;
@@ -159,7 +159,7 @@ const StyledBrand = styled.div(
   `,
 );
 
-const StyledText = styled.div(
+const StyledText = styled.section(
   () => css`
     display: flex;
     flex-direction: column;
@@ -175,7 +175,7 @@ const StyledText = styled.div(
   `,
 );
 
-const StyledAirbnb = styled.div(
+const StyledAirbnb = styled.h3(
   () => css`
     color: #4b1e04;
     font-family: "Inter Tight";
@@ -185,7 +185,7 @@ const StyledAirbnb = styled.div(
   `,
 );
 
-const StyledSarahConnor = styled.div(
+const StyledSarahConnor = styled.p(
   () => css`
     color: #4b1e04;
     font-family: "Inter Tight";
@@ -195,7 +195,7 @@ const StyledSarahConnor = styled.div(
   `,
 );
 
-const Styled10000 = styled.div(
+const Styled10000 = styled.p(
   () => css`
     color: #4b1e04;
     font-family: "Inter Tight";
@@ -237,7 +237,7 @@ const StyledProgress = styled.div(
   `,
 );
 
-const StyledQuality = styled.div(
+const StyledQuality = styled.label(
   () => css`
     color: #4b1e04;
     font-family: "Inter Tight";
@@ -298,7 +298,7 @@ const StyledFrame35 = styled.div(
   `,
 );
 
-const StyledOwner = styled.div(
+const StyledOwner = styled.label(
   ({ theme }) => css`
     color: ${theme["Neutral"]["Grey Transparency Scale"]["80"]};
     font-family: "Inter Tight";
@@ -308,7 +308,7 @@ const StyledOwner = styled.div(
   `,
 );
 
-const StyledJessicaPierson = styled.div(
+const StyledJessicaPierson = styled.p(
   ({ theme }) => css`
     color: ${theme["Text"]["Primary"]};
     font-family: "Inter Tight";
@@ -318,7 +318,8 @@ const StyledJessicaPierson = styled.div(
   `,
 );
 
-export const CRMCard = React.forwardRef<HTMLDivElement, CRMCardProps>(
+/** A CRM card component displaying a client's lead information, including brand/logo, contact name, lead value, status tag, pipeline stage, progress indicator, and owner details. Supports multiple CRM pipeline statuses via variant. */
+export const CRMCard = React.forwardRef<HTMLElement, CRMCardProps>(
   function CRMCard(
     {
       client = "Airbnb",
@@ -341,7 +342,13 @@ export const CRMCard = React.forwardRef<HTMLDivElement, CRMCardProps>(
     ref,
   ) {
     return (
-      <StyledRoot {...rest} ref={ref} $status={status}>
+      <StyledRoot
+        role="article"
+        aria-label="CRM card for Airbnb"
+        {...rest}
+        ref={ref}
+        $status={status}
+      >
         <StyledContainer>
           <StyledContent>
             <StyledBrand>

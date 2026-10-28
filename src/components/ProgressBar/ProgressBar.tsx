@@ -101,10 +101,18 @@ const StyledHighlight = styled.div<{ $progress: number }>(
   `,
 );
 
+/** A progress bar component that visually represents a value between 0 and 100, indicating the completion or advancement of a task or process. */
 export const ProgressBar = React.forwardRef<HTMLDivElement, ProgressBarProps>(
   function ProgressBar({ progress = 0, ...rest }, ref) {
     return (
-      <StyledRoot {...rest} ref={ref}>
+      <StyledRoot
+        role="progressbar"
+        aria-valuenow={progress}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        {...rest}
+        ref={ref}
+      >
         <StyledProgress $progress={progress}>
           <StyledHighlight $progress={progress}></StyledHighlight>
         </StyledProgress>

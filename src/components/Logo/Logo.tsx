@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { SVG_URLS } from "./Logo.markup";
 
 export interface LogoProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"span">,
   "logo" | "children"
 > {
   logo?:
@@ -20,13 +20,14 @@ export interface LogoProps extends Omit<
     | "Microsoft";
 }
 
-const StyledRoot = styled.div(
+const StyledRoot = styled.span(
   () => css`
     display: inline-flex;
   `,
 );
 
-export const Logo = React.forwardRef<HTMLDivElement, LogoProps>(function Logo(
+/** Vector artwork rendered from exported SVG assets. */
+export const Logo = React.forwardRef<HTMLSpanElement, LogoProps>(function Logo(
   { logo = "AirBNB", ...rest },
   ref,
 ) {

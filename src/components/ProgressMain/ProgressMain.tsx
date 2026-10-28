@@ -173,7 +173,7 @@ const StyledPercentage = styled.div(
   `,
 );
 
-const Styled0 = styled.div(
+const Styled0 = styled.span(
   ({ theme }) => css`
     color: ${theme["Text"]["Primary"]};
     font-family: "PT Serif";
@@ -183,10 +183,18 @@ const Styled0 = styled.div(
   `,
 );
 
+/** A progress bar component that visually represents a completion percentage from 0 to 100, with a highlighted fill region and a numeric percentage label. */
 export const ProgressMain = React.forwardRef<HTMLDivElement, ProgressMainProps>(
   function ProgressMain({ progress = 0, ...rest }, ref) {
     return (
-      <StyledRoot {...rest} ref={ref}>
+      <StyledRoot
+        role="progressbar"
+        aria-valuenow={progress}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        {...rest}
+        ref={ref}
+      >
         <StyledProgress>
           <StyledLine3 />
           <StyledHighlight $progress={progress}>

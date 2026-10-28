@@ -1,9 +1,9 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-export interface AlertProps extends React.ComponentPropsWithoutRef<"div"> {}
+export interface AlertProps extends React.ComponentPropsWithoutRef<"section"> {}
 
-const StyledRoot = styled.div(
+const StyledRoot = styled.section(
   () => css`
     position: relative;
     border-radius: 0px;
@@ -41,13 +41,20 @@ const StyledFrame53 = styled.div(
   `,
 );
 
-export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
-  function Alert({ ...rest }, ref) {
-    return (
-      <StyledRoot {...rest} ref={ref}>
-        <StyledFrame54></StyledFrame54>
-        <StyledFrame53></StyledFrame53>
-      </StyledRoot>
-    );
-  },
-);
+/** An Alert component used to display important messages or notifications to the user, typically conveying status information such as success, warning, error, or informational states. */
+export const Alert = React.forwardRef<HTMLElement, AlertProps>(function Alert(
+  { ...rest },
+  ref,
+) {
+  return (
+    <StyledRoot
+      role="alert"
+      aria-label="Alert notification"
+      {...rest}
+      ref={ref}
+    >
+      <StyledFrame54></StyledFrame54>
+      <StyledFrame53></StyledFrame53>
+    </StyledRoot>
+  );
+});

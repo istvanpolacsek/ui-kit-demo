@@ -3,14 +3,14 @@ import styled, { css } from "styled-components";
 import { Alert } from "../Alert";
 
 export interface FilterItemProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"button">,
   "isActive" | "label"
 > {
   isActive?: boolean;
   label?: string;
 }
 
-const StyledRoot = styled.div(
+const StyledRoot = styled.button(
   ({ theme }) => css`
     position: relative;
     display: flex;
@@ -49,10 +49,11 @@ const StyledAlert = styled.div(
   `,
 );
 
-export const FilterItem = React.forwardRef<HTMLDivElement, FilterItemProps>(
+/** A filter item component that represents a selectable filter option. Displays a label and optionally an active state indicator (Alert icon) when the filter is currently applied. */
+export const FilterItem = React.forwardRef<HTMLButtonElement, FilterItemProps>(
   function FilterItem({ isActive = false, label = "Item", ...rest }, ref) {
     return (
-      <StyledRoot {...rest} ref={ref}>
+      <StyledRoot aria-label="Item" {...rest} ref={ref}>
         <StyledItem>{label}</StyledItem>
         {isActive && (
           <StyledAlert>

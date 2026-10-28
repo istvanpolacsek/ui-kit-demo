@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { ProfilePicture, type ProfilePictureProps } from "../ProfilePicture";
 import { ButtonPrimary, type ButtonPrimaryProps } from "../ButtonPrimary";
+import { useMenu } from "./ActivityTimeline.menu";
 
 export interface ActivityTimelineProps extends Omit<
   React.ComponentPropsWithoutRef<"div">,
@@ -11,6 +12,7 @@ export interface ActivityTimelineProps extends Omit<
   | "lastContributorName"
   | "contributors"
   | "actions"
+  | "onClose"
 > {
   date?: string;
   title?: string;
@@ -18,6 +20,8 @@ export interface ActivityTimelineProps extends Omit<
   lastContributorName?: string;
   contributors?: ProfilePictureProps[];
   actions?: ButtonPrimaryProps[];
+  /** Called when the user presses Escape in the menu. */
+  onClose?: () => void;
 }
 
 const StyledRoot = styled.div(
@@ -163,6 +167,7 @@ const StyledActions = styled.div(
   `,
 );
 
+/** Displays a single activity timeline entry, showing a timestamp, event title, summary description, contributor avatars with a name, and optional action controls. Intended to be used as a list item within a chronological activity feed. */
 export const ActivityTimeline = React.forwardRef<
   HTMLDivElement,
   ActivityTimelineProps
@@ -174,12 +179,14 @@ export const ActivityTimeline = React.forwardRef<
     lastContributorName = "Jessica Pierson",
     contributors,
     actions,
+    onClose,
     ...rest
   },
   ref,
 ) {
+  const menu = useMenu({ onClose, forwardedRef: ref });
   return (
-    <StyledRoot {...rest} ref={ref}>
+    <StyledRoot role="menu" {...rest} ref={menu.ref}>
       <StyledSept4202609>{date}</StyledSept4202609>
       <StyledContent>
         <StyledInfo>

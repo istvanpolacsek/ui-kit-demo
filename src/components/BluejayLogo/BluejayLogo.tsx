@@ -3,17 +3,18 @@ import styled, { css } from "styled-components";
 import { SVG_URLS } from "./BluejayLogo.markup";
 
 export interface BluejayLogoProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"span">,
   "children"
 > {}
 
-const StyledRoot = styled.div(
+const StyledRoot = styled.span(
   () => css`
     display: inline-flex;
   `,
 );
 
-export const BluejayLogo = React.forwardRef<HTMLDivElement, BluejayLogoProps>(
+/** Vector artwork rendered from exported SVG assets. */
+export const BluejayLogo = React.forwardRef<HTMLSpanElement, BluejayLogoProps>(
   function BluejayLogo({ ...rest }, ref) {
     return (
       <StyledRoot {...rest} ref={ref}>

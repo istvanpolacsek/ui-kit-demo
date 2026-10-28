@@ -4,7 +4,7 @@ import { ProfilePicture } from "../ProfilePicture";
 import { ButtonPrimary, type ButtonPrimaryProps } from "../ButtonPrimary";
 
 export interface ContactCardProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"article">,
   "title" | "description" | "actions"
 > {
   title?: string;
@@ -12,7 +12,7 @@ export interface ContactCardProps extends Omit<
   actions?: ButtonPrimaryProps[];
 }
 
-const StyledRoot = styled.div(
+const StyledRoot = styled.article(
   ({ theme }) => css`
     display: flex;
     flex-direction: column;
@@ -63,7 +63,7 @@ const StyledFrame57 = styled.div(
   `,
 );
 
-const StyledPrimaryContact = styled.div(
+const StyledPrimaryContact = styled.h3(
   ({ theme }) => css`
     color: ${theme["Text"]["Primary"]};
     font-family: "Inter Tight";
@@ -73,7 +73,7 @@ const StyledPrimaryContact = styled.div(
   `,
 );
 
-const StyledArleneMcCoyBusinessExecutive = styled.div(
+const StyledArleneMcCoyBusinessExecutive = styled.p(
   ({ theme }) => css`
     color: ${theme["Text"]["Primary"]};
     font-family: "Inter Tight";
@@ -83,8 +83,11 @@ const StyledArleneMcCoyBusinessExecutive = styled.div(
   `,
 );
 
-const StyledActions = styled.div(
+const StyledActions = styled.ul(
   () => css`
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
     padding-top: 0px;
@@ -104,7 +107,8 @@ const StyledActions = styled.div(
   `,
 );
 
-export const ContactCard = React.forwardRef<HTMLDivElement, ContactCardProps>(
+/** Displays a contact card with a profile picture, title, and description, along with a set of action buttons for interacting with the contact. */
+export const ContactCard = React.forwardRef<HTMLElement, ContactCardProps>(
   function ContactCard(
     {
       title = "Primary Contact",
@@ -115,7 +119,7 @@ export const ContactCard = React.forwardRef<HTMLDivElement, ContactCardProps>(
     ref,
   ) {
     return (
-      <StyledRoot {...rest} ref={ref}>
+      <StyledRoot aria-label="Primary Contact" {...rest} ref={ref}>
         <StyledContent>
           <ProfilePicture size={"L"} />
           <StyledFrame57>
@@ -127,7 +131,9 @@ export const ContactCard = React.forwardRef<HTMLDivElement, ContactCardProps>(
         </StyledContent>
         <StyledActions>
           {actions?.map((item, index) => (
-            <ButtonPrimary key={index} {...item} />
+            <li key={index}>
+              <ButtonPrimary {...item} />
+            </li>
           ))}
         </StyledActions>
       </StyledRoot>

@@ -92,13 +92,22 @@ const StyledLabel2 = styled.div(
   `,
 );
 
+/** A bar graph component that visually represents a progress value (0–100) with an associated monetary amount label and a descriptive text label below. */
 export const BarGraph = React.forwardRef<HTMLDivElement, BarGraphProps>(
   function BarGraph(
     { amount = "€10k", label = "Label", progress = 10, ...rest },
     ref,
   ) {
     return (
-      <StyledRoot {...rest} ref={ref} $progress={progress}>
+      <StyledRoot
+        role="progressbar"
+        aria-valuenow={progress}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        {...rest}
+        ref={ref}
+        $progress={progress}
+      >
         <Styled10 $progress={progress}>
           <Styled10k>{amount}</Styled10k>
         </Styled10>

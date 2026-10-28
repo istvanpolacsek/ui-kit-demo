@@ -67,6 +67,7 @@ const StyledRoot = styled.div<{ $size: "L" | "S" }>(
 const DEFAULT_IMAGE =
   "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><rect width='200' height='200' fill='%23c7d2e0'/><circle cx='100' cy='80' r='36' fill='%238a9bb3'/><ellipse cx='100' cy='190' rx='70' ry='60' fill='%238a9bb3'/></svg>";
 
+/** Displays a user's profile picture/avatar in two size variants (Large and Small). Renders as a semantic image element representing a person's identity. */
 export const ProfilePicture = React.forwardRef<
   HTMLDivElement,
   ProfilePictureProps
@@ -75,7 +76,13 @@ export const ProfilePicture = React.forwardRef<
   ref,
 ) {
   return (
-    <StyledRoot {...rest} ref={ref} $size={size}>
+    <StyledRoot
+      role="img"
+      aria-label="User profile picture"
+      {...rest}
+      ref={ref}
+      $size={size}
+    >
       {children}
     </StyledRoot>
   );

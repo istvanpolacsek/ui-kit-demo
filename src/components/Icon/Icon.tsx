@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { SVG_MARKUP } from "./Icon.markup";
 
 export interface IconProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"span">,
   "iconName" | "children" | "dangerouslySetInnerHTML"
 > {
   iconName?:
@@ -270,13 +270,14 @@ export interface IconProps extends Omit<
     | "zoom-out";
 }
 
-const StyledRoot = styled.div(
+const StyledRoot = styled.span(
   () => css`
     display: inline-flex;
   `,
 );
 
-export const Icon = React.forwardRef<HTMLDivElement, IconProps>(function Icon(
+/** Vector artwork rendered from exported SVG assets. */
+export const Icon = React.forwardRef<HTMLSpanElement, IconProps>(function Icon(
   { iconName = "anchor", ...rest },
   ref,
 ) {

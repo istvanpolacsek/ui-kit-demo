@@ -31,7 +31,7 @@ const StyledRoot = styled.div(
   `,
 );
 
-const StyledLabel = styled.div(
+const StyledLabel = styled.label(
   ({ theme }) => css`
     color: ${theme["Text"]["Primary"]};
     font-family: "Inter Tight";
@@ -41,7 +41,7 @@ const StyledLabel = styled.div(
   `,
 );
 
-const Styled00k = styled.div(
+const Styled00k = styled.span(
   ({ theme }) => css`
     color: ${theme["Text"]["Primary"]};
     font-family: "Inter Tight";
@@ -51,13 +51,14 @@ const Styled00k = styled.div(
   `,
 );
 
+/** Displays a labeled progress indicator with a numeric amount, typically used to show progress toward a goal or budget (e.g., fundraising, spending limits). */
 export const Progress = React.forwardRef<HTMLDivElement, ProgressProps>(
   function Progress(
     { label = "Label", amount = "€00k", progress = 0, ...rest },
     ref,
   ) {
     return (
-      <StyledRoot {...rest} ref={ref}>
+      <StyledRoot role="group" aria-label="Progress" {...rest} ref={ref}>
         <StyledLabel>{label}</StyledLabel>
         <ProgressBar progress={progress} />
         <Styled00k>{amount}</Styled00k>

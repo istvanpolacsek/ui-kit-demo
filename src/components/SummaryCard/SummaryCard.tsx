@@ -7,7 +7,7 @@ import { ProfilePicture, type ProfilePictureProps } from "../ProfilePicture";
 import { SummaryItem, type SummaryItemProps } from "../SummaryItem";
 
 export interface SummaryCardProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"article">,
   | "summary"
   | "client"
   | "contact"
@@ -39,7 +39,7 @@ export interface SummaryCardProps extends Omit<
   size?: ProfilePictureProps["size"];
 }
 
-const StyledRoot = styled.div(
+const StyledRoot = styled.article(
   ({ theme }) => css`
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@ const StyledRoot = styled.div(
   `,
 );
 
-const StyledInfo = styled.div(
+const StyledInfo = styled.section(
   () => css`
     display: flex;
     flex-direction: column;
@@ -75,7 +75,7 @@ const StyledInfo = styled.div(
   `,
 );
 
-const StyledSummary = styled.div(
+const StyledSummary = styled.h3(
   () => css`
     color: #4b1e04;
     font-family: "PT Serif";
@@ -86,7 +86,7 @@ const StyledSummary = styled.div(
 );
 
 const StyledNetflixIsEvaluating3VendorsOurPricingIsCompetitiveButLegalReviewMayDelayTimeline =
-  styled.div(
+  styled.p(
     () => css`
       color: #4b1e04;
       font-family: "Inter Tight";
@@ -212,7 +212,7 @@ const StyledProgress = styled.div(
   `,
 );
 
-const StyledQuality = styled.div(
+const StyledQuality = styled.h4(
   () => css`
     color: #4b1e04;
     font-family: "Inter Tight";
@@ -293,8 +293,11 @@ const StyledPhillip = styled.div(
   `,
 );
 
-const StyledSummaryItems = styled.div(
+const StyledSummaryItems = styled.ul(
   () => css`
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
     padding-top: 0px;
@@ -315,7 +318,8 @@ const StyledSummaryItems = styled.div(
   `,
 );
 
-export const SummaryCard = React.forwardRef<HTMLDivElement, SummaryCardProps>(
+/** A summary card displaying client and contact information, a quality progress indicator, owner details, and a list of summary items. Used to provide a concise overview of a client engagement or deal. */
+export const SummaryCard = React.forwardRef<HTMLElement, SummaryCardProps>(
   function SummaryCard(
     {
       summary = "Netflix is evaluating 3 vendors. Our pricing is competitive but legal review may delay timeline.",
@@ -337,7 +341,7 @@ export const SummaryCard = React.forwardRef<HTMLDivElement, SummaryCardProps>(
     ref,
   ) {
     return (
-      <StyledRoot {...rest} ref={ref}>
+      <StyledRoot role="region" aria-label="Summary Card" {...rest} ref={ref}>
         <StyledInfo>
           <StyledSummary>{"Summary"}</StyledSummary>
           <StyledNetflixIsEvaluating3VendorsOurPricingIsCompetitiveButLegalReviewMayDelayTimeline>
@@ -378,7 +382,9 @@ export const SummaryCard = React.forwardRef<HTMLDivElement, SummaryCardProps>(
         </StyledOwner>
         <StyledSummaryItems>
           {summaryItems?.map((item, index) => (
-            <SummaryItem key={index} {...item} />
+            <li key={index}>
+              <SummaryItem {...item} />
+            </li>
           ))}
         </StyledSummaryItems>
       </StyledRoot>

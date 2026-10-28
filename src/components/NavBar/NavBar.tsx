@@ -3,13 +3,16 @@ import styled, { css } from "styled-components";
 import { Icon } from "../Icon";
 import { Tab, type TabProps } from "../Tab";
 import { SearchBar } from "../SearchBar";
+import { useMenu } from "./NavBar.menu";
 
 export interface NavBarProps extends Omit<
   React.ComponentPropsWithoutRef<"div">,
-  "type" | "items"
+  "type" | "items" | "onClose"
 > {
   type?: "Detail" | "Default";
   items?: TabProps[];
+  /** Called when the user presses Escape in the menu. */
+  onClose?: () => void;
 }
 
 const StyledRoot = styled.div<{ $type: "Detail" | "Default" }>(
@@ -160,10 +163,12 @@ const StyledItems2 = styled.div(
   `,
 );
 
+/** A navigation bar component that provides top-level navigation tabs and optional search functionality. Supports two variants: Default (with icon and tab items) and Detail (with shared file tabs). */
 export const NavBar = React.forwardRef<HTMLDivElement, NavBarProps>(
-  function NavBar({ type = "Default", items, ...rest }, ref) {
+  function NavBar({ type = "Default", items, onClose, ...rest }, ref) {
+    const menu = useMenu({ onClose, forwardedRef: ref });
     return (
-      <StyledRoot {...rest} ref={ref} $type={type}>
+      <StyledRoot role="menu" {...rest} ref={menu.ref} $type={type}>
         {type === "Default" && (
           <StyledIcon>
             {type === "Default" && <Icon iconName={"layout-sidebar"} />}

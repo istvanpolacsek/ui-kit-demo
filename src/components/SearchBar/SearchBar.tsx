@@ -70,6 +70,7 @@ const StyledSearchInThisDeal = styled.input(
   `,
 );
 
+/** A search bar component that allows users to search within a deal. Contains a search icon and a placeholder text input field. */
 export const SearchBar = React.forwardRef<HTMLInputElement, SearchBarProps>(
   function SearchBar({ placeholder = "Search in this deal", ...rest }, ref) {
     return (

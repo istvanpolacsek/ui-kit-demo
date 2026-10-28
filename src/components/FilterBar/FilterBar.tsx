@@ -3,14 +3,17 @@ import styled, { css } from "styled-components";
 import { FilterItem, type FilterItemProps } from "../FilterItem";
 
 export interface FilterBarProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"ul">,
   "items"
 > {
   items?: FilterItemProps[];
 }
 
-const StyledRoot = styled.div(
+const StyledRoot = styled.ul(
   () => css`
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
     padding-top: 0px;
@@ -25,7 +28,7 @@ const StyledRoot = styled.div(
   `,
 );
 
-const StyledItems = styled.div(
+const StyledItems = styled.li(
   () => css`
     display: flex;
     flex-direction: row;
@@ -43,10 +46,11 @@ const StyledItems = styled.div(
   `,
 );
 
-export const FilterBar = React.forwardRef<HTMLDivElement, FilterBarProps>(
+/** A horizontal filter bar that renders a list of filter items, allowing users to select or toggle filters to refine content. */
+export const FilterBar = React.forwardRef<HTMLUListElement, FilterBarProps>(
   function FilterBar({ items, ...rest }, ref) {
     return (
-      <StyledRoot {...rest} ref={ref}>
+      <StyledRoot role="group" aria-label="Filter options" {...rest} ref={ref}>
         <StyledItems>
           {items?.map((item, index) => (
             <FilterItem key={index} {...item} />

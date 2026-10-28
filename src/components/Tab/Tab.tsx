@@ -2,14 +2,14 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 export interface TabProps extends Omit<
-  React.ComponentPropsWithoutRef<"div">,
+  React.ComponentPropsWithoutRef<"button">,
   "label" | "state"
 > {
   label?: string;
   state?: "Default" | "Selected";
 }
 
-const StyledRoot = styled.div<{ $state: "Default" | "Selected" }>(
+const StyledRoot = styled.button<{ $state: "Default" | "Selected" }>(
   ({ theme, $state }) => css`
     display: flex;
     flex-direction: row;
@@ -52,7 +52,7 @@ const StyledRoot = styled.div<{ $state: "Default" | "Selected" }>(
   `,
 );
 
-const StyledDeals = styled.div<{ $state: "Default" | "Selected" }>(
+const StyledDeals = styled.span<{ $state: "Default" | "Selected" }>(
   ({ theme, $state }) => css`
     ${(() => {
       switch ($state) {
@@ -75,12 +75,19 @@ const StyledDeals = styled.div<{ $state: "Default" | "Selected" }>(
   `,
 );
 
-export const Tab = React.forwardRef<HTMLDivElement, TabProps>(function Tab(
+/** A tab component that represents a single tab item within a tab bar. Supports 'Default' and 'Selected' states to indicate the active tab. */
+export const Tab = React.forwardRef<HTMLButtonElement, TabProps>(function Tab(
   { label = "Deals", state = "Selected", ...rest },
   ref,
 ) {
   return (
-    <StyledRoot {...rest} ref={ref} $state={state}>
+    <StyledRoot
+      role="tab"
+      aria-label="Deals"
+      {...rest}
+      ref={ref}
+      $state={state}
+    >
       <StyledDeals $state={state}>{label}</StyledDeals>
     </StyledRoot>
   );
