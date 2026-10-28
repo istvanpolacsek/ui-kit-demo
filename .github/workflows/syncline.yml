@@ -1,0 +1,114 @@
+# Added by the Syncline Figma sync. Edit freely: later syncs never overwrite this file.
+name: syncline
+
+on:
+  pull_request:
+    paths:
+      - '.figma/**'
+      - 'syncline.config.json'
+
+# A newer push to the PR (a re-sync rewrites the branch) supersedes a running job.
+concurrency:
+  group: syncline-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write # commits the generated files to the PR branch
+  id-token: write # lets the CLI request a GitHub OIDC token (enrichment)
+
+jobs:
+  generate:
+    # Pull requests from forks get a read-only token and no OIDC token.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      handoff: ${{ steps.commit.outputs.handoff }}
+    env:
+      SYNCLINE_URL: 'https://app.syncline.design'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          # The push below uses its own token, not the one checkout would leave behind.
+          persist-credentials: false
+      # This job pushes the generated files as the GitHub App, and GitHub starts a run for that
+      # push too. It has nothing left to do, so every step below is skipped for it.
+      - name: Skip our own commit
+        id: own
+        run: |
+          case "$(git log -1 --format=%s)" in
+            "chore: regenerate from Figma"*) echo "skip=true" >> "$GITHUB_OUTPUT" ;;
+          esac
+      - uses: actions/setup-node@v4
+        if: steps.own.outputs.skip != 'true'
+        with:
+          node-version: 24
+      # The CLI formats its output with your own prettier config, so install your dependencies.
+      # The lockfile is searched upwards from the output folder; Yarn is chosen by the repo
+      # (corepack reads "packageManager"; a Berry repo without it gets the current stable Yarn,
+      # never the runner's global Yarn 1).
+      - name: Install dependencies
+        if: steps.own.outputs.skip != 'true'
+        run: |
+          root="$PWD"
+          d="$(cd '.' && pwd)"
+          while [ "$d" != "$root" ] && [ ! -f "$d/yarn.lock" ] && [ ! -f "$d/pnpm-lock.yaml" ] && [ ! -f "$d/package-lock.json" ]; do d="$(dirname "$d")"; done
+          cd "$d"
+          if [ -f yarn.lock ]; then
+            corepack enable
+            if [ -f .yarnrc.yml ] && ! grep -q '"packageManager"' package.json 2>/dev/null; then
+              corepack prepare yarn@stable --activate
+            fi
+            yarn --version
+            if [ -f .yarnrc.yml ] || grep -q '^__metadata:' yarn.lock; then yarn install --immutable
+            else yarn install --frozen-lockfile
+            fi
+          elif [ -f pnpm-lock.yaml ]; then corepack enable && pnpm install --frozen-lockfile
+          elif [ -f package-lock.json ]; then npm ci
+          fi
+      # --ci makes generated code that does not even parse fail the job (nothing broken is pushed).
+      - name: Generate components
+        if: steps.own.outputs.skip != 'true'
+        shell: bash
+        run: npx --yes @syncline-design/cli@latest generate --ci 2>&1 | tee "$RUNNER_TEMP/generate.log"
+      # Tells the operator why generation failed, so it can be fixed for everyone.
+      - name: Report generation failure
+        if: steps.own.outputs.skip != 'true' && failure()
+        continue-on-error: true
+        run: npx --yes @syncline-design/cli@latest ci report-failure --step generate --log "$RUNNER_TEMP/generate.log"
+      # A push with the built-in GITHUB_TOKEN is made by a bot actor: GitHub then creates a run
+      # for it and holds it for approval. A push as the GitHub App is not, and your own checks
+      # run on the generated commit. Without a token the next step falls back to GITHUB_TOKEN.
+      - name: Get push token
+        id: push
+        if: steps.own.outputs.skip != 'true'
+        continue-on-error: true
+        run: npx --yes @syncline-design/cli@latest ci push-token
+      # The push must be the last thing this job does: it starts a new run, which cancels this one.
+      - name: Commit generated files
+        id: commit
+        if: steps.own.outputs.skip != 'true'
+        env:
+          PUSH_TOKEN: ${{ steps.push.outputs.token }}
+          PUSH_NAME: ${{ steps.push.outputs.name }}
+          PUSH_EMAIL: ${{ steps.push.outputs.email }}
+          FALLBACK_TOKEN: ${{ github.token }}
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          git add -A -- . ':(exclude)**/node_modules/**' ':(exclude)**/storybook-static/**'
+          if git diff --cached --quiet; then
+            echo "Generated files are up to date."
+          elif [ -n "$PUSH_TOKEN" ]; then
+            git config user.name "$PUSH_NAME"
+            git config user.email "$PUSH_EMAIL"
+            git commit -m "chore: regenerate from Figma"
+            git push "https://x-access-token:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:refs/heads/${HEAD_REF}"
+            echo "handoff=true" >> "$GITHUB_OUTPUT"
+          else
+            # [skip ci] keeps GitHub from creating the run it would hold for approval.
+            git config user.name "syncline[bot]"
+            git config user.email "syncline[bot]@users.noreply.github.com"
+            git commit -m "chore: regenerate from Figma [skip ci]"
+            git push "https://x-access-token:${FALLBACK_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:refs/heads/${HEAD_REF}"
+          fi
