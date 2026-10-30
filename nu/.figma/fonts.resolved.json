@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "fonts": [
+    {
+      "family": "Inconsolata",
+      "provider": "fontsource",
+      "id": "inconsolata",
+      "variable": true,
+      "category": "monospace",
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "normal"
+      ]
+    },
+    {
+      "family": "Roboto",
+      "provider": "fontsource",
+      "id": "roboto",
+      "variable": true,
+      "category": "sans-serif",
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ]
+    }
+  ],
+  "unresolved": [
+    "Georgia"
+  ]
+}

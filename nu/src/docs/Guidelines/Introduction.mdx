@@ -1,0 +1,51 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Guidelines/Introduction" />
+
+# nu
+
+A React component library generated from the Figma design file. Components, tokens and these docs are produced by the Syncline pipeline; do not edit generated files by hand — change the design and re-sync.
+
+## Components
+
+- **↳ Icon**: 6954 components
+- **DS Components**: \.Page Components, \.Token Badge
+- **↳ Color**: \.Color Swatch
+- **↳ Button**: \.Button_Master, Button, \.Link_Button_Master, Link_Button
+- **↳ Controls**: Radio, Radio Option, Checkbox, Checkbox Option, Checkbox Legal, Chevron Control, Switch, Video Control
+- **↳ Chips**: Chips
+- **↳ Tags**: Tags
+- **↳ Input Field**: Placeholder Atoms \/ Web, Desktop \/ Text Field, Desktop \/ Text Field \/ Country Code, Desktop, Placeholder Atoms \/ Mobile, Mobile \/ Text Field \/ Country Code, Mobile \/ Text Field \/ Country Code, Mobile, \.Desktop\-Textfield\/Master, \.Mobile\-Textfield\/Master
+- **↳ Dropdown**: Placeholder Text \/ Web, optionWeb, Desktop \/ Dropdown, Placeholder Text \/ Mobile, optionMobile, Mobile \/ Dropdown, \.Desktop\-Dropdown\/Master, \.Mobile\-dropdown\/Master
+- **↳ Avatar \/ Avatar Group**: Avatar, Avatar Group
+- **↳ Search bar**: Search Bar
+- **↳ Filters**: Filter Dropdown, Filter Item, Filter bar, Filter Template
+- **↳ Accordion**: Accordion, Course Accordion
+- **↳ Toast**: Toast
+- **↳ Tabs**: Tabs, Tab Nav Bar
+- **↳ Scroll Bar**: Scroll Bar
+- **↳ Date Picker**: Date Picker Blocks, Date Picker
+- **↳ Tooltip**: Plain Tooltip, Rich Tooltip
+- **↳ Dialog**: Dialog
+- **↳ Pagination**: Pagination Number, Pagination
+- **↳ Logos**: Logo\-Color
+- **↳ Navigation**: Footer, Footer, Program Items, Nav Bar Link, Nav Bar, Nav Bar, Status bar
+- **↳ Section**: Hero Frame, Hero with Icons, Testimonial Slider, Media Slider Section, Photo Section, FAQs Section, CTA Banner
+- **↳ Widgets**: Homepage Search Widget, Info widget, Careers Widget, Accreditation Widget, CTA Widget
+- **↳ Cards**: Card Testimonial, Card Testimonial Video, Card Program, Card Location, Card Link, Card General, Card Icon, Card Bulletpoint, Card Podcast
+- **↳ Media**: Side Image, Media for Sliders
+- **↳ Bulletpoints**: Default Bulletpoint, Icon Bulletpoint, Hero Bulletpoint
+- **↳ Form**: Contact Data, Studies Status, Employment Status, Form field, Form field
+- **↳ Chat Assistance**: Chat bubble, Nav Bar
+
+## Setup
+
+Wrap your app in the generated provider so components can read design tokens:
+
+```tsx
+import { ThemeProvider } from "nu/providers/ThemeProvider";
+
+<ThemeProvider>
+  <App />
+</ThemeProvider>;
+```
