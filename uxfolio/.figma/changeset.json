@@ -1,0 +1,2802 @@
+{
+  "synced_at": "2026-10-30T13:36:09.806Z",
+  "synced_sha": "3fea5e89730f38f8975228d047dfa22f45344731",
+  "dirty_base": true,
+  "summary": {
+    "added": 557,
+    "modified": 0,
+    "removed": 0,
+    "unchanged": 0
+  },
+  "changes": {
+    "added": [
+      {
+        "id": "64:8463",
+        "name": "_Asset heading",
+        "type": "component"
+      },
+      {
+        "id": "64:8749",
+        "name": "_Asset subheading",
+        "type": "component"
+      },
+      {
+        "id": "41:2193",
+        "name": "Primary button / Neutral",
+        "type": "component"
+      },
+      {
+        "id": "43:3086",
+        "name": "Primary button / Destructive",
+        "type": "component"
+      },
+      {
+        "id": "1673:21411",
+        "name": "Primary button / Subtle",
+        "type": "component"
+      },
+      {
+        "id": "4405:16054",
+        "name": "Primary button with icon / Neutral",
+        "type": "component"
+      },
+      {
+        "id": "4405:16104",
+        "name": "Primary button with icon / Destructive",
+        "type": "component"
+      },
+      {
+        "id": "4405:16154",
+        "name": "Primary button with icon / Subtle",
+        "type": "component"
+      },
+      {
+        "id": "45:3970",
+        "name": "Icon only primary button / Neutral",
+        "type": "component"
+      },
+      {
+        "id": "45:4020",
+        "name": "Icon only primary button / Destructive",
+        "type": "component"
+      },
+      {
+        "id": "45:4314",
+        "name": "Icon only primary button / Subtle",
+        "type": "component"
+      },
+      {
+        "id": "41:2297",
+        "name": "Secondary button / Neutral",
+        "type": "component"
+      },
+      {
+        "id": "1327:16288",
+        "name": "Secondary button / Destructive",
+        "type": "component"
+      },
+      {
+        "id": "45:4216",
+        "name": "Icon only secondary button / Neutral",
+        "type": "component"
+      },
+      {
+        "id": "828:15081",
+        "name": "Tertiary button / Neutral",
+        "type": "component"
+      },
+      {
+        "id": "828:15116",
+        "name": "Tertiary button / Destructive",
+        "type": "component"
+      },
+      {
+        "id": "828:15079",
+        "name": "Tertiary button / Subtle",
+        "type": "component"
+      },
+      {
+        "id": "3371:1759",
+        "name": "Icon-only tertiary button / Neutral",
+        "type": "component"
+      },
+      {
+        "id": "3371:1883",
+        "name": "Icon-only tertiary button / Subtle",
+        "type": "component"
+      },
+      {
+        "id": "41:2517",
+        "name": "Link button",
+        "type": "component"
+      },
+      {
+        "id": "121:2338",
+        "name": "Icon button",
+        "type": "component"
+      },
+      {
+        "id": "339:18942",
+        "name": "Icon only primary toggle / Subtle",
+        "type": "component"
+      },
+      {
+        "id": "114:2760",
+        "name": "Icon only secondary toggle / Neutral",
+        "type": "component"
+      },
+      {
+        "id": "2406:26992",
+        "name": "Micro button",
+        "type": "component"
+      },
+      {
+        "id": "2114:999",
+        "name": "Copy link",
+        "type": "component"
+      },
+      {
+        "id": "2137:10303",
+        "name": "Copy link / Legacy",
+        "type": "component"
+      },
+      {
+        "id": "42:2954",
+        "name": "FAB / Neutral",
+        "type": "component"
+      },
+      {
+        "id": "1448:28209",
+        "name": "FAB / Subtle",
+        "type": "component"
+      },
+      {
+        "id": "43:3277",
+        "name": "FAB / Destructive",
+        "type": "component"
+      },
+      {
+        "id": "69:14515",
+        "name": "Navigation button / Editor nav bar",
+        "type": "component"
+      },
+      {
+        "id": "530:10481",
+        "name": "Navigation button / Account page",
+        "type": "component"
+      },
+      {
+        "id": "1786:18930",
+        "name": "Navigation button / Back",
+        "type": "component"
+      },
+      {
+        "id": "3134:33065",
+        "name": "Add page or social button",
+        "type": "component"
+      },
+      {
+        "id": "43:3424",
+        "name": "Avatar",
+        "type": "component"
+      },
+      {
+        "id": "43:3805",
+        "name": "Toolbar button / Neutral",
+        "type": "component"
+      },
+      {
+        "id": "3631:18762",
+        "name": "Toolbar button / Color",
+        "type": "component"
+      },
+      {
+        "id": "240:48210",
+        "name": "Toolbar button / Destructive",
+        "type": "component"
+      },
+      {
+        "id": "248:16397",
+        "name": "Toolbar button / Status",
+        "type": "component"
+      },
+      {
+        "id": "48:4513",
+        "name": "Toggle / Switch",
+        "type": "component"
+      },
+      {
+        "id": "48:4518",
+        "name": "Toggle / Radio box",
+        "type": "component"
+      },
+      {
+        "id": "48:4516",
+        "name": "Toggle / Check box",
+        "type": "component"
+      },
+      {
+        "id": "51:4720",
+        "name": "Tab / Small",
+        "type": "component"
+      },
+      {
+        "id": "135:6500",
+        "name": "Tab / Large",
+        "type": "component"
+      },
+      {
+        "id": "57:2404",
+        "name": "Option bar item",
+        "type": "component"
+      },
+      {
+        "id": "58:2995",
+        "name": "Slider thumb",
+        "type": "component"
+      },
+      {
+        "id": "2406:11166",
+        "name": "Add color button",
+        "type": "component"
+      },
+      {
+        "id": "52:5780",
+        "name": "Text field / Labeled",
+        "type": "component"
+      },
+      {
+        "id": "4222:21801",
+        "name": "Text field / Search",
+        "type": "component"
+      },
+      {
+        "id": "56:748",
+        "name": "Drop list / Labeled",
+        "type": "component"
+      },
+      {
+        "id": "53:5929",
+        "name": "Drop list / Labelless",
+        "type": "component"
+      },
+      {
+        "id": "69:15366",
+        "name": "Drop list / Portfolio",
+        "type": "component"
+      },
+      {
+        "id": "104:2363",
+        "name": "Drop list / Color swatch",
+        "type": "component"
+      },
+      {
+        "id": "56:912",
+        "name": "Multi select",
+        "type": "component"
+      },
+      {
+        "id": "4257:29304",
+        "name": "Multi select / Acknowledgement",
+        "type": "component"
+      },
+      {
+        "id": "56:913",
+        "name": "Multi select",
+        "type": "component"
+      },
+      {
+        "id": "56:988",
+        "name": "Option chip",
+        "type": "component"
+      },
+      {
+        "id": "3397:6468",
+        "name": "Font size picker / Default",
+        "type": "component"
+      },
+      {
+        "id": "3406:21836",
+        "name": "Font size picker / Platform",
+        "type": "component"
+      },
+      {
+        "id": "3406:19830",
+        "name": "Palette swatch selector / Default",
+        "type": "component"
+      },
+      {
+        "id": "3406:10632",
+        "name": "Palette swatch selector / Only swatch",
+        "type": "component"
+      },
+      {
+        "id": "4058:25774",
+        "name": "Color selector",
+        "type": "component"
+      },
+      {
+        "id": "5412:32102",
+        "name": "Color selector / Only color",
+        "type": "component"
+      },
+      {
+        "id": "57:2030",
+        "name": "Option item / Section",
+        "type": "component"
+      },
+      {
+        "id": "220:21966",
+        "name": "Option item / Case study",
+        "type": "component"
+      },
+      {
+        "id": "57:1272",
+        "name": "Option box / Modular",
+        "type": "component"
+      },
+      {
+        "id": "4809:18276",
+        "name": "Option box / Large horizontal / Text position",
+        "type": "component"
+      },
+      {
+        "id": "4863:6876",
+        "name": "Option box / Large horizontal / Image height consistency",
+        "type": "component"
+      },
+      {
+        "id": "4809:18330",
+        "name": "Option box / Large horizontal / Text position",
+        "type": "component"
+      },
+      {
+        "id": "5094:22438",
+        "name": "Option box / Large horizontal / Move section",
+        "type": "component"
+      },
+      {
+        "id": "6749:27253",
+        "name": "Option box / Large horizontal / Animated text layout",
+        "type": "component"
+      },
+      {
+        "id": "6471:7949",
+        "name": "Option box / Large horizontal / Cards section layouts",
+        "type": "component"
+      },
+      {
+        "id": "4809:18642",
+        "name": "Option box / Medium square / Aspect ratio",
+        "type": "component"
+      },
+      {
+        "id": "4809:18717",
+        "name": "Option box / Medium square / Section alignment",
+        "type": "component"
+      },
+      {
+        "id": "4814:33317",
+        "name": "Option box / Medium square / Animation",
+        "type": "component"
+      },
+      {
+        "id": "4809:18821",
+        "name": "Option box / Small horizontal / Background",
+        "type": "component"
+      },
+      {
+        "id": "4809:18921",
+        "name": "Option box / Small horizontal / Nav position",
+        "type": "component"
+      },
+      {
+        "id": "4809:18986",
+        "name": "Option box / Small horizontal / Menu item",
+        "type": "component"
+      },
+      {
+        "id": "4809:19042",
+        "name": "Option box / Small / Thumbnail devices",
+        "type": "component"
+      },
+      {
+        "id": "4809:19089",
+        "name": "Option box / Small / Front camera",
+        "type": "component"
+      },
+      {
+        "id": "4809:19114",
+        "name": "Option box / Small / Thumbnail device color",
+        "type": "component"
+      },
+      {
+        "id": "4809:19133",
+        "name": "Option box / Small / Thumbnail device corner",
+        "type": "component"
+      },
+      {
+        "id": "4814:28052",
+        "name": "Option box / Small / Device shadow",
+        "type": "component"
+      },
+      {
+        "id": "4809:19154",
+        "name": "Option box / Small / Divider line weight",
+        "type": "component"
+      },
+      {
+        "id": "4809:19194",
+        "name": "Option box / Small / Device styles",
+        "type": "component"
+      },
+      {
+        "id": "4809:19239",
+        "name": "Option box / Small / Image shape",
+        "type": "component"
+      },
+      {
+        "id": "829:25165",
+        "name": "Type selector",
+        "type": "component"
+      },
+      {
+        "id": "4023:23087",
+        "name": "Small type selector",
+        "type": "component"
+      },
+      {
+        "id": "135:4026",
+        "name": "Tab bar",
+        "type": "component"
+      },
+      {
+        "id": "57:2861",
+        "name": "Option bar / Labeled",
+        "type": "component"
+      },
+      {
+        "id": "57:2571",
+        "name": "Option bar / Only bar",
+        "type": "component"
+      },
+      {
+        "id": "58:3901",
+        "name": "Option slider / Labeled",
+        "type": "component"
+      },
+      {
+        "id": "58:3898",
+        "name": "Option slider / Labelless",
+        "type": "component"
+      },
+      {
+        "id": "58:3460",
+        "name": "Option slider / Only slider",
+        "type": "component"
+      },
+      {
+        "id": "2455:27971",
+        "name": "Option toggle / labeled",
+        "type": "component"
+      },
+      {
+        "id": "2455:27938",
+        "name": "Option toggle / Toggle item",
+        "type": "component"
+      },
+      {
+        "id": "59:4029",
+        "name": "File zone",
+        "type": "component"
+      },
+      {
+        "id": "53:7018",
+        "name": "Module divider",
+        "type": "component"
+      },
+      {
+        "id": "4750:33806",
+        "name": "Module divider / Only divider",
+        "type": "component"
+      },
+      {
+        "id": "263:12424",
+        "name": "Section divider",
+        "type": "component"
+      },
+      {
+        "id": "553:10330",
+        "name": "Scroll bar",
+        "type": "component"
+      },
+      {
+        "id": "220:22895",
+        "name": "Menu item / Account",
+        "type": "component"
+      },
+      {
+        "id": "220:22927",
+        "name": "Menu item / Design sidebar",
+        "type": "component"
+      },
+      {
+        "id": "220:23007",
+        "name": "Menu item / Settings sidebar",
+        "type": "component"
+      },
+      {
+        "id": "220:23083",
+        "name": "List item / Dropdown",
+        "type": "component"
+      },
+      {
+        "id": "220:23103",
+        "name": "List item / Option",
+        "type": "component"
+      },
+      {
+        "id": "6449:16343",
+        "name": "List item/Section",
+        "type": "component"
+      },
+      {
+        "id": "220:27793",
+        "name": "List item / Tab",
+        "type": "component"
+      },
+      {
+        "id": "829:24706",
+        "name": "List item / Type",
+        "type": "component"
+      },
+      {
+        "id": "4023:23405",
+        "name": "List item / Small type",
+        "type": "component"
+      },
+      {
+        "id": "220:23128",
+        "name": "List item / Font preset",
+        "type": "component"
+      },
+      {
+        "id": "220:23145",
+        "name": "List item / Font custom",
+        "type": "component"
+      },
+      {
+        "id": "220:23178",
+        "name": "List item / Color preset",
+        "type": "component"
+      },
+      {
+        "id": "220:23207",
+        "name": "List item / Custom color",
+        "type": "component"
+      },
+      {
+        "id": "6856:28083",
+        "name": "List item / Custom cursors",
+        "type": "component"
+      },
+      {
+        "id": "220:23224",
+        "name": "List item / Page",
+        "type": "component"
+      },
+      {
+        "id": "3162:21069",
+        "name": "List item / Addable page",
+        "type": "component"
+      },
+      {
+        "id": "3178:20910",
+        "name": "List item / Social media icons",
+        "type": "component"
+      },
+      {
+        "id": "220:23241",
+        "name": "List item / Page add",
+        "type": "component"
+      },
+      {
+        "id": "220:23263",
+        "name": "List item / Section",
+        "type": "component"
+      },
+      {
+        "id": "220:23280",
+        "name": "List item / Domain",
+        "type": "component"
+      },
+      {
+        "id": "220:23305",
+        "name": "List item / Idea",
+        "type": "component"
+      },
+      {
+        "id": "220:23319",
+        "name": "List item / Step",
+        "type": "component"
+      },
+      {
+        "id": "5058:42028",
+        "name": "List item / Add module",
+        "type": "component"
+      },
+      {
+        "id": "5096:8486",
+        "name": "Grid item / Case study selector",
+        "type": "component"
+      },
+      {
+        "id": "4254:23091",
+        "name": "Bento item",
+        "type": "component"
+      },
+      {
+        "id": "220:23343",
+        "name": "Header / Popover panel",
+        "type": "component"
+      },
+      {
+        "id": "220:23354",
+        "name": "Header / Sidebar",
+        "type": "component"
+      },
+      {
+        "id": "220:23359",
+        "name": "Header / Modal",
+        "type": "component"
+      },
+      {
+        "id": "220:23381",
+        "name": "Header / Non-editor page",
+        "type": "component"
+      },
+      {
+        "id": "2406:11207",
+        "name": "Subheader / Tiny",
+        "type": "component"
+      },
+      {
+        "id": "220:23388",
+        "name": "Subheader / Small",
+        "type": "component"
+      },
+      {
+        "id": "220:23396",
+        "name": "Subheader / Medium",
+        "type": "component"
+      },
+      {
+        "id": "220:23406",
+        "name": "Subheader / Large",
+        "type": "component"
+      },
+      {
+        "id": "4225:5679",
+        "name": "Subheader / Non-editor page",
+        "type": "component"
+      },
+      {
+        "id": "220:23420",
+        "name": "Option grid / Simple",
+        "type": "component"
+      },
+      {
+        "id": "2406:20780",
+        "name": "Option grid / Color style",
+        "type": "component"
+      },
+      {
+        "id": "220:23439",
+        "name": "Option grid / Section",
+        "type": "component"
+      },
+      {
+        "id": "220:23493",
+        "name": "Option grid / Case study",
+        "type": "component"
+      },
+      {
+        "id": "220:23508",
+        "name": "Option list / Simple",
+        "type": "component"
+      },
+      {
+        "id": "220:23523",
+        "name": "Option list / Array",
+        "type": "component"
+      },
+      {
+        "id": "829:25623",
+        "name": "Image manager / Single",
+        "type": "component"
+      },
+      {
+        "id": "829:25914",
+        "name": "Image manager / Multiple",
+        "type": "component"
+      },
+      {
+        "id": "829:25913",
+        "name": "Image manager / Edit item",
+        "type": "component"
+      },
+      {
+        "id": "829:25910",
+        "name": "Image manager / Reorder item",
+        "type": "component"
+      },
+      {
+        "id": "5168:32689",
+        "name": "Image manager / Thumbnail",
+        "type": "component"
+      },
+      {
+        "id": "220:23550",
+        "name": "Tab row",
+        "type": "component"
+      },
+      {
+        "id": "220:27828",
+        "name": "Tab list",
+        "type": "component"
+      },
+      {
+        "id": "1384:17510",
+        "name": "Overview card / General",
+        "type": "component"
+      },
+      {
+        "id": "4221:6654",
+        "name": "Overview card / Domain",
+        "type": "component"
+      },
+      {
+        "id": "4242:13330",
+        "name": "Setup summary / Domain connection",
+        "type": "component"
+      },
+      {
+        "id": "4242:22611",
+        "name": "Setup summary / Checkout",
+        "type": "component"
+      },
+      {
+        "id": "220:23615",
+        "name": "Message / Alert",
+        "type": "component"
+      },
+      {
+        "id": "220:23653",
+        "name": "Message / Feature CTA",
+        "type": "component"
+      },
+      {
+        "id": "220:23666",
+        "name": "Modal preview",
+        "type": "component"
+      },
+      {
+        "id": "220:32121",
+        "name": "Modal sidebar / File",
+        "type": "component"
+      },
+      {
+        "id": "220:23692",
+        "name": "Modal sidebar / Device style",
+        "type": "component"
+      },
+      {
+        "id": "220:23726",
+        "name": "Modal sidebar / Crop",
+        "type": "component"
+      },
+      {
+        "id": "220:23732",
+        "name": "Modal sidebar / Effects",
+        "type": "component"
+      },
+      {
+        "id": "220:23739",
+        "name": "Modal sidebar / Alt text",
+        "type": "component"
+      },
+      {
+        "id": "220:23746",
+        "name": "Modal sidebar / Section background",
+        "type": "component"
+      },
+      {
+        "id": "220:29953",
+        "name": "Modal sidebar / Logo colors",
+        "type": "component"
+      },
+      {
+        "id": "223:36037",
+        "name": "Modal sidebar / Thumbnail layout",
+        "type": "component"
+      },
+      {
+        "id": "3406:21948",
+        "name": "Color picker / Default",
+        "type": "component"
+      },
+      {
+        "id": "3406:21910",
+        "name": "Color picker / Embedded",
+        "type": "component"
+      },
+      {
+        "id": "4225:5657",
+        "name": "Page FAQ / Item only",
+        "type": "component"
+      },
+      {
+        "id": "4225:11641",
+        "name": "Table",
+        "type": "component"
+      },
+      {
+        "id": "4225:10738",
+        "name": "Table / Cell",
+        "type": "component"
+      },
+      {
+        "id": "4225:17439",
+        "name": "Guide",
+        "type": "component"
+      },
+      {
+        "id": "4225:17036",
+        "name": "Guide / Step",
+        "type": "component"
+      },
+      {
+        "id": "4813:15121",
+        "name": "Subscription preview / Free trial",
+        "type": "component"
+      },
+      {
+        "id": "4813:18029",
+        "name": "Subscription preview / UXfolio subscription",
+        "type": "component"
+      },
+      {
+        "id": "4249:18772",
+        "name": "Subscription preview / Domain subscription",
+        "type": "component"
+      },
+      {
+        "id": "4358:8646",
+        "name": "Subscription preview / Domain cancellation",
+        "type": "component"
+      },
+      {
+        "id": "4249:18332",
+        "name": "Subscription preview / Free trial",
+        "type": "component"
+      },
+      {
+        "id": "4247:9369",
+        "name": "Subscription preview / UXfolio subscription",
+        "type": "component"
+      },
+      {
+        "id": "4254:23153",
+        "name": "Portoflio thumbnail",
+        "type": "component"
+      },
+      {
+        "id": "5165:24455",
+        "name": "Case study thumbnail",
+        "type": "component"
+      },
+      {
+        "id": "4813:35635",
+        "name": "Embed Prompt",
+        "type": "component"
+      },
+      {
+        "id": "69:15947",
+        "name": "Overlay canvas / Homogen",
+        "type": "component"
+      },
+      {
+        "id": "42:2567",
+        "name": "Tooltip / Small",
+        "type": "component"
+      },
+      {
+        "id": "949:14218",
+        "name": "Tooltip / Medium",
+        "type": "component"
+      },
+      {
+        "id": "42:2920",
+        "name": "_Tooltip container",
+        "type": "component"
+      },
+      {
+        "id": "5058:43737",
+        "name": "Tooltip / Character limit",
+        "type": "component"
+      },
+      {
+        "id": "61:5552",
+        "name": "Branding banner",
+        "type": "component"
+      },
+      {
+        "id": "61:6012",
+        "name": "Toast / Text only",
+        "type": "component"
+      },
+      {
+        "id": "4159:15528",
+        "name": "Toast / Light / Text only",
+        "type": "component"
+      },
+      {
+        "id": "6290:11588",
+        "name": "Toast / With button",
+        "type": "component"
+      },
+      {
+        "id": "6290:11616",
+        "name": "Toast / Light / With button",
+        "type": "component"
+      },
+      {
+        "id": "60:4659",
+        "name": "Popover list / Dropdown",
+        "type": "component"
+      },
+      {
+        "id": "829:24801",
+        "name": "Popover list / Type dropdown",
+        "type": "component"
+      },
+      {
+        "id": "4023:23457",
+        "name": "Popover list / Small type dropdown",
+        "type": "component"
+      },
+      {
+        "id": "1682:23488",
+        "name": "Popover list / Font picker / Sidebar",
+        "type": "component"
+      },
+      {
+        "id": "6750:27625",
+        "name": "Popover list / Font picker / Section settings",
+        "type": "component"
+      },
+      {
+        "id": "3405:16214",
+        "name": "Popover list / Color picker",
+        "type": "component"
+      },
+      {
+        "id": "1101:13969",
+        "name": "Popover panel / Account",
+        "type": "component"
+      },
+      {
+        "id": "4813:30949",
+        "name": "Popover panel / Share",
+        "type": "component"
+      },
+      {
+        "id": "4813:31040",
+        "name": "Popover panel / URLs",
+        "type": "component"
+      },
+      {
+        "id": "4813:31858",
+        "name": "Popover panel / Reviews",
+        "type": "component"
+      },
+      {
+        "id": "366:21076",
+        "name": "Popover panel / Empty page",
+        "type": "component"
+      },
+      {
+        "id": "5058:36133",
+        "name": "Popover panel / Add module",
+        "type": "component"
+      },
+      {
+        "id": "5094:26997",
+        "name": "Popover panel / Move section",
+        "type": "component"
+      },
+      {
+        "id": "4767:32707",
+        "name": "Popover panel / Section settings / Hero",
+        "type": "component"
+      },
+      {
+        "id": "4797:14333",
+        "name": "Popover panel / Section settings / Navigation",
+        "type": "component"
+      },
+      {
+        "id": "829:27220",
+        "name": "Popover panel / Background",
+        "type": "component"
+      },
+      {
+        "id": "2504:27382",
+        "name": "Popover panel / Section settings / General",
+        "type": "component"
+      },
+      {
+        "id": "2504:28182",
+        "name": "Popover panel / Section settings / Subtitle",
+        "type": "component"
+      },
+      {
+        "id": "2504:27960",
+        "name": "Popover panel / Section settings / Columns",
+        "type": "component"
+      },
+      {
+        "id": "829:26694",
+        "name": "Popover panel / Section settings / Gallery",
+        "type": "component"
+      },
+      {
+        "id": "2455:23046",
+        "name": "Popover panel / Section settings / Logo wall",
+        "type": "component"
+      },
+      {
+        "id": "2455:24695",
+        "name": "Popover panel / Section settings / Divider line",
+        "type": "component"
+      },
+      {
+        "id": "2455:27498",
+        "name": "Popover panel / Section settings / Portfolio",
+        "type": "component"
+      },
+      {
+        "id": "5058:15343",
+        "name": "Popover panel / Section settings / Footer",
+        "type": "component"
+      },
+      {
+        "id": "6734:20914",
+        "name": "Popover panel / Section settings / Animated text",
+        "type": "component"
+      },
+      {
+        "id": "263:12491",
+        "name": "Toolbar / Thumbnail",
+        "type": "component"
+      },
+      {
+        "id": "60:5347",
+        "name": "Toolbar / Module",
+        "type": "component"
+      },
+      {
+        "id": "248:16111",
+        "name": "Toolbar / Thumbnail",
+        "type": "component"
+      },
+      {
+        "id": "5063:35635",
+        "name": "Toolbar / Spacer",
+        "type": "component"
+      },
+      {
+        "id": "4887:25282",
+        "name": "Navigation bar",
+        "type": "component"
+      },
+      {
+        "id": "69:15938",
+        "name": "Navigation bar / Editor / Legacy",
+        "type": "component"
+      },
+      {
+        "id": "495:16693",
+        "name": "Navigation bar / Non-editor",
+        "type": "component"
+      },
+      {
+        "id": "135:9250",
+        "name": "Sidebar / Main",
+        "type": "component"
+      },
+      {
+        "id": "1034:10503",
+        "name": "Sidebar / Sub",
+        "type": "component"
+      },
+      {
+        "id": "1034:11422",
+        "name": "Sidebar / Cascading",
+        "type": "component"
+      },
+      {
+        "id": "197:6565",
+        "name": "Modal / XS / Switch to desktop",
+        "type": "component"
+      },
+      {
+        "id": "339:18909",
+        "name": "Modal / XS / Satisfaction survey",
+        "type": "component"
+      },
+      {
+        "id": "197:6523",
+        "name": "Modal / S / Dark example",
+        "type": "component"
+      },
+      {
+        "id": "5066:20423",
+        "name": "Modal / S / Case study password",
+        "type": "component"
+      },
+      {
+        "id": "1390:16445",
+        "name": "Modal / S / Unsaved changes",
+        "type": "component"
+      },
+      {
+        "id": "697:25469",
+        "name": "Modal / S / Light example",
+        "type": "component"
+      },
+      {
+        "id": "197:6537",
+        "name": "Modal / M / Dark example",
+        "type": "component"
+      },
+      {
+        "id": "697:25485",
+        "name": "Modal / M / Light example",
+        "type": "component"
+      },
+      {
+        "id": "4352:25521",
+        "name": "Modal / M / Add domain to portfolio",
+        "type": "component"
+      },
+      {
+        "id": "4363:17999",
+        "name": "Modal / M / Transfer domain",
+        "type": "component"
+      },
+      {
+        "id": "220:33589",
+        "name": "Modal / M / Assign step",
+        "type": "component"
+      },
+      {
+        "id": "220:20530",
+        "name": "Modal / M / Add case study",
+        "type": "component"
+      },
+      {
+        "id": "220:19430",
+        "name": "Modal / M / Add section",
+        "type": "component"
+      },
+      {
+        "id": "197:6551",
+        "name": "Modal / L / Example",
+        "type": "component"
+      },
+      {
+        "id": "197:6619",
+        "name": "Modal / L / Image upload",
+        "type": "component"
+      },
+      {
+        "id": "245:13005",
+        "name": "Modal / L / Embed media",
+        "type": "component"
+      },
+      {
+        "id": "197:6655",
+        "name": "Modal / L / Image edit",
+        "type": "component"
+      },
+      {
+        "id": "223:35292",
+        "name": "Modal / L / Thumbnail",
+        "type": "component"
+      },
+      {
+        "id": "220:27853",
+        "name": "Modal / L / Image ideas",
+        "type": "component"
+      },
+      {
+        "id": "690:11884",
+        "name": "Modal / Walkthrough",
+        "type": "component"
+      },
+      {
+        "id": "1290:9589",
+        "name": "Modal / G2",
+        "type": "component"
+      },
+      {
+        "id": "264:13489",
+        "name": "_Section states / General",
+        "type": "component"
+      },
+      {
+        "id": "317:18565",
+        "name": "_Section states / Navigation",
+        "type": "component"
+      },
+      {
+        "id": "327:4677",
+        "name": "_Section states / Hero",
+        "type": "component"
+      },
+      {
+        "id": "341:23109",
+        "name": "_Section states / Footer",
+        "type": "component"
+      },
+      {
+        "id": "263:13361",
+        "name": "General section",
+        "type": "component"
+      },
+      {
+        "id": "265:13989",
+        "name": "Column section",
+        "type": "component"
+      },
+      {
+        "id": "265:13770",
+        "name": "Gallery section / Grid",
+        "type": "component"
+      },
+      {
+        "id": "5075:31998",
+        "name": "Gallery section / Carousel",
+        "type": "component"
+      },
+      {
+        "id": "5075:33254",
+        "name": "Gallery section / Slider",
+        "type": "component"
+      },
+      {
+        "id": "265:13849",
+        "name": "Subtitle section",
+        "type": "component"
+      },
+      {
+        "id": "265:13884",
+        "name": "Logo wall section",
+        "type": "component"
+      },
+      {
+        "id": "265:13954",
+        "name": "Process section",
+        "type": "component"
+      },
+      {
+        "id": "293:19006",
+        "name": "Divider section",
+        "type": "component"
+      },
+      {
+        "id": "6719:22739",
+        "name": "Animated text section",
+        "type": "component"
+      },
+      {
+        "id": "265:13919",
+        "name": "Portfolio section",
+        "type": "component"
+      },
+      {
+        "id": "317:17222",
+        "name": "Navigation / Full",
+        "type": "component"
+      },
+      {
+        "id": "317:17346",
+        "name": "Navigation / In-line",
+        "type": "component"
+      },
+      {
+        "id": "341:21642",
+        "name": "Navigation / Social icons",
+        "type": "component"
+      },
+      {
+        "id": "313:13706",
+        "name": "Case study hero section",
+        "type": "component"
+      },
+      {
+        "id": "313:13746",
+        "name": "Footer section",
+        "type": "component"
+      },
+      {
+        "id": "5058:25411",
+        "name": "Case study footer section",
+        "type": "component"
+      },
+      {
+        "id": "4782:35001",
+        "name": "Hero / Modular",
+        "type": "component"
+      },
+      {
+        "id": "4782:35296",
+        "name": "Hero / Overlay",
+        "type": "component"
+      },
+      {
+        "id": "5250:7768",
+        "name": "Hero / Sidebar",
+        "type": "component"
+      },
+      {
+        "id": "5268:6940",
+        "name": "Cursor",
+        "type": "component"
+      },
+      {
+        "id": "25:1021",
+        "name": "Logo / Product",
+        "type": "component"
+      },
+      {
+        "id": "216:12421",
+        "name": "Logo / Embedded media",
+        "type": "component"
+      },
+      {
+        "id": "341:21488",
+        "name": "Logo / Social media",
+        "type": "component"
+      },
+      {
+        "id": "43:3445",
+        "name": "Separator",
+        "type": "component"
+      },
+      {
+        "id": "60:4911",
+        "name": "Karma score",
+        "type": "component"
+      },
+      {
+        "id": "104:2307",
+        "name": "Color swatch",
+        "type": "component"
+      },
+      {
+        "id": "97:2001",
+        "name": "Tag / Filled",
+        "type": "component"
+      },
+      {
+        "id": "99:2010",
+        "name": "Tag / Outlined",
+        "type": "component"
+      },
+      {
+        "id": "831:11238",
+        "name": "Tag / Special",
+        "type": "component"
+      },
+      {
+        "id": "4813:36712",
+        "name": "Tag / Special / Subscription",
+        "type": "component"
+      },
+      {
+        "id": "4813:6706",
+        "name": "Tag / Subscription",
+        "type": "component"
+      },
+      {
+        "id": "5066:27463",
+        "name": "Tag / Subscription",
+        "type": "component"
+      },
+      {
+        "id": "6005:25816",
+        "name": "User line",
+        "type": "component"
+      },
+      {
+        "id": "6005:25863",
+        "name": "User rounding",
+        "type": "component"
+      },
+      {
+        "id": "7108:12635",
+        "name": "Arrow",
+        "type": "component"
+      },
+      {
+        "id": "3601:3017",
+        "name": "Illustration / Icon",
+        "type": "component"
+      },
+      {
+        "id": "29:3868",
+        "name": "Illustration / Legacy icon",
+        "type": "component"
+      },
+      {
+        "id": "135:3480",
+        "name": "Illustration / Empty",
+        "type": "component"
+      },
+      {
+        "id": "40:43",
+        "name": "Illustration / Feature CTA",
+        "type": "component"
+      },
+      {
+        "id": "6869:28531",
+        "name": "Custom cursors",
+        "type": "component"
+      },
+      {
+        "id": "29:3806",
+        "name": "Option preview / Large horizontal / Text position",
+        "type": "component"
+      },
+      {
+        "id": "4861:20816",
+        "name": "Option preview / Large horizontal / Image height consistency",
+        "type": "component"
+      },
+      {
+        "id": "4767:26283",
+        "name": "Option preview / Large horizontal / Hero layout",
+        "type": "component"
+      },
+      {
+        "id": "5094:16436",
+        "name": "Option preview / Large horizontal / Move section",
+        "type": "component"
+      },
+      {
+        "id": "6749:27230",
+        "name": "Option preview / Large horizontal / Animated text layout",
+        "type": "component"
+      },
+      {
+        "id": "29:2527",
+        "name": "Option preview / Medium square / Thumbnail layout",
+        "type": "component"
+      },
+      {
+        "id": "829:25460",
+        "name": "Option preview / Medium square / Aspect ratio",
+        "type": "component"
+      },
+      {
+        "id": "2504:26909",
+        "name": "Option preview / Medium square / Section alignment",
+        "type": "component"
+      },
+      {
+        "id": "4814:32795",
+        "name": "Option preview / Medium square / Animation",
+        "type": "component"
+      },
+      {
+        "id": "29:3754",
+        "name": "Option preview / Medium horizontal / Background",
+        "type": "component"
+      },
+      {
+        "id": "4797:14874",
+        "name": "Option preview / Medium horizontal / Nav position",
+        "type": "component"
+      },
+      {
+        "id": "4797:15230",
+        "name": "Option preview / Medium horizontal / Nav item",
+        "type": "component"
+      },
+      {
+        "id": "29:2637",
+        "name": "Option preview / Small / Thumbnail devices",
+        "type": "component"
+      },
+      {
+        "id": "3794:15636",
+        "name": "Option preview / Small / Front camera",
+        "type": "component"
+      },
+      {
+        "id": "3873:20392",
+        "name": "Option preview / Small / Device color",
+        "type": "component"
+      },
+      {
+        "id": "29:2655",
+        "name": "Option preview / Small / Thumbnail device corner",
+        "type": "component"
+      },
+      {
+        "id": "29:3827",
+        "name": "Option preview / Small / Divider line weight",
+        "type": "component"
+      },
+      {
+        "id": "199:8946",
+        "name": "Option preview / Small / Device styles",
+        "type": "component"
+      },
+      {
+        "id": "4717:29393",
+        "name": "Option preview / Small / Image shape",
+        "type": "component"
+      },
+      {
+        "id": "199:10897",
+        "name": "Option preview / Small / Device shadow",
+        "type": "component"
+      },
+      {
+        "id": "4767:9815",
+        "name": "Type preview / Hero",
+        "type": "component"
+      },
+      {
+        "id": "4797:15172",
+        "name": "Type preview / Navigation",
+        "type": "component"
+      },
+      {
+        "id": "829:19338",
+        "name": "Type preview / Gallery layout (obsolete)",
+        "type": "component"
+      },
+      {
+        "id": "7090:26154",
+        "name": "Type preview / Gallery layout",
+        "type": "component"
+      },
+      {
+        "id": "2455:28187",
+        "name": "Type preview / Portfolio layout",
+        "type": "component"
+      },
+      {
+        "id": "829:19470",
+        "name": "Type preview / Background",
+        "type": "component"
+      },
+      {
+        "id": "4758:1281",
+        "name": "Type preview / Text position",
+        "type": "component"
+      },
+      {
+        "id": "829:19501",
+        "name": "Type preview / Device styles",
+        "type": "component"
+      },
+      {
+        "id": "6841:15058",
+        "name": "Type preview / Case study interactions",
+        "type": "component"
+      },
+      {
+        "id": "6719:26613",
+        "name": "Type preview / Button interactions",
+        "type": "component"
+      },
+      {
+        "id": "6759:16699",
+        "name": "Type preview / Overflow style",
+        "type": "component"
+      },
+      {
+        "id": "6856:27713",
+        "name": "Type preview / Custom cursors",
+        "type": "component"
+      },
+      {
+        "id": "2406:1761",
+        "name": "Color style",
+        "type": "component"
+      },
+      {
+        "id": "29:2154",
+        "name": "Preset preview / Template",
+        "type": "component"
+      },
+      {
+        "id": "29:2326",
+        "name": "Preset preview / Case study preset",
+        "type": "component"
+      },
+      {
+        "id": "199:7282",
+        "name": "Image / Flexible",
+        "type": "component"
+      },
+      {
+        "id": "199:7193",
+        "name": "Image / Fixed",
+        "type": "component"
+      },
+      {
+        "id": "248:15770",
+        "name": "Indicator / Step",
+        "type": "component"
+      },
+      {
+        "id": "248:16560",
+        "name": "Indicator / Project",
+        "type": "component"
+      },
+      {
+        "id": "697:18094",
+        "name": "Indicator / Loading",
+        "type": "component"
+      },
+      {
+        "id": "829:25845",
+        "name": "Indicator / Image order",
+        "type": "component"
+      },
+      {
+        "id": "4217:15866",
+        "name": "Indicator / Status",
+        "type": "component"
+      },
+      {
+        "id": "4813:7998",
+        "name": "Indicator / Subscription",
+        "type": "component"
+      },
+      {
+        "id": "6350:21724",
+        "name": "Indicator / Case Study Status",
+        "type": "component"
+      },
+      {
+        "id": "4225:21512",
+        "name": "Banner / Huge",
+        "type": "component"
+      },
+      {
+        "id": "4243:8143",
+        "name": "Banner / Medium",
+        "type": "component"
+      },
+      {
+        "id": "4813:32370",
+        "name": "Prompt / Baanner",
+        "type": "component"
+      },
+      {
+        "id": "4247:9290",
+        "name": "Progress bar / Continuous",
+        "type": "component"
+      },
+      {
+        "id": "4249:18823",
+        "name": "Progress bar / Segmented",
+        "type": "component"
+      },
+      {
+        "id": "25:163",
+        "name": "Chevron right",
+        "type": "component"
+      },
+      {
+        "id": "25:146",
+        "name": "Chevron left",
+        "type": "component"
+      },
+      {
+        "id": "25:156",
+        "name": "Chevron up",
+        "type": "component"
+      },
+      {
+        "id": "25:160",
+        "name": "Chevron down",
+        "type": "component"
+      },
+      {
+        "id": "25:177",
+        "name": "Arrow right",
+        "type": "component"
+      },
+      {
+        "id": "25:168",
+        "name": "Arrow left",
+        "type": "component"
+      },
+      {
+        "id": "25:172",
+        "name": "Arrow up",
+        "type": "component"
+      },
+      {
+        "id": "25:175",
+        "name": "Arrow down",
+        "type": "component"
+      },
+      {
+        "id": "4247:8943",
+        "name": "Arrow out",
+        "type": "component"
+      },
+      {
+        "id": "25:142",
+        "name": "Arrows vertical",
+        "type": "component"
+      },
+      {
+        "id": "25:137",
+        "name": "Arrows horizontal",
+        "type": "component"
+      },
+      {
+        "id": "25:134",
+        "name": "Arrows replace",
+        "type": "component"
+      },
+      {
+        "id": "4745:10283",
+        "name": "Arrows resize horizontal",
+        "type": "component"
+      },
+      {
+        "id": "25:115",
+        "name": "Arrows rotate",
+        "type": "component"
+      },
+      {
+        "id": "1101:19265",
+        "name": "Arrow in circle up",
+        "type": "component"
+      },
+      {
+        "id": "1453:28963",
+        "name": "Top vertical align",
+        "type": "component"
+      },
+      {
+        "id": "1453:28959",
+        "name": "Center vertical align",
+        "type": "component"
+      },
+      {
+        "id": "1453:28958",
+        "name": "Bottom vertical align",
+        "type": "component"
+      },
+      {
+        "id": "1453:28962",
+        "name": "Left horizontal align",
+        "type": "component"
+      },
+      {
+        "id": "1453:28961",
+        "name": "Center horizontal align",
+        "type": "component"
+      },
+      {
+        "id": "1453:28960",
+        "name": "Right horizontal align",
+        "type": "component"
+      },
+      {
+        "id": "6334:11926",
+        "name": "Restart",
+        "type": "component"
+      },
+      {
+        "id": "25:147",
+        "name": "Design",
+        "type": "component"
+      },
+      {
+        "id": "25:144",
+        "name": "Settings",
+        "type": "component"
+      },
+      {
+        "id": "25:165",
+        "name": "Share",
+        "type": "component"
+      },
+      {
+        "id": "25:145",
+        "name": "Profile",
+        "type": "component"
+      },
+      {
+        "id": "25:162",
+        "name": "Notification",
+        "type": "component"
+      },
+      {
+        "id": "1834:26710",
+        "name": "Favorite",
+        "type": "component"
+      },
+      {
+        "id": "25:170",
+        "name": "Log out",
+        "type": "component"
+      },
+      {
+        "id": "25:148",
+        "name": "Sign in",
+        "type": "component"
+      },
+      {
+        "id": "25:178",
+        "name": "Review",
+        "type": "component"
+      },
+      {
+        "id": "25:141",
+        "name": "More",
+        "type": "component"
+      },
+      {
+        "id": "25:140",
+        "name": "Drag",
+        "type": "component"
+      },
+      {
+        "id": "25:143",
+        "name": "Delete",
+        "type": "component"
+      },
+      {
+        "id": "25:139",
+        "name": "Edit",
+        "type": "component"
+      },
+      {
+        "id": "2406:22253",
+        "name": "Edit small",
+        "type": "component"
+      },
+      {
+        "id": "220:4088",
+        "name": "Designer",
+        "type": "component"
+      },
+      {
+        "id": "25:136",
+        "name": "Close",
+        "type": "component"
+      },
+      {
+        "id": "53:6919",
+        "name": "Add",
+        "type": "component"
+      },
+      {
+        "id": "5063:35623",
+        "name": "Subtract",
+        "type": "component"
+      },
+      {
+        "id": "48:4496",
+        "name": "Check",
+        "type": "component"
+      },
+      {
+        "id": "1682:23374",
+        "name": "Search",
+        "type": "component"
+      },
+      {
+        "id": "25:135",
+        "name": "Upload",
+        "type": "component"
+      },
+      {
+        "id": "25:132",
+        "name": "Download",
+        "type": "component"
+      },
+      {
+        "id": "25:103",
+        "name": "Upload calcel",
+        "type": "component"
+      },
+      {
+        "id": "25:133",
+        "name": "Ideas",
+        "type": "component"
+      },
+      {
+        "id": "25:174",
+        "name": "Lock",
+        "type": "component"
+      },
+      {
+        "id": "3360:465",
+        "name": "Unlock",
+        "type": "component"
+      },
+      {
+        "id": "3618:13793",
+        "name": "Password",
+        "type": "component"
+      },
+      {
+        "id": "25:111",
+        "name": "Copy",
+        "type": "component"
+      },
+      {
+        "id": "25:131",
+        "name": "Hidden",
+        "type": "component"
+      },
+      {
+        "id": "25:128",
+        "name": "Visible",
+        "type": "component"
+      },
+      {
+        "id": "25:126",
+        "name": "Not public",
+        "type": "component"
+      },
+      {
+        "id": "25:125",
+        "name": "Public",
+        "type": "component"
+      },
+      {
+        "id": "121:2227",
+        "name": "Web",
+        "type": "component"
+      },
+      {
+        "id": "25:123",
+        "name": "Email",
+        "type": "component"
+      },
+      {
+        "id": "25:122",
+        "name": "None",
+        "type": "component"
+      },
+      {
+        "id": "25:155",
+        "name": "Backgrouund fill",
+        "type": "component"
+      },
+      {
+        "id": "25:98",
+        "name": "Send",
+        "type": "component"
+      },
+      {
+        "id": "25:77",
+        "name": "Info",
+        "type": "component"
+      },
+      {
+        "id": "25:76",
+        "name": "Success",
+        "type": "component"
+      },
+      {
+        "id": "25:75",
+        "name": "Danger",
+        "type": "component"
+      },
+      {
+        "id": "4221:6633",
+        "name": "Time",
+        "type": "component"
+      },
+      {
+        "id": "783:150",
+        "name": "Share",
+        "type": "component"
+      },
+      {
+        "id": "3126:17667",
+        "name": "Portfolios",
+        "type": "component"
+      },
+      {
+        "id": "3126:20276",
+        "name": "Home",
+        "type": "component"
+      },
+      {
+        "id": "3126:20275",
+        "name": "Page",
+        "type": "component"
+      },
+      {
+        "id": "3133:28272",
+        "name": "Edit pages",
+        "type": "component"
+      },
+      {
+        "id": "3406:23397",
+        "name": "Light mode",
+        "type": "component"
+      },
+      {
+        "id": "3406:23396",
+        "name": "Dark mode",
+        "type": "component"
+      },
+      {
+        "id": "4659:13879",
+        "name": "Stop",
+        "type": "component"
+      },
+      {
+        "id": "5058:42561",
+        "name": "Link",
+        "type": "component"
+      },
+      {
+        "id": "5058:42562",
+        "name": "Detach",
+        "type": "component"
+      },
+      {
+        "id": "5483:22531",
+        "name": "Resume builder",
+        "type": "component"
+      },
+      {
+        "id": "5484:22540",
+        "name": "Presentation",
+        "type": "component"
+      },
+      {
+        "id": "25:138",
+        "name": "Left align text",
+        "type": "component"
+      },
+      {
+        "id": "25:161",
+        "name": "Center align text",
+        "type": "component"
+      },
+      {
+        "id": "25:81",
+        "name": "Right align text",
+        "type": "component"
+      },
+      {
+        "id": "25:116",
+        "name": "Link",
+        "type": "component"
+      },
+      {
+        "id": "25:94",
+        "name": "Link add",
+        "type": "component"
+      },
+      {
+        "id": "25:157",
+        "name": "Edit link",
+        "type": "component"
+      },
+      {
+        "id": "25:153",
+        "name": "No link",
+        "type": "component"
+      },
+      {
+        "id": "25:166",
+        "name": "Bulleted list",
+        "type": "component"
+      },
+      {
+        "id": "25:106",
+        "name": "Numbered list",
+        "type": "component"
+      },
+      {
+        "id": "25:176",
+        "name": "Bold",
+        "type": "component"
+      },
+      {
+        "id": "25:152",
+        "name": "Italic",
+        "type": "component"
+      },
+      {
+        "id": "25:129",
+        "name": "Text size",
+        "type": "component"
+      },
+      {
+        "id": "25:169",
+        "name": "Line height",
+        "type": "component"
+      },
+      {
+        "id": "25:150",
+        "name": "Letter spacing",
+        "type": "component"
+      },
+      {
+        "id": "25:149",
+        "name": "Font color",
+        "type": "component"
+      },
+      {
+        "id": "3646:20926",
+        "name": "Paste",
+        "type": "component"
+      },
+      {
+        "id": "3990:22731",
+        "name": "Remove color",
+        "type": "component"
+      },
+      {
+        "id": "5322:26798",
+        "name": "Correct grammar",
+        "type": "component"
+      },
+      {
+        "id": "5322:26805",
+        "name": "Make shorter",
+        "type": "component"
+      },
+      {
+        "id": "25:117",
+        "name": "Add logo",
+        "type": "component"
+      },
+      {
+        "id": "25:89",
+        "name": "Edit logo",
+        "type": "component"
+      },
+      {
+        "id": "25:109",
+        "name": "Remove logo",
+        "type": "component"
+      },
+      {
+        "id": "25:159",
+        "name": "Add button",
+        "type": "component"
+      },
+      {
+        "id": "25:108",
+        "name": "Edit button",
+        "type": "component"
+      },
+      {
+        "id": "25:114",
+        "name": "Remove button",
+        "type": "component"
+      },
+      {
+        "id": "25:107",
+        "name": "Add image",
+        "type": "component"
+      },
+      {
+        "id": "25:167",
+        "name": "Edit image",
+        "type": "component"
+      },
+      {
+        "id": "219:4055",
+        "name": "Custom image",
+        "type": "component"
+      },
+      {
+        "id": "25:121",
+        "name": "Remove image",
+        "type": "component"
+      },
+      {
+        "id": "25:104",
+        "name": "Add text",
+        "type": "component"
+      },
+      {
+        "id": "25:102",
+        "name": "Edit text",
+        "type": "component"
+      },
+      {
+        "id": "25:151",
+        "name": "Remove text",
+        "type": "component"
+      },
+      {
+        "id": "2514:20162",
+        "name": "Add quote",
+        "type": "component"
+      },
+      {
+        "id": "2514:20161",
+        "name": "Edit quote",
+        "type": "component"
+      },
+      {
+        "id": "2514:20160",
+        "name": "Remove quote",
+        "type": "component"
+      },
+      {
+        "id": "341:23461",
+        "name": "Add page",
+        "type": "component"
+      },
+      {
+        "id": "341:23460",
+        "name": "Edit page",
+        "type": "component"
+      },
+      {
+        "id": "341:23459",
+        "name": "Remove page",
+        "type": "component"
+      },
+      {
+        "id": "25:171",
+        "name": "Background",
+        "type": "component"
+      },
+      {
+        "id": "25:127",
+        "name": "Flip horizontally",
+        "type": "component"
+      },
+      {
+        "id": "25:124",
+        "name": "Flip horizontally alt",
+        "type": "component"
+      },
+      {
+        "id": "25:112",
+        "name": "Flip vertically",
+        "type": "component"
+      },
+      {
+        "id": "25:100",
+        "name": "Flip vertically alt",
+        "type": "component"
+      },
+      {
+        "id": "25:99",
+        "name": "Spacing",
+        "type": "component"
+      },
+      {
+        "id": "5063:35487",
+        "name": "Top spacer",
+        "type": "component"
+      },
+      {
+        "id": "5063:35488",
+        "name": "Bottom spacer",
+        "type": "component"
+      },
+      {
+        "id": "25:96",
+        "name": "Carousel",
+        "type": "component"
+      },
+      {
+        "id": "25:93",
+        "name": "Carousel",
+        "type": "component"
+      },
+      {
+        "id": "25:92",
+        "name": "Tile",
+        "type": "component"
+      },
+      {
+        "id": "25:164",
+        "name": "Grid",
+        "type": "component"
+      },
+      {
+        "id": "25:83",
+        "name": "Grid add",
+        "type": "component"
+      },
+      {
+        "id": "25:130",
+        "name": "Grid remove",
+        "type": "component"
+      },
+      {
+        "id": "25:90",
+        "name": "Grid edit",
+        "type": "component"
+      },
+      {
+        "id": "829:26002",
+        "name": "Grid reorder",
+        "type": "component"
+      },
+      {
+        "id": "25:110",
+        "name": "Add column",
+        "type": "component"
+      },
+      {
+        "id": "25:88",
+        "name": "Remove column",
+        "type": "component"
+      },
+      {
+        "id": "25:118",
+        "name": "Crop",
+        "type": "component"
+      },
+      {
+        "id": "25:97",
+        "name": "Effects",
+        "type": "component"
+      },
+      {
+        "id": "25:91",
+        "name": "Gallery layout",
+        "type": "component"
+      },
+      {
+        "id": "199:8081",
+        "name": "Alt text",
+        "type": "component"
+      },
+      {
+        "id": "25:87",
+        "name": "Size",
+        "type": "component"
+      },
+      {
+        "id": "25:158",
+        "name": "Original",
+        "type": "component"
+      },
+      {
+        "id": "56:90",
+        "name": "Crop custom",
+        "type": "component"
+      },
+      {
+        "id": "56:52",
+        "name": "Crop circle",
+        "type": "component"
+      },
+      {
+        "id": "25:105",
+        "name": "1:1",
+        "type": "component"
+      },
+      {
+        "id": "25:86",
+        "name": "4:5",
+        "type": "component"
+      },
+      {
+        "id": "25:119",
+        "name": "2:3",
+        "type": "component"
+      },
+      {
+        "id": "25:173",
+        "name": "9:16",
+        "type": "component"
+      },
+      {
+        "id": "25:113",
+        "name": "5:4",
+        "type": "component"
+      },
+      {
+        "id": "25:85",
+        "name": "3:2",
+        "type": "component"
+      },
+      {
+        "id": "25:120",
+        "name": "16:9",
+        "type": "component"
+      },
+      {
+        "id": "25:95",
+        "name": "Devices",
+        "type": "component"
+      },
+      {
+        "id": "25:84",
+        "name": "Mobile",
+        "type": "component"
+      },
+      {
+        "id": "25:154",
+        "name": "Tablet",
+        "type": "component"
+      },
+      {
+        "id": "25:82",
+        "name": "Laptop",
+        "type": "component"
+      },
+      {
+        "id": "25:101",
+        "name": "Desktop",
+        "type": "component"
+      },
+      {
+        "id": "25:80",
+        "name": "Small image",
+        "type": "component"
+      },
+      {
+        "id": "25:79",
+        "name": "Medium image",
+        "type": "component"
+      },
+      {
+        "id": "25:78",
+        "name": "Large image",
+        "type": "component"
+      },
+      {
+        "id": "59:4121",
+        "name": "Blur",
+        "type": "component"
+      },
+      {
+        "id": "59:4126",
+        "name": "Dim",
+        "type": "component"
+      },
+      {
+        "id": "339:14875",
+        "name": "Very unsatisfied",
+        "type": "component"
+      },
+      {
+        "id": "339:14873",
+        "name": "Unsatisfied",
+        "type": "component"
+      },
+      {
+        "id": "339:14874",
+        "name": "Indifferent",
+        "type": "component"
+      },
+      {
+        "id": "339:14872",
+        "name": "Satisfied",
+        "type": "component"
+      },
+      {
+        "id": "339:14871",
+        "name": "Very satisfied",
+        "type": "component"
+      },
+      {
+        "id": "530:10729",
+        "name": "Payment",
+        "type": "component"
+      },
+      {
+        "id": "530:10734",
+        "name": "Gift",
+        "type": "component"
+      },
+      {
+        "id": "4853:8648",
+        "name": "Promo",
+        "type": "component"
+      },
+      {
+        "id": "1682:23421",
+        "name": "Top",
+        "type": "component"
+      },
+      {
+        "id": "1682:23420",
+        "name": "Sans",
+        "type": "component"
+      },
+      {
+        "id": "1682:23419",
+        "name": "Serif",
+        "type": "component"
+      },
+      {
+        "id": "1682:23418",
+        "name": "Mono",
+        "type": "component"
+      },
+      {
+        "id": "3162:21488",
+        "name": "Contact page",
+        "type": "component"
+      },
+      {
+        "id": "3162:21486",
+        "name": "About page",
+        "type": "component"
+      },
+      {
+        "id": "3162:21484",
+        "name": "Blank page",
+        "type": "component"
+      },
+      {
+        "id": "3162:21487",
+        "name": "Send mail",
+        "type": "component"
+      },
+      {
+        "id": "3162:21485",
+        "name": "PDF resumé",
+        "type": "component"
+      },
+      {
+        "id": "3162:21483",
+        "name": "External link",
+        "type": "component"
+      },
+      {
+        "id": "4405:15078",
+        "name": "AI-powered",
+        "type": "component"
+      },
+      {
+        "id": "5322:26948",
+        "name": "Storytelling",
+        "type": "component"
+      },
+      {
+        "id": "5322:26959",
+        "name": "Custom prompt",
+        "type": "component"
+      },
+      {
+        "id": "6752:16090",
+        "name": "Off",
+        "type": "component"
+      },
+      {
+        "id": "6752:16101",
+        "name": "Wave",
+        "type": "component"
+      },
+      {
+        "id": "6752:16087",
+        "name": "Arrow",
+        "type": "component"
+      },
+      {
+        "id": "6752:16088",
+        "name": "Sparkle",
+        "type": "component"
+      },
+      {
+        "id": "6752:16089",
+        "name": "Star",
+        "type": "component"
+      },
+      {
+        "id": "317:16117",
+        "name": "Navigation item / Page",
+        "type": "component"
+      },
+      {
+        "id": "317:16118",
+        "name": "Navigation item / Portfolio title",
+        "type": "component"
+      },
+      {
+        "id": "341:21497",
+        "name": "Navigation item / Social icon",
+        "type": "component"
+      },
+      {
+        "id": "2535:19493",
+        "name": "Stepper",
+        "type": "component"
+      },
+      {
+        "id": "6046:34286",
+        "name": "Color override",
+        "type": "component"
+      },
+      {
+        "id": "5058:31202",
+        "name": "Case study navigation item",
+        "type": "component"
+      },
+      {
+        "id": "238:47584",
+        "name": "User button / Text primary",
+        "type": "component"
+      },
+      {
+        "id": "5075:33240",
+        "name": "User button",
+        "type": "component"
+      },
+      {
+        "id": "5075:33181",
+        "name": "User button icon / Arrow",
+        "type": "component"
+      },
+      {
+        "id": "245:15437",
+        "name": "User input field",
+        "type": "component"
+      },
+      {
+        "id": "238:47846",
+        "name": "Image caption",
+        "type": "component"
+      },
+      {
+        "id": "265:14897",
+        "name": "Text box",
+        "type": "component"
+      },
+      {
+        "id": "238:47529",
+        "name": "Text box / Regular",
+        "type": "component"
+      },
+      {
+        "id": "238:47514",
+        "name": "Text box / Tight",
+        "type": "component"
+      },
+      {
+        "id": "5075:24788",
+        "name": "Text box / Text overflow",
+        "type": "component"
+      },
+      {
+        "id": "5256:33453",
+        "name": "Text box / Text underlay",
+        "type": "component"
+      },
+      {
+        "id": "265:15072",
+        "name": "Image box",
+        "type": "component"
+      },
+      {
+        "id": "240:49109",
+        "name": "Image box / Regular",
+        "type": "component"
+      },
+      {
+        "id": "245:12135",
+        "name": "Image box / Tight",
+        "type": "component"
+      },
+      {
+        "id": "5240:19629",
+        "name": "Image box / Preview",
+        "type": "component"
+      },
+      {
+        "id": "341:23657",
+        "name": "Testimonial box",
+        "type": "component"
+      },
+      {
+        "id": "240:49633",
+        "name": "Testimonial box / Regular",
+        "type": "component"
+      },
+      {
+        "id": "245:12056",
+        "name": "Column item / Regular",
+        "type": "component"
+      },
+      {
+        "id": "245:15142",
+        "name": "Embedded media box / Regular",
+        "type": "component"
+      },
+      {
+        "id": "245:15506",
+        "name": "Form box",
+        "type": "component"
+      },
+      {
+        "id": "248:15792",
+        "name": "Process item",
+        "type": "component"
+      },
+      {
+        "id": "248:15917",
+        "name": "Logo box",
+        "type": "component"
+      },
+      {
+        "id": "961:26468",
+        "name": "Case study box / Outside",
+        "type": "component"
+      },
+      {
+        "id": "961:26477",
+        "name": "Case study box / Inside",
+        "type": "component"
+      },
+      {
+        "id": "961:26486",
+        "name": "Case study box / Hover",
+        "type": "component"
+      },
+      {
+        "id": "961:26491",
+        "name": "Case study box / Hidden",
+        "type": "component"
+      },
+      {
+        "id": "5065:20896",
+        "name": "Case study box / Empty",
+        "type": "component"
+      },
+      {
+        "id": "960:21493",
+        "name": "_Background gradient / Large",
+        "type": "component"
+      },
+      {
+        "id": "960:21486",
+        "name": "_Background gradient / Small",
+        "type": "component"
+      },
+      {
+        "id": "313:6227",
+        "name": "User divider / Light",
+        "type": "component"
+      },
+      {
+        "id": "313:6226",
+        "name": "User divider / Medium",
+        "type": "component"
+      },
+      {
+        "id": "313:6225",
+        "name": "User divider / Bold",
+        "type": "component"
+      }
+    ],
+    "modified": [],
+    "removed": []
+  }
+}
