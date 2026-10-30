@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "fonts": [
+    {
+      "family": "Inter Tight",
+      "provider": "fontsource",
+      "id": "inter-tight",
+      "variable": true,
+      "category": "sans-serif",
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ]
+    },
+    {
+      "family": "PT Serif",
+      "provider": "fontsource",
+      "id": "pt-serif",
+      "variable": false,
+      "category": "serif",
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,202 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+Colour tokens from the design file. Read them in styled-components as `theme['Brand']['Peach']`.
+
+## Primitive
+
+<ColorPalette>
+  <ColorItem
+    title={"Brand"}
+    subtitle=""
+    colors={{
+      Peach: "#f9cfa2",
+      Coral: "#f0c6b1",
+      Beige: "#e6dfb1",
+      Grey: "#eae8e1",
+    }}
+  />
+  <ColorItem
+    title={"Brand / Peach Scale"}
+    subtitle=""
+    colors={{
+      "10": "#fffaf6",
+      "20": "#ffe7ce",
+      "30": "#f9cfa2",
+      "40": "#d7b086",
+      "50": "#b5926c",
+      "60": "#937554",
+      "70": "#71583d",
+      "80": "#4f3d29",
+    }}
+  />
+  <ColorItem
+    title={"Brand / Coral Scale"}
+    subtitle=""
+    colors={{
+      "10": "#fcf8f5",
+      "20": "#f6ded3",
+      "30": "#f0c6b1",
+      "40": "#cea692",
+      "50": "#ac8876",
+      "60": "#8a6a5b",
+      "70": "#684e42",
+      "80": "#46342a",
+    }}
+  />
+  <ColorItem
+    title={"Brand / Beige Scale"}
+    subtitle=""
+    colors={{
+      "10": "#fffef9",
+      "20": "#fff7ca",
+      "30": "#e6dfb1",
+      "40": "#c9c296",
+      "50": "#aca57c",
+      "60": "#8f8964",
+      "70": "#726d4d",
+      "80": "#545037",
+    }}
+  />
+  <ColorItem
+    title={"Neutral"}
+    subtitle=""
+    colors={{ Maroon: "#4b1e04", Grey: "#212121", White: "#ffffff" }}
+  />
+  <ColorItem
+    title={"Neutral / Maroon Scale"}
+    subtitle=""
+    colors={{
+      "10": "#fff7f2",
+      "20": "#ffe4d5",
+      "30": "#ffd2b8",
+      "40": "#f9bb97",
+      "50": "#e49b70",
+      "60": "#b1683d",
+      "70": "#7e3e19",
+      "80": "#4b1e04",
+    }}
+  />
+  <ColorItem
+    title={"Neutral / Grey Scale"}
+    subtitle=""
+    colors={{
+      "10": "#ffffff",
+      "20": "#ededed",
+      "30": "#d3d3d3",
+      "40": "#bababa",
+      "50": "#878787",
+      "60": "#6e6e6e",
+      "70": "#545454",
+      "80": "#212121",
+    }}
+  />
+  <ColorItem
+    title={"Neutral / Grey Transparency Scale"}
+    subtitle=""
+    colors={{
+      "10": "rgba(255, 255, 255, 0.5)",
+      "20": "rgba(237, 237, 237, 0.5)",
+      "30": "rgba(211, 211, 211, 0.5)",
+      "40": "rgba(186, 186, 186, 0.5)",
+      "50": "rgba(135, 135, 135, 0.5)",
+      "60": "rgba(110, 110, 110, 0.5)",
+      "70": "rgba(84, 84, 84, 0.5)",
+      "80": "rgba(33, 33, 33, 0.5)",
+    }}
+  />
+  <ColorItem
+    title={"Neutral / White Transparency Scale"}
+    subtitle=""
+    colors={{
+      "10": "rgba(255, 255, 255, 0.1)",
+      "20": "rgba(255, 255, 255, 0.2)",
+      "30": "rgba(255, 255, 255, 0.3)",
+      "40": "rgba(255, 255, 255, 0.4)",
+      "50": "rgba(255, 255, 255, 0.5)",
+      "60": "rgba(255, 255, 255, 0.6)",
+      "70": "rgba(255, 255, 255, 0.7)",
+      "80": "rgba(255, 255, 255, 0.8)",
+      "90": "rgba(255, 255, 255, 0.9)",
+    }}
+  />
+  <ColorItem
+    title={"Semantic"}
+    subtitle=""
+    colors={{ Success: "#2eb863", Warning: "#ffc444", Error: "#e63d04" }}
+  />
+  <ColorItem
+    title={"Semantic / Error Scale"}
+    subtitle=""
+    colors={{
+      "10": "#ffece6",
+      "20": "#ffc2ad",
+      "30": "#ff9775",
+      "40": "#ff6d3d",
+      "50": "#e63d04",
+      "60": "#b32d00",
+      "70": "#802000",
+      "80": "#4d1300",
+    }}
+  />
+  <ColorItem
+    title={"Semantic / Warning Scale"}
+    subtitle=""
+    colors={{
+      "10": "#fff9ec",
+      "20": "#ffe7b4",
+      "30": "#ffd57c",
+      "40": "#ffc344",
+      "50": "#d6a02c",
+      "60": "#ad7f1a",
+      "70": "#855e0c",
+      "80": "#5c4003",
+    }}
+  />
+  <ColorItem
+    title={"Semantic / Success Scale"}
+    subtitle=""
+    colors={{
+      "10": "#effff5",
+      "20": "#c1ffd8",
+      "30": "#92ffbc",
+      "40": "#63ff9f",
+      "50": "#48e183",
+      "60": "#2eb863",
+      "70": "#1a8f47",
+      "80": "#0b662e",
+    }}
+  />
+</ColorPalette>
+## Semantic
+
+<ColorPalette>
+  <ColorItem
+    title={"Text"}
+    subtitle=""
+    colors={{
+      Primary: "#4b1e04",
+      Secondary: "#212121",
+      Inverse: "#ffffff",
+      Disabled: "#bababa",
+    }}
+  />
+  <ColorItem
+    title={"Background"}
+    subtitle=""
+    colors={{ Default: "#ffffff", Surface: "rgba(255, 255, 255, 0.5)" }}
+  />
+  <ColorItem
+    title={"Background / Brand"}
+    subtitle=""
+    colors={{ Peach: "#f9cfa2", Coral: "#f0c6b1", Beige: "#e6dfb1" }}
+  />
+  <ColorItem
+    title={"Background / Brand / Status"}
+    subtitle=""
+    colors={{ Success: "#2eb863", Warning: "#ffc444", Error: "#e63d04" }}
+  />
+</ColorPalette>
