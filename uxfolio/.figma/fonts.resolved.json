@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "fonts": [
+    {
+      "family": "Bricolage Grotesque",
+      "provider": "fontsource",
+      "id": "bricolage-grotesque",
+      "variable": true,
+      "category": "sans-serif",
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal"
+      ]
+    },
+    {
+      "family": "DM Mono",
+      "provider": "fontsource",
+      "id": "dm-mono",
+      "variable": false,
+      "category": "monospace",
+      "weights": [
+        300,
+        400,
+        500
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ]
+    },
+    {
+      "family": "Inter",
+      "provider": "fontsource",
+      "id": "inter",
+      "variable": true,
+      "category": "sans-serif",
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ]
+    },
+    {
+      "family": "Inter Tight",
+      "provider": "fontsource",
+      "id": "inter-tight",
+      "variable": true,
+      "category": "sans-serif",
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ]
+    },
+    {
+      "family": "Lato",
+      "provider": "fontsource",
+      "id": "lato",
+      "variable": false,
+      "category": "sans-serif",
+      "weights": [
+        100,
+        300,
+        400,
+        700,
+        900
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ]
+    },
+    {
+      "family": "Sora",
+      "provider": "fontsource",
+      "id": "sora",
+      "variable": true,
+      "category": "sans-serif",
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal"
+      ]
+    },
+    {
+      "family": "Work Sans",
+      "provider": "fontsource",
+      "id": "work-sans",
+      "variable": true,
+      "category": "sans-serif",
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ]
+    }
+  ],
+  "unresolved": [
+    "Gambetta",
+    "SF Mono",
+    "SF Pro"
+  ]
+}
