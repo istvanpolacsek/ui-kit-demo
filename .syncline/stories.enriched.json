@@ -1,0 +1,1177 @@
+{
+  "promptVersion": "v3:claude-sonnet-4-6",
+  "entries": {
+    "Summary Card": {
+      "hash": "96703dd947425a9021a63bf8ff3aa804c389ba457076baa5e494cfa901d3216a",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Shows summary text",
+            "args": [
+              {
+                "prop": "summary",
+                "value": "Netflix is evaluating 3 vendors. Our pricing is competitive but legal review may delay timeline."
+              },
+              {
+                "prop": "client",
+                "value": "Netflix"
+              },
+              {
+                "prop": "contact",
+                "value": "Arlene McCoy"
+              },
+              {
+                "prop": "owner",
+                "value": "Phillip"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Netflix is evaluating 3 vendors. Our pricing is competitive but legal review may delay timeline."
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Netflix"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Arlene McCoy"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Phillip"
+              }
+            ]
+          },
+          {
+            "name": "Displays updated client and contact",
+            "args": [
+              {
+                "prop": "client",
+                "value": "Amazon"
+              },
+              {
+                "prop": "contact",
+                "value": "Arlene McCoy"
+              },
+              {
+                "prop": "owner",
+                "value": "Phillip"
+              },
+              {
+                "prop": "summary",
+                "value": "Amazon is reviewing our proposal ahead of Q4 budget decisions."
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Amazon"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Amazon is reviewing our proposal ahead of Q4 budget decisions."
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Arlene McCoy"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Summary Item": {
+      "hash": "879379b2b052f7534e872be492da338a48f6f42c55924b1b4dc6abd6086fd273",
+      "enrichment": {
+        "stories": []
+      },
+      "verified": true,
+      "rejected": [
+        {
+          "name": "Edit label and value",
+          "reason": "Unable to find an element with the text: Call scheduled. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your m"
+        },
+        {
+          "name": "Shows custom label and value",
+          "reason": "Unable to find an element with the text: Q4 2024. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher "
+        }
+      ]
+    },
+    "Activity Timeline": {
+      "hash": "06fb1a0060914065f101ac566f880d856349e8f6deb4f011fcc318f6482f34ac",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Long summary text",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Contract Renewal Discussion"
+              },
+              {
+                "prop": "summary",
+                "value": "Reviewed all contract terms with the legal team and stakeholders. Final approval pending signature from both parties before end of quarter deadline."
+              },
+              {
+                "prop": "lastContributorName",
+                "value": "Marcus Webb"
+              },
+              {
+                "prop": "date",
+                "value": "Oct 15, 2026 – 02:45 PM"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t2"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Contract Renewal Discussion"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Reviewed all contract terms with the legal team and stakeholders. Final approval pending signature from both parties before end of quarter deadline."
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Marcus Webb"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Oct 15, 2026 – 02:45 PM"
+              }
+            ]
+          },
+          {
+            "name": "Contributor and date details",
+            "args": [
+              {
+                "prop": "lastContributorName",
+                "value": "David Okafor"
+              },
+              {
+                "prop": "date",
+                "value": "Jan 1, 2027 – 12:00 AM"
+              },
+              {
+                "prop": "title",
+                "value": "Year-End Report Filed"
+              },
+              {
+                "prop": "summary",
+                "value": "Annual report submitted to all stakeholders and archived in the document management system."
+              }
+            ],
+            "steps": [
+              {
+                "action": "hover",
+                "target": "t4"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "David Okafor"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Jan 1, 2027 – 12:00 AM"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "CRM Card": {
+      "hash": "b6c1f297ad344b3531657e78e6491af30469895989b0ef173c49e7e7704201e4",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Shows client and contact details",
+            "args": [
+              {
+                "prop": "client",
+                "value": "Airbnb"
+              },
+              {
+                "prop": "contact",
+                "value": "Sarah Connor"
+              },
+              {
+                "prop": "leadValue",
+                "value": "$10,000"
+              },
+              {
+                "prop": "owner",
+                "value": "Jessica Pierson"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Airbnb"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Sarah Connor"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "$10,000"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Jessica Pierson"
+              }
+            ]
+          },
+          {
+            "name": "Shows status tag when enabled",
+            "args": [
+              {
+                "prop": "showStatusTag",
+                "value": true
+              },
+              {
+                "prop": "status",
+                "value": "proposal-sent"
+              },
+              {
+                "prop": "client",
+                "value": "Airbnb"
+              },
+              {
+                "prop": "contact",
+                "value": "Sarah Connor"
+              },
+              {
+                "prop": "leadValue",
+                "value": "$10,000"
+              },
+              {
+                "prop": "owner",
+                "value": "Jessica Pierson"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Airbnb"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Sarah Connor"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "$10,000"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Jessica Pierson"
+              }
+            ]
+          },
+          {
+            "name": "Won and signed deal",
+            "args": [
+              {
+                "prop": "status",
+                "value": "won-&-signed"
+              },
+              {
+                "prop": "client",
+                "value": "Airbnb"
+              },
+              {
+                "prop": "leadValue",
+                "value": "$10,000"
+              },
+              {
+                "prop": "contact",
+                "value": "Sarah Connor"
+              },
+              {
+                "prop": "owner",
+                "value": "Jessica Pierson"
+              },
+              {
+                "prop": "stageType",
+                "value": "Bold"
+              },
+              {
+                "prop": "stageStatus",
+                "value": "Success"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Airbnb"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "$10,000"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Sarah Connor"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Jessica Pierson"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Bluejay Logo": {
+      "hash": "ec8e776fbfabb6e02307c991b7dd0e7b7c0925980a1de4e885c17b52fe0adcac",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Search bar": {
+      "hash": "ac5570a7d5a63d28060088b449ebccca9c1980821ed89ad18ac4c4b8e862d972",
+      "enrichment": {
+        "stories": []
+      },
+      "verified": true,
+      "rejected": [
+        {
+          "name": "Type a search query",
+          "reason": "Unable to find an accessible element with the role \"textbox\"\n\nHere are the accessible roles:\n\n  searchbox:\n\n  Name \"Search in this deal\":\n  \u001b[36m<input\u001b[39m\n    \u001b[33maria-label\u001b[39m=\u001b[32m\"Search in th"
+        },
+        {
+          "name": "Custom placeholder text",
+          "reason": "Unable to find an element with the text: Search in this deal. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make y"
+        },
+        {
+          "name": "Clear typed text",
+          "reason": "Unable to find an accessible element with the role \"textbox\"\n\nHere are the accessible roles:\n\n  searchbox:\n\n  Name \"Search in this deal\":\n  \u001b[36m<input\u001b[39m\n    \u001b[33maria-label\u001b[39m=\u001b[32m\"Search in th"
+        }
+      ]
+    },
+    "Alert": {
+      "hash": "ee6972149be3de98b408e0cf90fb286486c4295e23598df1fa3aa695dbe24b4e",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Filter Item": {
+      "hash": "0dd507c95188b9102ce82d9b58efac833295d26e41cb32a4a7b3bef20216f385",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Click to activate",
+            "args": [
+              {
+                "prop": "isActive",
+                "value": false
+              },
+              {
+                "prop": "label",
+                "value": "Item"
+              }
+            ],
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Custom label",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Price Range"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Price Range"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true,
+      "rejected": [
+        {
+          "name": "Active state",
+          "reason": "Unable to find an accessible element with the role \"button\" and name \"Item\"\n\nHere are the accessible roles:\n\n  button:\n\n  Name \"Item Alert\":\n  \u001b[36m<button\u001b[39m\n    \u001b[33mclass\u001b[39m=\u001b[32m\"sc-laZKXu hwK"
+        }
+      ]
+    },
+    "Filter Bar": {
+      "hash": "867c12d5433fc57419c012f4f21737b47be00c16f8d6aa548202c0416a784a9d",
+      "enrichment": {
+        "stories": []
+      },
+      "verified": true,
+      "rejected": [
+        {
+          "name": "List is visible",
+          "reason": "Unable to find an accessible element with the role \"list\"\n\nHere are the accessible roles:\n\n  group:\n\n  Name \"Filter options\":\n  \u001b[36m<ul\u001b[39m\n    \u001b[33maria-label\u001b[39m=\u001b[32m\"Filter options\"\u001b[39m\n    \u001b["
+        }
+      ]
+    },
+    "Progress": {
+      "hash": "e66a6d723faaa3a0da452515326096b5269e695fe42de4308673ce56d1292fd6",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom label and amount",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Revenue"
+              },
+              {
+                "prop": "amount",
+                "value": "€50k"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Revenue"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "€50k"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Pipeline Item ": {
+      "hash": "d6719423aa998da96f30c5adacfb345d819ea4d764f90d942bb5416d1b742ef4",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Error status with bold type",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Income"
+              },
+              {
+                "prop": "description",
+                "value": "$100,00"
+              },
+              {
+                "prop": "type",
+                "value": "Bold"
+              },
+              {
+                "prop": "status",
+                "value": "Error"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Income"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "$100,00"
+              }
+            ]
+          },
+          {
+            "name": "Success status with light type",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Income"
+              },
+              {
+                "prop": "description",
+                "value": "$100,00"
+              },
+              {
+                "prop": "type",
+                "value": "Light"
+              },
+              {
+                "prop": "status",
+                "value": "Success"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t2"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Income"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "$100,00"
+              }
+            ]
+          },
+          {
+            "name": "Warning status neutral description",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Income"
+              },
+              {
+                "prop": "description",
+                "value": "$100,00"
+              },
+              {
+                "prop": "type",
+                "value": "Bold"
+              },
+              {
+                "prop": "status",
+                "value": "Warning"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Income"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "$100,00"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Risky Deal": {
+      "hash": "379b46cd470f7239696073b3b6ace36d773bcd776a92e30777315d607ecdf231",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "High value deal details",
+            "args": [
+              {
+                "prop": "client",
+                "value": "Netflix"
+              },
+              {
+                "prop": "activity",
+                "value": "Contract Renewal"
+              },
+              {
+                "prop": "totalValue",
+                "value": "$250,000"
+              },
+              {
+                "prop": "timeline",
+                "value": "Last activity 2 days ago"
+              },
+              {
+                "prop": "logo",
+                "value": "Netflix"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Netflix"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Contract Renewal"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "$250,000"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Last activity 2 days ago"
+              }
+            ]
+          },
+          {
+            "name": "Stale deal warning",
+            "args": [
+              {
+                "prop": "client",
+                "value": "Deloitte"
+              },
+              {
+                "prop": "activity",
+                "value": "Initial Outreach"
+              },
+              {
+                "prop": "totalValue",
+                "value": "$12,000"
+              },
+              {
+                "prop": "timeline",
+                "value": "Last activity 45 days ago"
+              },
+              {
+                "prop": "logo",
+                "value": "Deloitte"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Last activity 45 days ago"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Deloitte"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "$12,000"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Contact Card": {
+      "hash": "701ef76a4a37f6df9e1b625203849a8edd837c9b73d81fef685c91677280a86e",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom title and description",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Jane Doe"
+              },
+              {
+                "prop": "description",
+                "value": "Jane Doe – Software Engineer"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Jane Doe"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Jane Doe – Software Engineer"
+              }
+            ]
+          },
+          {
+            "name": "Hover reveals contact info",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Primary Contact"
+              },
+              {
+                "prop": "description",
+                "value": "Arlene McCoy – Business Executive"
+              }
+            ],
+            "steps": [
+              {
+                "action": "hover",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t2"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Logo": {
+      "hash": "87b9c5c1a3742de51e7669035e0d5325828fb77c20e138fcd369ab90339b50d5",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Button / Primary": {
+      "hash": "fe115cece2eb51f72752fe9045835cee2da570e1ce60b424ea7641ac7d9cd151",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Large dark mode",
+            "args": [
+              {
+                "prop": "size",
+                "value": "L"
+              },
+              {
+                "prop": "mode",
+                "value": "Dark"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Click interaction",
+            "args": [
+              {
+                "prop": "text",
+                "value": "Submit"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Submit"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectEnabled",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true,
+      "rejected": [
+        {
+          "name": "Icon only",
+          "reason": "Unable to find an accessible element with the role \"button\" and name \"Button\"\n\nHere are the accessible roles:\n\n  button:\n\n  Name \"\":\n  \u001b[36m<button\u001b[39m\n    \u001b[33mclass\u001b[39m=\u001b[32m\"sc-dlnlqM dCcRSn\"\u001b[39"
+        }
+      ]
+    },
+    "Tag": {
+      "hash": "dcce152fc4be8d74601cff5d0e343e0472fce29927562faf5c1444c3bd42be83",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Error status label",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Error Tag"
+              },
+              {
+                "prop": "status",
+                "value": "Error"
+              },
+              {
+                "prop": "type",
+                "value": "Bold"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Error Tag"
+              }
+            ]
+          },
+          {
+            "name": "Success light type",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Success"
+              },
+              {
+                "prop": "status",
+                "value": "Success"
+              },
+              {
+                "prop": "type",
+                "value": "Light"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Success"
+              }
+            ]
+          },
+          {
+            "name": "Warning neutral label",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Warning Notice"
+              },
+              {
+                "prop": "status",
+                "value": "Warning"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Warning Notice"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Icon": {
+      "hash": "fcbda5b9991fe55c1d9f40fb91e5c55fd37ee0f80e1664e676f7a952974371b9",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Tab": {
+      "hash": "8357185c6fd20cff1a1d8f5f4eaed497a654fbf353e8bc5c291d01a7ce8af678",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Selected state",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Selected"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Deals"
+              }
+            ]
+          },
+          {
+            "name": "Click to focus",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Deals"
+              }
+            ],
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Nav Bar": {
+      "hash": "14ecd6bff447790a83816b1847cd47bb97c291687accc41b6d5c0c311ae80cd2",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Detail type visible",
+            "args": [
+              {
+                "prop": "type",
+                "value": "Detail"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Hover reveals menu",
+            "steps": [
+              {
+                "action": "hover",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Profile Picture": {
+      "hash": "4c7d82dc59dc94395b56ba4b7cffbf3c70f5793897aa595ab1e33e1ef75d55a0",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Progress / Main": {
+      "hash": "be337f802774f4b44ac275728ec3909c466747097bfdf00514ea30af3b8444f1",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Half complete",
+            "args": [
+              {
+                "prop": "progress",
+                "value": 50
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "50"
+              }
+            ]
+          },
+          {
+            "name": "Fully complete",
+            "args": [
+              {
+                "prop": "progress",
+                "value": 100
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "100"
+              }
+            ]
+          },
+          {
+            "name": "Empty progress",
+            "args": [
+              {
+                "prop": "progress",
+                "value": 0
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "0"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Progress Bar": {
+      "hash": "28a4e1d58e724ddf6c8c0dba18b94b233c2659157a5efbf9bf687dcf43d3130a",
+      "enrichment": {
+        "stories": []
+      },
+      "verified": true,
+      "rejected": [
+        {
+          "name": "Half complete",
+          "reason": "\u001b[2mexpect(\u001b[22m\u001b[31melement\u001b[39m\u001b[2m).toHaveTextContent()\u001b[22m\n\nExpected element to have text content:\n\u001b[32m  50\u001b[39m\nReceived:\n\u001b[31m\u001b[39m"
+        },
+        {
+          "name": "Fully complete",
+          "reason": "\u001b[2mexpect(\u001b[22m\u001b[31melement\u001b[39m\u001b[2m).toHaveTextContent()\u001b[22m\n\nExpected element to have text content:\n\u001b[32m  100\u001b[39m\nReceived:\n\u001b[31m\u001b[39m"
+        },
+        {
+          "name": "Empty progress",
+          "reason": "\u001b[2mexpect(\u001b[22m\u001b[31melement\u001b[39m\u001b[2m).toHaveTextContent()\u001b[22m\n\nExpected element to have text content:\n\u001b[32m  0\u001b[39m\nReceived:\n\u001b[31m\u001b[39m"
+        }
+      ]
+    },
+    "Bar Graph": {
+      "hash": "802bd8d909f4dc5346b9a01c4c77d0504e134d36d884c1dfe57e0aff526384f5",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "High progress",
+            "args": [
+              {
+                "prop": "progress",
+                "value": 90
+              },
+              {
+                "prop": "amount",
+                "value": "€90k"
+              },
+              {
+                "prop": "label",
+                "value": "Savings"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "€90k"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Savings"
+              }
+            ]
+          },
+          {
+            "name": "Low progress with custom label",
+            "args": [
+              {
+                "prop": "progress",
+                "value": 10
+              },
+              {
+                "prop": "amount",
+                "value": "€1k"
+              },
+              {
+                "prop": "label",
+                "value": "Expenses"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "€1k"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Expenses"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    }
+  }
+}
