@@ -1,0 +1,907 @@
+{
+  "promptVersion": "v3:claude-sonnet-4-6",
+  "entries": {
+    "Summary Card": {
+      "hash": "96703dd947425a9021a63bf8ff3aa804c389ba457076baa5e494cfa901d3216a",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Shows summary text",
+            "args": [
+              {
+                "prop": "summary",
+                "value": "Netflix is evaluating 3 vendors. Our pricing is competitive but legal review may delay timeline."
+              },
+              {
+                "prop": "client",
+                "value": "Netflix"
+              },
+              {
+                "prop": "contact",
+                "value": "Arlene McCoy"
+              },
+              {
+                "prop": "owner",
+                "value": "Phillip"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Netflix is evaluating 3 vendors. Our pricing is competitive but legal review may delay timeline."
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Netflix"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Arlene McCoy"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Phillip"
+              }
+            ]
+          },
+          {
+            "name": "Displays updated client and contact",
+            "args": [
+              {
+                "prop": "client",
+                "value": "Amazon"
+              },
+              {
+                "prop": "contact",
+                "value": "Arlene McCoy"
+              },
+              {
+                "prop": "owner",
+                "value": "Phillip"
+              },
+              {
+                "prop": "summary",
+                "value": "Amazon is reviewing our proposal ahead of Q4 budget decisions."
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Amazon"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Amazon is reviewing our proposal ahead of Q4 budget decisions."
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Arlene McCoy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Summary Item": {
+      "hash": "879379b2b052f7534e872be492da338a48f6f42c55924b1b4dc6abd6086fd273",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Edit label and value",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Deal Stage"
+              },
+              {
+                "prop": "value",
+                "value": "Call scheduled"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Deal Stage"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Call scheduled"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              },
+              {
+                "action": "clear",
+                "target": "t1"
+              },
+              {
+                "action": "type",
+                "target": "t1",
+                "value": "Proposal sent"
+              },
+              {
+                "action": "expectValue",
+                "target": "t1",
+                "value": "Proposal sent"
+              }
+            ]
+          },
+          {
+            "name": "Custom label and value",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Close Date"
+              },
+              {
+                "prop": "value",
+                "value": "Q4 2024"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Close Date"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Q4 2024"
+              },
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Activity Timeline": {
+      "hash": "06fb1a0060914065f101ac566f880d856349e8f6deb4f011fcc318f6482f34ac",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Long summary text",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Contract Renewal Discussion"
+              },
+              {
+                "prop": "summary",
+                "value": "Reviewed all contract terms with the legal team and stakeholders. Final approval pending signature from both parties before end of quarter deadline."
+              },
+              {
+                "prop": "lastContributorName",
+                "value": "Marcus Webb"
+              },
+              {
+                "prop": "date",
+                "value": "Oct 15, 2026 – 02:45 PM"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t2"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Contract Renewal Discussion"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Reviewed all contract terms with the legal team and stakeholders. Final approval pending signature from both parties before end of quarter deadline."
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Marcus Webb"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Oct 15, 2026 – 02:45 PM"
+              }
+            ]
+          },
+          {
+            "name": "Contributor and date details",
+            "args": [
+              {
+                "prop": "lastContributorName",
+                "value": "David Okafor"
+              },
+              {
+                "prop": "date",
+                "value": "Jan 1, 2027 – 12:00 AM"
+              },
+              {
+                "prop": "title",
+                "value": "Year-End Report Filed"
+              },
+              {
+                "prop": "summary",
+                "value": "Annual report submitted to all stakeholders and archived in the document management system."
+              }
+            ],
+            "steps": [
+              {
+                "action": "hover",
+                "target": "t4"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "David Okafor"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Jan 1, 2027 – 12:00 AM"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "CRM Card": {
+      "hash": "b6c1f297ad344b3531657e78e6491af30469895989b0ef173c49e7e7704201e4",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Shows client and contact details",
+            "args": [
+              {
+                "prop": "client",
+                "value": "Airbnb"
+              },
+              {
+                "prop": "contact",
+                "value": "Sarah Connor"
+              },
+              {
+                "prop": "leadValue",
+                "value": "$10,000"
+              },
+              {
+                "prop": "owner",
+                "value": "Jessica Pierson"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Airbnb"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Sarah Connor"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "$10,000"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Jessica Pierson"
+              }
+            ]
+          },
+          {
+            "name": "Shows status tag when enabled",
+            "args": [
+              {
+                "prop": "showStatusTag",
+                "value": true
+              },
+              {
+                "prop": "status",
+                "value": "proposal-sent"
+              },
+              {
+                "prop": "client",
+                "value": "Airbnb"
+              },
+              {
+                "prop": "contact",
+                "value": "Sarah Connor"
+              },
+              {
+                "prop": "leadValue",
+                "value": "$10,000"
+              },
+              {
+                "prop": "owner",
+                "value": "Jessica Pierson"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Airbnb"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Sarah Connor"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "$10,000"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Jessica Pierson"
+              }
+            ]
+          },
+          {
+            "name": "Won and signed deal with large size",
+            "args": [
+              {
+                "prop": "status",
+                "value": "won-&-signed"
+              },
+              {
+                "prop": "size",
+                "value": "L"
+              },
+              {
+                "prop": "client",
+                "value": "Airbnb"
+              },
+              {
+                "prop": "contact",
+                "value": "Sarah Connor"
+              },
+              {
+                "prop": "leadValue",
+                "value": "$10,000"
+              },
+              {
+                "prop": "owner",
+                "value": "Jessica Pierson"
+              },
+              {
+                "prop": "showStatusTag",
+                "value": true
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Airbnb"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "$10,000"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Jessica Pierson"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Bluejay Logo": {
+      "hash": "ec8e776fbfabb6e02307c991b7dd0e7b7c0925980a1de4e885c17b52fe0adcac",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Search bar": {
+      "hash": "ac5570a7d5a63d28060088b449ebccca9c1980821ed89ad18ac4c4b8e862d972",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Type a search query",
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "type",
+                "target": "t1",
+                "value": "quarterly report"
+              },
+              {
+                "action": "expectValue",
+                "target": "t1",
+                "value": "quarterly report"
+              }
+            ]
+          },
+          {
+            "name": "Custom placeholder text",
+            "args": [
+              {
+                "prop": "placeholder",
+                "value": "Search in this deal"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Search in this deal"
+              },
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "type",
+                "target": "t1",
+                "value": "invoice"
+              },
+              {
+                "action": "expectValue",
+                "target": "t1",
+                "value": "invoice"
+              }
+            ]
+          },
+          {
+            "name": "Clear typed text",
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "type",
+                "target": "t1",
+                "value": "draft contract"
+              },
+              {
+                "action": "expectValue",
+                "target": "t1",
+                "value": "draft contract"
+              },
+              {
+                "action": "clear",
+                "target": "t1"
+              },
+              {
+                "action": "expectValue",
+                "target": "t1",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Alert": {
+      "hash": "ee6972149be3de98b408e0cf90fb286486c4295e23598df1fa3aa695dbe24b4e",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Filter Item": {
+      "hash": "0dd507c95188b9102ce82d9b58efac833295d26e41cb32a4a7b3bef20216f385",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Active state",
+            "args": [
+              {
+                "prop": "isActive",
+                "value": true
+              },
+              {
+                "prop": "label",
+                "value": "Item"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Item"
+              }
+            ]
+          },
+          {
+            "name": "Click to activate",
+            "args": [
+              {
+                "prop": "isActive",
+                "value": false
+              },
+              {
+                "prop": "label",
+                "value": "Item"
+              }
+            ],
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Custom label",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Price Range"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Price Range"
+              },
+              {
+                "action": "hover",
+                "target": "t1"
+              },
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Filter Bar": {
+      "hash": "867c12d5433fc57419c012f4f21737b47be00c16f8d6aa548202c0416a784a9d",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "List is visible",
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Progress": {
+      "hash": "e66a6d723faaa3a0da452515326096b5269e695fe42de4308673ce56d1292fd6",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom label and amount",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Revenue"
+              },
+              {
+                "prop": "amount",
+                "value": "€50k"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Revenue"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "€50k"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Pipeline Item ": {
+      "hash": "d6719423aa998da96f30c5adacfb345d819ea4d764f90d942bb5416d1b742ef4",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Error status with bold type",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Income"
+              },
+              {
+                "prop": "description",
+                "value": "$100,00"
+              },
+              {
+                "prop": "type",
+                "value": "Bold"
+              },
+              {
+                "prop": "status",
+                "value": "Error"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Income"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "$100,00"
+              }
+            ]
+          },
+          {
+            "name": "Success status with light type",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Income"
+              },
+              {
+                "prop": "description",
+                "value": "$100,00"
+              },
+              {
+                "prop": "type",
+                "value": "Light"
+              },
+              {
+                "prop": "status",
+                "value": "Success"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t2"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Income"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "$100,00"
+              }
+            ]
+          },
+          {
+            "name": "Warning status neutral description",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Income"
+              },
+              {
+                "prop": "description",
+                "value": "$100,00"
+              },
+              {
+                "prop": "status",
+                "value": "Warning"
+              },
+              {
+                "prop": "type",
+                "value": "Bold"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Income"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "$100,00"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Risky Deal": {
+      "hash": "379b46cd470f7239696073b3b6ace36d773bcd776a92e30777315d607ecdf231",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "High value deal details",
+            "args": [
+              {
+                "prop": "client",
+                "value": "Netflix"
+              },
+              {
+                "prop": "activity",
+                "value": "Contract Renewal"
+              },
+              {
+                "prop": "totalValue",
+                "value": "$250,000"
+              },
+              {
+                "prop": "timeline",
+                "value": "Last activity 2 days ago"
+              },
+              {
+                "prop": "logo",
+                "value": "Netflix"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Netflix"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Contract Renewal"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "$250,000"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Last activity 2 days ago"
+              }
+            ]
+          },
+          {
+            "name": "Stale deal warning",
+            "args": [
+              {
+                "prop": "client",
+                "value": "Deloitte"
+              },
+              {
+                "prop": "activity",
+                "value": "Initial Outreach"
+              },
+              {
+                "prop": "totalValue",
+                "value": "$12,000"
+              },
+              {
+                "prop": "timeline",
+                "value": "Last activity 45 days ago"
+              },
+              {
+                "prop": "logo",
+                "value": "Deloitte"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Last activity 45 days ago"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Deloitte"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "$12,000"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Contact Card": {
+      "hash": "701ef76a4a37f6df9e1b625203849a8edd837c9b73d81fef685c91677280a86e",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom title and description",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Jane Doe"
+              },
+              {
+                "prop": "description",
+                "value": "Jane Doe – Software Engineer"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Jane Doe"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Jane Doe – Software Engineer"
+              }
+            ]
+          },
+          {
+            "name": "Hover reveals contact details",
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "hover",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
