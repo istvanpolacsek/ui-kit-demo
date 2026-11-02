@@ -1,0 +1,1894 @@
+{
+  "promptVersion": "v3:claude-sonnet-4-6",
+  "entries": {
+    "Placeholder Atoms / Web": {
+      "hash": "afd93e45a6818e8ff55d27bb67439aa83420ce1f268422bf2cc06feb61687da8",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Desktop / Text Field": {
+      "hash": "0bc8f2527992333d6d9c9caad3150e9ff23ada71eceeedb4cce0044db4d63ffc",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Desktop / Text Field / Country Code": {
+      "hash": "afda7ccc8c35cf6f4930a603163cd076d95f3a6185126046df1e3ce03766cfb3",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Desktop": {
+      "hash": "b3923d7e120729ace6e2cfa7096e98849a82c46bc0d077bb9c118fc4cf50194d",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Placeholder Atoms / Mobile": {
+      "hash": "3e734209e5823260ea02d01a39d2468a597234ef0a769e7429f2908ce712616e",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Mobile / Text Field / Country Code": {
+      "hash": "76f9cb9ef99c8612b63f108c76b4569bfed578fc1f63b901be5177249535e76a",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Mobile / Text Field / Country Code 2": {
+      "hash": "c5c75d28317a8ed177b90d79a572b6d1ac71b75bba7b9ce4125212bd92f4513e",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Mobile": {
+      "hash": "0a428e70281c0a03f91a2eddde4436eb870f93fac298f07d7ab9b09b7e38ba7e",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    ".Desktop-Textfield/Master": {
+      "hash": "ec385869a52b86960de819fcb94714ccc70eb6c1bac10e9f5fb1619c6bc5d938",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    ".Mobile-Textfield/Master": {
+      "hash": "7b0bd40af7a2544baccf3bf5b2640f43d63289b7186e109098f3c7eb12b214d5",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Placeholder Text / Web": {
+      "hash": "10b6216b80679fc40f38847adf3f25b7f0c4b61148b85fd8d4de031486f1f5dc",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "optionWeb": {
+      "hash": "734ec887538ecca678344a01d0d44f01ff44f4d15352c941005491034c55f148",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Click interaction",
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Keyboard activation",
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "press",
+                "value": "{Enter}"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Desktop / Dropdown": {
+      "hash": "445e26cd6fa427f1091475c9496a21493eddb84f826512fc24b77b48167aba0b",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Placeholder Text / Mobile": {
+      "hash": "4536cb2c26328cf851070bcc09ff4a3b9b4654bef9a68c3b04f93285f51a4f37",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "optionMobile": {
+      "hash": "e6d05a5e4bc9814129977780c58695b6bc64f61e2119dc1b81ac40d01d750107",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Pressed state",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Pressed"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Hover interaction",
+            "args": [],
+            "steps": [
+              {
+                "action": "hover",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Mobile / Dropdown": {
+      "hash": "56f4fd210022ec3f65f0ac8e3314426b427bf33c4535d897d0daf01de2f11707",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    ".Desktop-Dropdown/Master": {
+      "hash": "f2cc8825c7528da4f1915dc756523df38be2c404061206d87ed8e77da3e8e871",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    ".Mobile-dropdown/Master": {
+      "hash": "36ba63335f707743baf378dd0f206b3cccd36861c3e17be5c8a81e0d41a6e23d",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Avatar": {
+      "hash": "958684a8e3c14eec7d7d97fe15c38f8c1a9f7e0ea4dd82e0fc444603cce75c85",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Avatar Group": {
+      "hash": "59f0817222a78f81f314040fc86ccd81aada9ed25ee5371602865e1e7411e99c",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Small size",
+            "args": [
+              {
+                "prop": "size",
+                "value": "Small"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Large size",
+            "args": [
+              {
+                "prop": "size",
+                "value": "Large"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Hover over list",
+            "steps": [
+              {
+                "action": "hover",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Search Bar": {
+      "hash": "9ec3fb79da21255c7a697b00ed40097b319debc03e6ee5097c35fbef76e659f2",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Filter Dropdown": {
+      "hash": "7cf86f2e99dd51bb5c8cb6f23ca4d778c6982ad73a69575c48311e7c57b655e7",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Opens on click",
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Already open",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Open"
+              }
+            ],
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Filter Item": {
+      "hash": "daf5d062bf4fe2b44e8fb980101d64d95482ae2092563436f0b9d5dd3da4fca4",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Filter bar": {
+      "hash": "75fd46c3645fbf46a176322b2ed4f070d6884e59e3bf6e30b25b5af7161ba36c",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Filter Template": {
+      "hash": "3224a052dfe7d0fc348e3c08d8bf36e97ddceb67551142f5fa26f599bbfb2309",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Accordion": {
+      "hash": "496022f83440743e2a00fa82239ba1802d8f04d290a2546614c71e9f430c31d0",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Opens on click",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Closed"
+              }
+            ],
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Focused state",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Focused"
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Mobile open",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Mobile"
+              },
+              {
+                "prop": "state",
+                "value": "Open"
+              }
+            ],
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Course Accordion": {
+      "hash": "b6e50cc8c3fd0d9166126a1336b557f06e0c4e5cff64cbd59ee8a592de4f5e3c",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Opens on click",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Closed"
+              }
+            ],
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Focused state on mobile",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Focused"
+              },
+              {
+                "prop": "device",
+                "value": "Mobile"
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Open state on desktop",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Open"
+              },
+              {
+                "prop": "device",
+                "value": "Desktop"
+              }
+            ],
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Toast": {
+      "hash": "e455d843e5d30e9ae818c50e277611786640be8644ef06db6f6b85075a97ced1",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Tabs": {
+      "hash": "d272f814a49df7e4bc8991642b4648c195fbd7c452311683d793d254d3d5ce41",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Selected state",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Selected"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Focused state",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Focused"
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Mobile selected",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Mobile"
+              },
+              {
+                "prop": "state",
+                "value": "Selected"
+              }
+            ],
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Tab Nav Bar": {
+      "hash": "55f9d30585d32c6c268ca52c8d182dafb8788d2ab0cf7765f21aa213bdbee4ff",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Mobile navigation",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Mobile"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Desktop navigation",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Desktop"
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Radio": {
+      "hash": "a7a81aa60e6f5c4eaddd4e17daa2793256a907356278d300541e8e200d4f34c7",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Radio Option": {
+      "hash": "4ff8df613a806a0f640348bdf461d7a03ee758ca9508fb21b6d6cec7677ecfca",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Checkbox": {
+      "hash": "090fd69fcf2c1ac60d766eec3267b6a88dd7f709737a8a04eef3d6ff10f81649",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Unchecked to checked",
+            "steps": [
+              {
+                "action": "expectUnchecked",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectChecked",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Required",
+            "args": [
+              {
+                "prop": "required",
+                "value": true
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              },
+              {
+                "action": "expectEnabled",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Default checked then unchecked",
+            "args": [
+              {
+                "prop": "defaultChecked",
+                "value": true
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectChecked",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectUnchecked",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Checkbox Option": {
+      "hash": "139d2bba11e628a9f3e4a1c345cf7f6b803b728959ba0ac8e84f7c93cac1c4f5",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Checkbox Legal": {
+      "hash": "c233edc59bf70685c35ca12461b8d67f0f8391df3546bb82fd8002efe59bcbbf",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Chevron Control": {
+      "hash": "1d0854b326148a694e10791e9ceebc75f4280a1e0163eb08d0993cb600392637",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Left direction focus",
+            "args": [
+              {
+                "prop": "direction",
+                "value": "Left"
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Right direction click",
+            "args": [
+              {
+                "prop": "direction",
+                "value": "Right"
+              }
+            ],
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectEnabled",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Switch": {
+      "hash": "c546decaf3566edd260b8219b9b6ff1eda354754939681bd9eb8c1be9591ec6d",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Toggle on and off",
+            "steps": [
+              {
+                "action": "expectUnchecked",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectChecked",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectUnchecked",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Required",
+            "args": [
+              {
+                "prop": "required",
+                "value": true
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectChecked",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Focused",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Focused"
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              },
+              {
+                "action": "press",
+                "value": "{Space}"
+              },
+              {
+                "action": "expectChecked",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Video Control": {
+      "hash": "c6df71fd2710d1fc7af61b4df6c869f19694e402920bcf2ed3317dafa237b476",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Play button click",
+            "args": [
+              {
+                "prop": "type",
+                "value": "Play"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Rewind button focused via keyboard",
+            "args": [
+              {
+                "prop": "type",
+                "value": "Rewind"
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              },
+              {
+                "action": "press",
+                "value": "{Enter}"
+              }
+            ]
+          },
+          {
+            "name": "Forward button hover and click",
+            "args": [
+              {
+                "prop": "type",
+                "value": "Forward"
+              }
+            ],
+            "steps": [
+              {
+                "action": "hover",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Chips": {
+      "hash": "5a60ea2389062208d0ed3623081f121c667b246bd749f10fcbe604ef8f45f7f6",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Disabled",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Disabled"
+              },
+              {
+                "prop": "value",
+                "value": "Disabled Chip"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectDisabled",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Selected state",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Selected"
+              },
+              {
+                "prop": "value",
+                "value": "Selected Chip"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectEnabled",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "With icons large",
+            "args": [
+              {
+                "prop": "leftIcon",
+                "value": true
+              },
+              {
+                "prop": "rightIcon",
+                "value": true
+              },
+              {
+                "prop": "size",
+                "value": "Large"
+              },
+              {
+                "prop": "value",
+                "value": "Icon Chip"
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Tags": {
+      "hash": "8c1ab0ffc096b47521930999fe680e79517c43c84f5121ccc539da46df2c8228",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Type Fuchsia with icon",
+            "args": [
+              {
+                "prop": "type",
+                "value": "Fuchsia"
+              },
+              {
+                "prop": "icon",
+                "value": true
+              },
+              {
+                "prop": "value",
+                "value": "Design"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t2"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Design"
+              }
+            ]
+          },
+          {
+            "name": "Large Avocado tag",
+            "args": [
+              {
+                "prop": "type",
+                "value": "Avocado"
+              },
+              {
+                "prop": "size",
+                "value": "Large"
+              },
+              {
+                "prop": "value",
+                "value": "Nature"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t2"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Nature"
+              }
+            ]
+          },
+          {
+            "name": "Type into textbox and verify",
+            "args": [
+              {
+                "prop": "type",
+                "value": "RoyalBlue"
+              },
+              {
+                "prop": "size",
+                "value": "Small"
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              },
+              {
+                "action": "type",
+                "target": "t1",
+                "value": "Hello"
+              },
+              {
+                "action": "expectValue",
+                "target": "t1",
+                "value": "Hello"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Photo Section": {
+      "hash": "13ecbc7e582cd0f26bd6bee24c2b2dd009177d7ebea4076768cafb5f2244c76e",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "FAQs Section": {
+      "hash": "20517dcab64423ee6a147c589ed24cb8d13a2079723897766078cf27510851f3",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "CTA Banner": {
+      "hash": "0477e05e6b2d30c44a661487e05c05c945bc2277b27dbdbbc99012d196f40c72",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Homepage Search Widget ": {
+      "hash": "d2fa96a77622fed2942eb48eff2aee793199c92e63006585751e84753efaca2c",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Info widget": {
+      "hash": "1c59a1899e45fa99fb7d5e63bdfc26cb8408683961026197ddf16708e63c1669",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Careers Widget": {
+      "hash": "52b732c581fe75f13e4ea470d20a04d0691f9859818909c6b46cf2df99984233",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Accreditation Widget": {
+      "hash": "ca0fc8a097ee8f32021e033f8b6a92c36f9c4de6d1ac5c705c74dcbb3c48abdb",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "CTA Widget": {
+      "hash": "368d26a4c37a6d9d804941906516d37e7a72fed18320b177bfd10ffecc04ab8b",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Card Testimonial": {
+      "hash": "1184daf384cf6557a16005f36a9ed520a58e8f0d66a0bfb043e8f3ee1dda6657",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Card Testimonial Video": {
+      "hash": "42774408b22295fd8ed5c349244c63373d9976d620caf0dc6f4e663dfb1da068",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Scroll Bar": {
+      "hash": "edb34745bee74ac56ee66a281c555bf35eabd06d4838da46315e38da3f69499f",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Date Picker Blocks": {
+      "hash": "0d5599affe6fe84f2dbbe0983c29a38c364dc866d3387a7c77ebf0cb7b5dfb17",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Today Selected",
+            "args": [
+              {
+                "prop": "type",
+                "value": "Today"
+              },
+              {
+                "prop": "state",
+                "value": "Enabled"
+              },
+              {
+                "prop": "date",
+                "value": "15"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Disabled",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Disabled"
+              },
+              {
+                "prop": "date",
+                "value": "08"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectDisabled",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Focused with indicator",
+            "args": [
+              {
+                "prop": "showFocusIndicator",
+                "value": true
+              },
+              {
+                "prop": "state",
+                "value": "Focused"
+              },
+              {
+                "prop": "date",
+                "value": "22"
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Date Picker": {
+      "hash": "0ce2d3c56f5784cd6b0c7cc2e9fe6d1ae62232c1b6080f490db41ad74b370ee1",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Plain Tooltip": {
+      "hash": "0967cbde316676476de658dd813cc294d38255e416229a97f924b2e31c168fea",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Multi line tooltip",
+            "args": [
+              {
+                "prop": "type",
+                "value": "Multi line"
+              },
+              {
+                "prop": "supportingText",
+                "value": "This is a longer tooltip message that spans across multiple lines to demonstrate the multi line tooltip type."
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "This is a longer tooltip message that spans across multiple lines to demonstrate the multi line tooltip type."
+              }
+            ]
+          },
+          {
+            "name": "Single line custom text",
+            "args": [
+              {
+                "prop": "type",
+                "value": "Single line"
+              },
+              {
+                "prop": "supportingText",
+                "value": "Quick tip"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Quick tip"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Rich Tooltip": {
+      "hash": "bea5deb736ed130b07fb52918037833a00c996a342505ab5fc2d0d8136860976",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Dialog": {
+      "hash": "722e4f472cece2139ba8d47481667686a732b2c318d224904f6ea99d87e8a93d",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Mobile with icon",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Mobile"
+              },
+              {
+                "prop": "icon",
+                "value": "True"
+              },
+              {
+                "prop": "title",
+                "value": "Confirm Action"
+              },
+              {
+                "prop": "supportingText",
+                "value": "Are you sure you want to proceed?"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Confirm Action"
+              }
+            ]
+          },
+          {
+            "name": "Desktop supporting text",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Desktop"
+              },
+              {
+                "prop": "title",
+                "value": "Delete Item"
+              },
+              {
+                "prop": "supportingText",
+                "value": "This action cannot be undone. All associated data will be permanently removed."
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "This action cannot be undone. All associated data will be permanently removed."
+              }
+            ]
+          },
+          {
+            "name": "Focus on dialog",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Important Notice"
+              },
+              {
+                "prop": "supportingText",
+                "value": "Please read before continuing."
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Pagination Number": {
+      "hash": "704907dd77fc9b295d46f48c5a28a9c61619971417f4f0d50c9aa4c50bbd5676",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Active state",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Active"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Hover interaction",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Hover"
+              }
+            ],
+            "steps": [
+              {
+                "action": "hover",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Focused Active state",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Focused Active"
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Pagination": {
+      "hash": "9170854b654c21d1113a8982e56d1f67b30c826750364a5161206e4c82312bc6",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Mobile view",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Mobile"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Desktop view",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Desktop"
+              }
+            ],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Logo-Color": {
+      "hash": "13aacd940082bec40816b349fac85ca387c67d81da6794cb776326595140af57",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Footer": {
+      "hash": "1357dc5b632921245f311d7962017c82c2c3a25f75cff69d3a58f852ee1842fc",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Footer 2": {
+      "hash": "72c09bf69f954bfc2809ac76610cd9e4919fdd472133848dfbfe0159038319ab",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Program Items": {
+      "hash": "928a579d441149ecb5047959070494615b493f9c687d689f7b5e618d674be8cf",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Nav Bar Link": {
+      "hash": "17dec16eac9f6a5e4d74a55602c3ab6207eac494af8e80b969f40a36e74f6cb4",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Keyboard focus",
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Hover link",
+            "steps": [
+              {
+                "action": "hover",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Nav Bar": {
+      "hash": "0b26ffd28caeec9a59b76c9537dcd29e2cf1595455620e0b710d54b325c820b2",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Mobile open menu",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Mobile"
+              },
+              {
+                "prop": "state",
+                "value": "Open"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Desktop closed state",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Desktop"
+              },
+              {
+                "prop": "state",
+                "value": "Closed"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Nav Bar 2": {
+      "hash": "145751651bf3a36e87f8037056a98bb7685a9d07990176c33c3097c5d93ce597",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Mobile view",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Mobile"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Desktop view",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Desktop"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Keyboard focus on navigation",
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Status bar": {
+      "hash": "4d3f7779376abbd70f0b52c4dee10fdbeb06d41f7d1028e2fc73199b4ec1b637",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Hero Frame": {
+      "hash": "9c4e59bd92cc91bfd5c66e9021748ec5afd7d86108ae3fa0621c478081b75b8f",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Hero with Icons": {
+      "hash": "bf7b4003c18ac37d595aa7e1f5396be6b117393455499a287f5a0e382b962da7",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Testimonial Slider": {
+      "hash": "82e78ccf6eb0ca5d274b1168da9519fcf84e58c2c817eef91467cbdcebf25897",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Media Slider Section": {
+      "hash": "8d530560955b3480c87edb320d1266b504bd65e27b9f5eaa49bb16fa5a9c5fd5",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Icon Bulletpoint": {
+      "hash": "a26f5827a8f1a7bd918ee7ea819e52daa27d7d32d342beadbe0e03d2f8021540",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Hero Bulletpoint": {
+      "hash": "43593c256895242f54fd65cf1a36b0b9997270dd884f60788bd2b4f32d82c35c",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Contact Data": {
+      "hash": "90556439919c6cbf75d307b45524f1cd1473adc8b274bdbe64e88ca3c6ee291f",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Studies Status": {
+      "hash": "2706a13225a7c6a10bd3859bd15a185a92133a86f75ccc83b696dc726449b794",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Employment Status": {
+      "hash": "53db48c5cd2490514a77c0419ae941e1134a449c3411758aa451698d99604d09",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Form field": {
+      "hash": "f48579f6f142042eaacfa146fa08b4124c74b42489c1ee622746571ce193e874",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Form field 2": {
+      "hash": "5cfa76d6c62c4c7c5efe991d1338866368bff7afe955a2c47fda17118cd92a3c",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Chat bubble": {
+      "hash": "fd903f4eca70b85abedd57210f191c8bbda1817b7bfa556dc4c77a2a1f7891f2",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Chat Nav Bar": {
+      "hash": "a547b66a7716aac1a8e3bb33abae097d4289b91848d7724a71e2f7c0608b1990",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Open state visible",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Open"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Closed state hidden",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Closed"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectHidden",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Card Program": {
+      "hash": "03e251b47cc0faf3535f2f08dbe73fc8aae530a5d0f8d7e1556822903113ca4c",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Card Location": {
+      "hash": "12cc7e36f1c65ab8c1673a4386e22fef193696e163baabb2d8dc51b860dff5eb",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Card Link": {
+      "hash": "fd6b954e211095c24b4b1975360c0c7e0e5b81610d257e8ce2e0473c9fbd3a15",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Mobile view",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Mobile"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Desktop hover",
+            "args": [
+              {
+                "prop": "device",
+                "value": "Desktop"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              },
+              {
+                "action": "hover",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Card General": {
+      "hash": "de5ad1e344fef48d2bbe1ec9f8cb3c66ea8141eb6b541a85c3e2130bf96fc18a",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Card Icon": {
+      "hash": "674a62ad9e94689450abb5f48cbf01cc88268f1f0eaa9750c56d876a5ae52013",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Card Bulletpoint": {
+      "hash": "5c6ecb15a56ec6218f5eae131a58c8300a8d5f62691ba2a025bcadd5559b043a",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Card Podcast": {
+      "hash": "f0413fefc9d43840a93ebd3434fb7486e90bdc588592ad3470234f06d17d2a1f",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Side Image": {
+      "hash": "215658babf894809250aec686c22f2f2e8de2b3d0680da83d604ffc03034f4fc",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Media for Sliders": {
+      "hash": "3ef2d2a15d8eae52b5abf92b5ea215cb232672cc1591366d42a0a2db861941d9",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Default Bulletpoint": {
+      "hash": "4d59971c53769ef9897b850685f32eacf3cea7ce376cdd7133ec7b8a3c3ea6d3",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Small size",
+            "args": [
+              {
+                "prop": "size",
+                "value": "Small"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          },
+          {
+            "name": "Medium size",
+            "args": [
+              {
+                "prop": "size",
+                "value": "Medium"
+              }
+            ],
+            "steps": [
+              {
+                "action": "hover",
+                "target": "t1"
+              },
+              {
+                "action": "expectVisible",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
