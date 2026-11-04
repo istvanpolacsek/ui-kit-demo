@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "components": {
+    "2f083e1fb12a5a1b28e33694993a3c684d568233": "@select",
+    "30e92096dd941a2345429e5d269d7e5416724bc4": "@button",
+    "37cd35948852057592a050df808cceaf504d2c83": "@button",
+    "6c5bd94a0f70db7a25d134ae96ef8cc97ce2c5b3": "@button",
+    "6d592345f9ddcff1c600b9661ead9b4e37e24472": "@input text",
+    "926d2831c1aa7d512638b82658f29c94d3c139cc": "@button",
+    "cac4b8b74f6bc97e493b4d6818264f33e5927d48": "@input text",
+    "d2826fa38f29159dc109c9125d757e0b59d90262": "@input text placeholder=Value",
+    "fdbf431340ce6cbab67fccde4de1de160c694e63": "@button"
+  },
+  "pages": {
+    "Icons": "@iconset"
+  }
+}
