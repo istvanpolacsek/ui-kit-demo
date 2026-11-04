@@ -1,0 +1,38 @@
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { SideImage } from "./SideImage";
+import { expect, userEvent, within } from "storybook/test";
+
+const meta = {
+  title: "  ↳ Media/Side Image",
+  component: SideImage,
+  tags: ["autodocs"],
+  parameters: { layout: "centered" },
+} satisfies Meta<typeof SideImage>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {
+  args: {
+    device: "Web",
+    children: (
+      <img
+        src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><rect width='200' height='200' fill='%23c7d2e0'/><circle cx='100' cy='80' r='36' fill='%238a9bb3'/><ellipse cx='100' cy='190' rx='70' ry='60' fill='%238a9bb3'/></svg>"
+        alt=""
+      />
+    ),
+  },
+};
+
+export const MobileView: Story = {
+  args: { ...Default.args, device: "Mobile" },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getAllByRole("region")[0]).toBeVisible();
+  },
+};
+export const WebView: Story = {
+  args: { ...Default.args, device: "Web" },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getAllByRole("region")[0]).toBeVisible();
+  },
+};

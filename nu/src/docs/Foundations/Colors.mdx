@@ -1,0 +1,330 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+Colour tokens from the design file. Read them in styled-components as `theme['gray']['0']`.
+
+## Colors \- Primitives
+
+<ColorPalette>
+  <ColorItem
+    title={"gray"}
+    subtitle=""
+    colors={{
+      "0": "#ffffff",
+      "100": "#f0f4fa",
+      "200": "#e4eaf3",
+      "300": "#d0d8e6",
+      "400": "#a5b2c9",
+      "500": "#7a869b",
+      "600": "#4e5765",
+      "700": "#2d3138",
+      "800": "#191a1c",
+    }}
+  />
+  <ColorItem
+    title={"royalBlue"}
+    subtitle=""
+    colors={{
+      "100": "#eaf3ff",
+      "200": "#c6ddff",
+      "300": "#9cc2f9",
+      "400": "#4a88e3",
+      "500": "#0847a8",
+      "700": "#002254",
+      "800": "#001433",
+      "600 •": "#003a92",
+    }}
+  />
+  <ColorItem
+    title={"aqua"}
+    subtitle=""
+    colors={{
+      "100": "#eefbfc",
+      "200": "#b8f0f2",
+      "300": "#81e5e8",
+      "400": "#4bd9de",
+      "600": "#1a8b8f",
+      "700": "#105659",
+      "800": "#062222",
+      "500 •": "#23bdc1",
+    }}
+  />
+  <ColorItem
+    title={"sand"}
+    subtitle=""
+    colors={{
+      "100": "#f3efeb",
+      "200": "#e6dfd9",
+      "300": "#cec8c1",
+      "400": "#aca598",
+      "600": "#5b574e",
+      "700": "#393630",
+      "800": "#161513",
+      "500 •": "#827b6e",
+    }}
+  />
+  <ColorItem
+    title={"green"}
+    subtitle=""
+    colors={{ "100": "#cffade", "800": "#03501e", "500 •": "#19a84a" }}
+  />
+  <ColorItem
+    title={"orange"}
+    subtitle=""
+    colors={{ "100": "#fbead2", "800": "#5c3806", "500 •": "#c18024" }}
+  />
+  <ColorItem
+    title={"red"}
+    subtitle=""
+    colors={{ "100": "#fbdad2", "800": "#5d1807", "500 •": "#c24424" }}
+  />
+  <ColorItem
+    title={"fuchsia"}
+    subtitle=""
+    colors={{ "100": "#f9dafa", "800": "#490a4b", "500 •": "#9c399e" }}
+  />
+  <ColorItem
+    title={"avocado"}
+    subtitle=""
+    colors={{ "100": "#f0facc", "800": "#3f4f03", "500 •": "#85a511" }}
+  />
+  <ColorItem
+    title={"wheat"}
+    subtitle=""
+    colors={{ "100": "#fcfbd7", "800": "#66630a", "500 •": "#d5d039" }}
+  />
+</ColorPalette>
+## Colors \- Mapped
+
+<ColorPalette>
+  <ColorItem
+    title={"background"}
+    subtitle=""
+    colors={{ bgDefult: "#ffffff", bgGray: "#f0f4fa", bgBrand: "#003a92" }}
+  />
+  <ColorItem
+    title={"surface"}
+    subtitle=""
+    colors={{
+      surfaceDefault: "#ffffff",
+      surfaceGray: "#f0f4fa",
+      surfaceSand: "#f3efeb",
+      surfaceBrand: "#0847a8",
+    }}
+  />
+  <ColorItem
+    title={"border"}
+    subtitle=""
+    colors={{ borderGray: "#a5b2c9", borderBrand: "#4a88e3" }}
+  />
+  <ColorItem
+    title={"text"}
+    subtitle=""
+    colors={{
+      textOnLightDefault: "#191a1c",
+      textOnDarkDefault: "#ffffff",
+      textOnLightBlue: "#003a92",
+      textOnDarkBlue: "#c6ddff",
+      inlineLinkOnDark: "#b8f0f2",
+      inlineLinkOnLight: "#1a8b8f",
+      eyebrowOnLight: "#003a92",
+      eyebrowOnDark: "#c6ddff",
+    }}
+  />
+  <ColorItem
+    title={"alert"}
+    subtitle=""
+    colors={{
+      successText: "#03501e",
+      successDefault: "#19a84a",
+      successLight: "#cffade",
+      warningText: "#5c3806",
+      warningDefault: "#c18024",
+      WarningLight: "#fbead2",
+      errorText: "#5d1807",
+      errorDefault: "#c24424",
+      errorLight: "#fbdad2",
+    }}
+  />
+  <ColorItem
+    title={"accent"}
+    subtitle=""
+    colors={{
+      accentBrand: "#003a92",
+      accentBrandInverted: "#9cc2f9",
+      accentAqua: "#23bdc1",
+      accentSand: "#393630",
+      accentWhite: "#ffffff",
+      accentGray: "#191a1c",
+    }}
+  />
+  <ColorItem
+    title={"button / Default"}
+    subtitle=""
+    colors={{
+      focusedStroke: "#003a92",
+      default: "#003a92",
+      hover: "#4a88e3",
+      pressed: "#002254",
+    }}
+  />
+  <ColorItem
+    title={"button / Inverted"}
+    subtitle=""
+    colors={{
+      focusedStroke: "#ffffff",
+      default: "#ffffff",
+      hover: "#c6ddff",
+      pressed: "#9cc2f9",
+    }}
+  />
+</ColorPalette>
+
+#### Usage
+
+<table className="uk-table">
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>{"background/bgDefult"}</code>
+      </td>
+      <td>{"For main surfaces and default backgrounds."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"background/bgBrand"}</code>
+      </td>
+      <td>{"For brand-focused sections or emphasis areas."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"surface/surfaceDefault"}</code>
+      </td>
+      <td>{"For main body text and high-emphasis content."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"border/borderGray"}</code>
+      </td>
+      <td>
+        {
+          "For strong emphasis borders on main surfaces and default backgrounds."
+        }
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"border/borderBrand"}</code>
+      </td>
+      <td>
+        {"For subtle dividers or secondary surfaces, reducing visual weight."}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"surface/surfaceGray"}</code>
+      </td>
+      <td>{"For supporting text and other less prominent details."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"surface/surfaceSand"}</code>
+      </td>
+      <td>{"For placeholders or low-emphasis content."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"surface/surfaceBrand"}</code>
+      </td>
+      <td>{"For inactive or non-interactive states."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"alert/successText"}</code>
+      </td>
+      <td>{"For subtle error backgrounds."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"alert/successDefault"}</code>
+      </td>
+      <td>{"For success surfaces and icons."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"alert/successLight"}</code>
+      </td>
+      <td>{"For subtle success backgrounds."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"alert/warningText"}</code>
+      </td>
+      <td>{"For warning or caution text."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"alert/warningDefault"}</code>
+      </td>
+      <td>{"For warning surfaces and icons."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"alert/WarningLight"}</code>
+      </td>
+      <td>{"For subtle warning backgrounds."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"alert/errorText"}</code>
+      </td>
+      <td>{"For error or critical text."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"alert/errorDefault"}</code>
+      </td>
+      <td>{"For error surfaces and icons."}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"alert/errorLight"}</code>
+      </td>
+      <td>{"For subtle error backgrounds."}</td>
+    </tr>
+  </tbody>
+</table>
+## Primitive\-colors
+
+<ColorPalette>
+  <ColorItem
+    title={"_Purple"}
+    subtitle=""
+    colors={{
+      "100": "#f3f3f4",
+      "200": "#d2d1de",
+      "300": "#aea9ce",
+      "400": "#8b7bc5",
+      "500": "#6b46c1",
+      "600": "#5929a6",
+      "700": "#481582",
+      "800": "#330857",
+      "900": "#180125",
+    }}
+  />
+</ColorPalette>
+
+<style>
+  {
+    "table.uk-table { width: 100%; border-collapse: collapse; }\ntable.uk-table tr, table.uk-table tr:nth-of-type(2n) { background: transparent; border: 0; }\ntable.uk-table tr th, table.uk-table tr td { border: 0; border-bottom: 1px solid color-mix(in srgb, currentColor 14%, transparent); padding: 10px 16px 10px 0; text-align: left; vertical-align: middle; }\ntable.uk-table tr th { font-weight: 600; border-bottom-color: color-mix(in srgb, currentColor 30%, transparent); }\ntable.uk-table tr th:last-child, table.uk-table tr td:last-child { padding-right: 0; }\ntable.uk-table code { font-size: 12.5px; }"
+  }
+</style>
