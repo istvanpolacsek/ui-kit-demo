@@ -1,0 +1,882 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+Colour tokens from the design file. Read them in styled-components as `theme['Pink']['100']`.
+
+## Color Primitives
+
+<ColorPalette>
+  <ColorItem
+    title={"Pink"}
+    subtitle=""
+    colors={{
+      "100": "#fcf1fd",
+      "200": "#fae1fa",
+      "300": "#f5c0ef",
+      "400": "#f19edc",
+      "500": "#ea3fb8",
+      "600": "#d732a8",
+      "700": "#ba2a92",
+      "800": "#8a226f",
+      "900": "#57184a",
+      "1000": "#3f1536",
+    }}
+  />
+  <ColorItem
+    title={"Blue"}
+    subtitle=""
+    colors={{
+      "100": "#f1f6fd",
+      "200": "#e1ebfa",
+      "300": "#c0d4f5",
+      "400": "#9ebef1",
+      "500": "#3f81ea",
+      "600": "#3271d7",
+      "700": "#2a61ba",
+      "800": "#224a8a",
+      "900": "#183057",
+      "1000": "#15253f",
+    }}
+  />
+</ColorPalette>
+## Color
+
+#### SDS Light
+
+<ColorPalette>
+  <ColorItem
+    title={"Background / Default"}
+    subtitle=""
+    colors={{
+      Default: "#ffffff",
+      "Default Hover": "#f5f5f5",
+      Secondary: "#f5f5f5",
+      "Secondary Hover": "#e6e6e6",
+      Tertiary: "#d9d9d9",
+      "Tertiary Hover": "#b3b3b3",
+    }}
+  />
+  <ColorItem
+    title={"Background / Neutral"}
+    subtitle=""
+    colors={{
+      Default: "#5a5a5a",
+      Hover: "#434343",
+      Secondary: "#cdcdcd",
+      "Secondary Hover": "#b2b2b2",
+      Tertiary: "#e3e3e3",
+      "Tertiary Hover": "#cdcdcd",
+    }}
+  />
+  <ColorItem
+    title={"Background / Brand"}
+    subtitle=""
+    colors={{
+      Default: "#2c2c2c",
+      Hover: "#1e1e1e",
+      Secondary: "#e6e6e6",
+      "Secondary Hover": "#d9d9d9",
+      Tertiary: "#f5f5f5",
+      "Tertiary Hover": "#e6e6e6",
+    }}
+  />
+  <ColorItem
+    title={"Background / Positive"}
+    subtitle=""
+    colors={{
+      Default: "#14ae5c",
+      Hover: "#009951",
+      Secondary: "#cff7d3",
+      "Secondary Hover": "#aff4c6",
+      Tertiary: "#ebffee",
+      "Tertiary Hover": "#cff7d3",
+    }}
+  />
+  <ColorItem
+    title={"Background / Warning"}
+    subtitle=""
+    colors={{
+      Default: "#e8b931",
+      Hover: "#e5a000",
+      Secondary: "#fff1c2",
+      "Secondary Hover": "#ffe8a3",
+      Tertiary: "#fffbeb",
+      "Tertiary Hover": "#fff1c2",
+    }}
+  />
+  <ColorItem
+    title={"Background / Danger"}
+    subtitle=""
+    colors={{
+      Default: "#ec221f",
+      Hover: "#c00f0c",
+      Secondary: "#fdd3d0",
+      "Secondary Hover": "#fcb3ad",
+      Tertiary: "#fee9e7",
+      "Tertiary Hover": "#fdd3d0",
+    }}
+  />
+  <ColorItem
+    title={"Background / Disabled"}
+    subtitle=""
+    colors={{ Default: "#d9d9d9" }}
+  />
+  <ColorItem
+    title={"Background / Utilities"}
+    subtitle=""
+    colors={{
+      Scrim: "rgba(255, 255, 255, 0.8)",
+      Blanket: "rgba(0, 0, 0, 0.7)",
+      Overlay: "rgba(0, 0, 0, 0.5)",
+      Measurement: "#fae1fa",
+    }}
+  />
+  <ColorItem
+    title={"Text / Default"}
+    subtitle=""
+    colors={{ Default: "#1e1e1e", Secondary: "#757575", Tertiary: "#b3b3b3" }}
+  />
+  <ColorItem
+    title={"Text / Neutral"}
+    subtitle=""
+    colors={{
+      Default: "#303030",
+      Secondary: "#5a5a5a",
+      Tertiary: "#767676",
+      "On Neutral": "#f3f3f3",
+      "On Neutral Secondary": "#303030",
+      "On Neutral Tertiary": "#434343",
+    }}
+  />
+  <ColorItem
+    title={"Text / Brand"}
+    subtitle=""
+    colors={{
+      Default: "#2c2c2c",
+      Secondary: "#444444",
+      Tertiary: "#757575",
+      "On Brand": "#f5f5f5",
+      "On Brand Secondary": "#1e1e1e",
+      "On Brand Tertiary": "#2c2c2c",
+    }}
+  />
+  <ColorItem
+    title={"Text / Positive"}
+    subtitle=""
+    colors={{
+      Default: "#02542d",
+      Secondary: "#009951",
+      Tertiary: "#14ae5c",
+      "On Positive": "#ebffee",
+      "On Positive Secondary": "#02542d",
+      "On Positive Tertiary": "#02542d",
+    }}
+  />
+  <ColorItem
+    title={"Text / Warning"}
+    subtitle=""
+    colors={{
+      Default: "#522504",
+      Secondary: "#975102",
+      Tertiary: "#bf6a02",
+      "On Warning": "#401b01",
+      "On Warning Secondary": "#682d03",
+      "On Warning Tertiary": "#522504",
+    }}
+  />
+  <ColorItem
+    title={"Text / Danger"}
+    subtitle=""
+    colors={{
+      Default: "#900b09",
+      Secondary: "#c00f0c",
+      Tertiary: "#ec221f",
+      "On Danger": "#fee9e7",
+      "On Danger Secondary": "#900b09",
+      "On Danger Tertiary": "#900b09",
+    }}
+  />
+  <ColorItem
+    title={"Text / Disabled"}
+    subtitle=""
+    colors={{ Default: "#b3b3b3", "On Disabled": "#b3b3b3" }}
+  />
+  <ColorItem
+    title={"Text / Utilities"}
+    subtitle=""
+    colors={{ "Text On Overlay": "#0c0c0d", "Text On Measurement": "#8a226f" }}
+  />
+  <ColorItem
+    title={"Border / Default"}
+    subtitle=""
+    colors={{ Default: "#d9d9d9", Secondary: "#757575", tertiary: "#383838" }}
+  />
+  <ColorItem
+    title={"Border / Neutral"}
+    subtitle=""
+    colors={{ Default: "#303030", Secondary: "#767676", tertiary: "#b2b2b2" }}
+  />
+  <ColorItem
+    title={"Border / Brand"}
+    subtitle=""
+    colors={{ Default: "#2c2c2c", Secondary: "#444444", Tertiary: "#757575" }}
+  />
+  <ColorItem
+    title={"Border / Positive"}
+    subtitle=""
+    colors={{ Default: "#02542d", Secondary: "#009951", tertiary: "#14ae5c" }}
+  />
+  <ColorItem
+    title={"Border / Warning"}
+    subtitle=""
+    colors={{ Default: "#522504", Secondary: "#975102", tertiary: "#bf6a02" }}
+  />
+  <ColorItem
+    title={"Border / Danger"}
+    subtitle=""
+    colors={{ Default: "#900b09", Secondary: "#c00f0c", Tertiary: "#ec221f" }}
+  />
+  <ColorItem
+    title={"Border / Disabled"}
+    subtitle=""
+    colors={{ default: "#b3b3b3" }}
+  />
+  <ColorItem
+    title={"Border / Utilities"}
+    subtitle=""
+    colors={{ Measurement: "#f19edc", Swatch: "rgba(0, 0, 0, 0.24)" }}
+  />
+  <ColorItem
+    title={"Icon / Default"}
+    subtitle=""
+    colors={{ Default: "#1e1e1e", Secondary: "#757575", Tertiary: "#b3b3b3" }}
+  />
+  <ColorItem
+    title={"Icon / Neutral"}
+    subtitle=""
+    colors={{
+      Default: "#303030",
+      Secondary: "#5a5a5a",
+      Tertiary: "#767676",
+      "On Neutral": "#f3f3f3",
+      "On Neutral Secondary": "#303030",
+      "On Neutral Tertiary": "#434343",
+    }}
+  />
+  <ColorItem
+    title={"Icon / Brand"}
+    subtitle=""
+    colors={{
+      Default: "#2c2c2c",
+      Secondary: "#444444",
+      Tertiary: "#757575",
+      "On Brand": "#f5f5f5",
+      "On Brand Secondary": "#1e1e1e",
+      "On Brand Tertiary": "#2c2c2c",
+    }}
+  />
+  <ColorItem
+    title={"Icon / Positive"}
+    subtitle=""
+    colors={{
+      Default: "#02542d",
+      Secondary: "#009951",
+      Tertiary: "#14ae5c",
+      "On Positive": "#ebffee",
+      "On Positive Secondary": "#02542d",
+      "On Positive Tertiary": "#024023",
+    }}
+  />
+  <ColorItem
+    title={"Icon / Warning"}
+    subtitle=""
+    colors={{
+      Default: "#522504",
+      Secondary: "#975102",
+      Tertiary: "#bf6a02",
+      "On Warning": "#401b01",
+      "On Warning Secondary": "#682d03",
+      "On Warning Tertiary": "#522504",
+    }}
+  />
+  <ColorItem
+    title={"Icon / Danger"}
+    subtitle=""
+    colors={{
+      Default: "#900b09",
+      Secondary: "#c00f0c",
+      Tertiary: "#ec221f",
+      "On Danger": "#fee9e7",
+      "On Danger Secondary": "#900b09",
+      "On Danger Tertiary": "#900b09",
+    }}
+  />
+  <ColorItem
+    title={"Icon / Disabled"}
+    subtitle=""
+    colors={{ Default: "#b3b3b3", "On Disabled": "#b3b3b3" }}
+  />
+  <ColorItem
+    title={"Icon / Utilities"}
+    subtitle=""
+    colors={{ Icon: "#d732a8", "Icon On Measurement": "#8a226f" }}
+  />
+</ColorPalette>
+
+#### SDS Dark
+
+<ColorPalette>
+  <ColorItem
+    title={"Background / Default"}
+    subtitle=""
+    colors={{
+      Default: "#1e1e1e",
+      "Default Hover": "#383838",
+      Secondary: "#2c2c2c",
+      "Secondary Hover": "#1e1e1e",
+      Tertiary: "#444444",
+      "Tertiary Hover": "#383838",
+    }}
+  />
+  <ColorItem
+    title={"Background / Neutral"}
+    subtitle=""
+    colors={{
+      Default: "#b2b2b2",
+      Hover: "#949494",
+      Secondary: "#303030",
+      "Secondary Hover": "#242424",
+      Tertiary: "#303030",
+      "Tertiary Hover": "#242424",
+    }}
+  />
+  <ColorItem
+    title={"Background / Brand"}
+    subtitle=""
+    colors={{
+      Default: "#f5f5f5",
+      Hover: "#d9d9d9",
+      Secondary: "#444444",
+      "Secondary Hover": "#757575",
+      Tertiary: "#444444",
+      "Tertiary Hover": "#2c2c2c",
+    }}
+  />
+  <ColorItem
+    title={"Background / Positive"}
+    subtitle=""
+    colors={{
+      Default: "#008043",
+      Hover: "#02542d",
+      Secondary: "#02542d",
+      "Secondary Hover": "#024023",
+      Tertiary: "#024023",
+      "Tertiary Hover": "#062d1b",
+    }}
+  />
+  <ColorItem
+    title={"Background / Warning"}
+    subtitle=""
+    colors={{
+      Default: "#e8b931",
+      Hover: "#e5a000",
+      Secondary: "#682d03",
+      "Secondary Hover": "#522504",
+      Tertiary: "#522504",
+      "Tertiary Hover": "#401b01",
+    }}
+  />
+  <ColorItem
+    title={"Background / Danger"}
+    subtitle=""
+    colors={{
+      Default: "#c00f0c",
+      Hover: "#900b09",
+      Secondary: "#690807",
+      "Secondary Hover": "#4d0b0a",
+      Tertiary: "#4d0b0a",
+      "Tertiary Hover": "#300603",
+    }}
+  />
+  <ColorItem
+    title={"Background / Disabled"}
+    subtitle=""
+    colors={{ Default: "#383838" }}
+  />
+  <ColorItem
+    title={"Background / Utilities"}
+    subtitle=""
+    colors={{
+      Scrim: "rgba(0, 0, 0, 0.8)",
+      Blanket: "rgba(0, 0, 0, 0.7)",
+      Overlay: "rgba(0, 0, 0, 0.5)",
+      Measurement: "#8a226f",
+    }}
+  />
+  <ColorItem
+    title={"Text / Default"}
+    subtitle=""
+    colors={{
+      Default: "#ffffff",
+      Secondary: "rgba(255, 255, 255, 0.7)",
+      Tertiary: "rgba(255, 255, 255, 0.4)",
+    }}
+  />
+  <ColorItem
+    title={"Text / Neutral"}
+    subtitle=""
+    colors={{
+      Default: "#e3e3e3",
+      Secondary: "#cdcdcd",
+      Tertiary: "#b2b2b2",
+      "On Neutral": "#242424",
+      "On Neutral Secondary": "#f3f3f3",
+      "On Neutral Tertiary": "#f3f3f3",
+    }}
+  />
+  <ColorItem
+    title={"Text / Brand"}
+    subtitle=""
+    colors={{
+      Default: "#f5f5f5",
+      Secondary: "#d9d9d9",
+      Tertiary: "#b3b3b3",
+      "On Brand": "#1e1e1e",
+      "On Brand Secondary": "#f5f5f5",
+      "On Brand Tertiary": "#f5f5f5",
+    }}
+  />
+  <ColorItem
+    title={"Text / Positive"}
+    subtitle=""
+    colors={{
+      Default: "#cff7d3",
+      Secondary: "#85e0a3",
+      Tertiary: "#009951",
+      "On Positive": "#ebffee",
+      "On Positive Secondary": "#ebffee",
+      "On Positive Tertiary": "#ebffee",
+    }}
+  />
+  <ColorItem
+    title={"Text / Warning"}
+    subtitle=""
+    colors={{
+      Default: "#fff1c2",
+      Secondary: "#e8b931",
+      Tertiary: "#bf6a02",
+      "On Warning": "#401b01",
+      "On Warning Secondary": "#fffbeb",
+      "On Warning Tertiary": "#fffbeb",
+    }}
+  />
+  <ColorItem
+    title={"Text / Danger"}
+    subtitle=""
+    colors={{
+      Default: "#fdd3d0",
+      Secondary: "#f4776a",
+      Tertiary: "#ec221f",
+      "On Danger": "#fee9e7",
+      "On Danger Secondary": "#fee9e7",
+      "On Danger Tertiary": "#fee9e7",
+    }}
+  />
+  <ColorItem
+    title={"Text / Disabled"}
+    subtitle=""
+    colors={{ Default: "#757575", "On Disabled": "#b3b3b3" }}
+  />
+  <ColorItem
+    title={"Text / Utilities"}
+    subtitle=""
+    colors={{ "Text On Overlay": "#ffffff", "Text On Measurement": "#fae1fa" }}
+  />
+  <ColorItem
+    title={"Border / Default"}
+    subtitle=""
+    colors={{ Default: "#444444", Secondary: "#757575", tertiary: "#b3b3b3" }}
+  />
+  <ColorItem
+    title={"Border / Neutral"}
+    subtitle=""
+    colors={{ Default: "#f3f3f3", Secondary: "#949494", tertiary: "#767676" }}
+  />
+  <ColorItem
+    title={"Border / Brand"}
+    subtitle=""
+    colors={{ Default: "#f5f5f5", Secondary: "#d9d9d9", Tertiary: "#b3b3b3" }}
+  />
+  <ColorItem
+    title={"Border / Positive"}
+    subtitle=""
+    colors={{ Default: "#cff7d3", Secondary: "#85e0a3", tertiary: "#009951" }}
+  />
+  <ColorItem
+    title={"Border / Warning"}
+    subtitle=""
+    colors={{ Default: "#fff1c2", Secondary: "#e8b931", tertiary: "#bf6a02" }}
+  />
+  <ColorItem
+    title={"Border / Danger"}
+    subtitle=""
+    colors={{ Default: "#fdd3d0", Secondary: "#f4776a", Tertiary: "#ec221f" }}
+  />
+  <ColorItem
+    title={"Border / Disabled"}
+    subtitle=""
+    colors={{ default: "#444444" }}
+  />
+  <ColorItem
+    title={"Border / Utilities"}
+    subtitle=""
+    colors={{ Measurement: "#d732a8", Swatch: "rgba(255, 255, 255, 0.24)" }}
+  />
+  <ColorItem
+    title={"Icon / Default"}
+    subtitle=""
+    colors={{
+      Default: "#ffffff",
+      Secondary: "rgba(255, 255, 255, 0.7)",
+      Tertiary: "rgba(255, 255, 255, 0.4)",
+    }}
+  />
+  <ColorItem
+    title={"Icon / Neutral"}
+    subtitle=""
+    colors={{
+      Default: "#e3e3e3",
+      Secondary: "#cdcdcd",
+      Tertiary: "#b2b2b2",
+      "On Neutral": "#242424",
+      "On Neutral Secondary": "#f3f3f3",
+      "On Neutral Tertiary": "#f3f3f3",
+    }}
+  />
+  <ColorItem
+    title={"Icon / Brand"}
+    subtitle=""
+    colors={{
+      Default: "#f5f5f5",
+      Secondary: "#d9d9d9",
+      Tertiary: "#b3b3b3",
+      "On Brand": "#1e1e1e",
+      "On Brand Secondary": "#f5f5f5",
+      "On Brand Tertiary": "#f5f5f5",
+    }}
+  />
+  <ColorItem
+    title={"Icon / Positive"}
+    subtitle=""
+    colors={{
+      Default: "#cff7d3",
+      Secondary: "#85e0a3",
+      Tertiary: "#009951",
+      "On Positive": "#ebffee",
+      "On Positive Secondary": "#ebffee",
+      "On Positive Tertiary": "#ebffee",
+    }}
+  />
+  <ColorItem
+    title={"Icon / Warning"}
+    subtitle=""
+    colors={{
+      Default: "#fff1c2",
+      Secondary: "#e8b931",
+      Tertiary: "#bf6a02",
+      "On Warning": "#401b01",
+      "On Warning Secondary": "#fffbeb",
+      "On Warning Tertiary": "#fffbeb",
+    }}
+  />
+  <ColorItem
+    title={"Icon / Danger"}
+    subtitle=""
+    colors={{
+      Default: "#fdd3d0",
+      Secondary: "#f4776a",
+      Tertiary: "#ec221f",
+      "On Danger": "#fee9e7",
+      "On Danger Secondary": "#fee9e7",
+      "On Danger Tertiary": "#fee9e7",
+    }}
+  />
+  <ColorItem
+    title={"Icon / Disabled"}
+    subtitle=""
+    colors={{ Default: "#757575", "On Disabled": "#b3b3b3" }}
+  />
+  <ColorItem
+    title={"Icon / Utilities"}
+    subtitle=""
+    colors={{ Icon: "#f19edc", "Icon On Measurement": "#fae1fa" }}
+  />
+</ColorPalette>
+
+#### Usage
+
+<table className="uk-table">
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>{"Background/Default/Default"}</code>
+      </td>
+      <td>{"Bg/Default/Default"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Neutral/Default"}</code>
+      </td>
+      <td>{"Bg/Neutral/Default"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Neutral/Hover"}</code>
+      </td>
+      <td>{"Bg/Neutral/Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Neutral/Secondary"}</code>
+      </td>
+      <td>{"Bg/Neutral/Secondary"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Neutral/Secondary Hover"}</code>
+      </td>
+      <td>{"Bg/Neutral/Secondary Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Neutral/Tertiary"}</code>
+      </td>
+      <td>{"Bg/Neutral/Tertiary"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Neutral/Tertiary Hover"}</code>
+      </td>
+      <td>{"Bg/Neutral/Tertiary Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Default/Default Hover"}</code>
+      </td>
+      <td>{"Bg/Default/Default Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Default/Secondary"}</code>
+      </td>
+      <td>{"Bg/Default/Secondary"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Default/Secondary Hover"}</code>
+      </td>
+      <td>{"Bg/Default/Secondary Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Default/Tertiary"}</code>
+      </td>
+      <td>{"Bg/Default/Tertiary"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Default/Tertiary Hover"}</code>
+      </td>
+      <td>{"Bg/Default/Tertiary Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Brand/Default"}</code>
+      </td>
+      <td>{"Bg/Brand/Default"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Brand/Hover"}</code>
+      </td>
+      <td>{"Bg/Brand/Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Brand/Secondary"}</code>
+      </td>
+      <td>{"Bg/Brand/Secondary"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Brand/Secondary Hover"}</code>
+      </td>
+      <td>{"Bg/Brand/Secondary Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Brand/Tertiary"}</code>
+      </td>
+      <td>{"Bg/Brand/Tertiary"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Brand/Tertiary Hover"}</code>
+      </td>
+      <td>{"Bg/Brand/Tertiary Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Positive/Default"}</code>
+      </td>
+      <td>{"Bg/Positive/Default"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Positive/Hover"}</code>
+      </td>
+      <td>{"Bg/Positive/Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Positive/Secondary"}</code>
+      </td>
+      <td>{"Bg/Positive/Secondary"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Positive/Secondary Hover"}</code>
+      </td>
+      <td>{"Bg/Positive/Secondary Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Positive/Tertiary"}</code>
+      </td>
+      <td>{"Bg/Positive/Tertiary"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Positive/Tertiary Hover"}</code>
+      </td>
+      <td>{"Bg/Positive/Tertiary Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Warning/Default"}</code>
+      </td>
+      <td>{"Bg/Warning/Default"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Warning/Hover"}</code>
+      </td>
+      <td>{"Bg/Warning/Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Warning/Secondary"}</code>
+      </td>
+      <td>{"Bg/Warning/Secondary"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Warning/Secondary Hover"}</code>
+      </td>
+      <td>{"Bg/Warning/Secondary Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Warning/Tertiary"}</code>
+      </td>
+      <td>{"Bg/Warning/Tertiary"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Warning/Tertiary Hover"}</code>
+      </td>
+      <td>{"Bg/Warning/Tertiary Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Danger/Default"}</code>
+      </td>
+      <td>{"Bg/Danger/Default"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Danger/Hover"}</code>
+      </td>
+      <td>{"Bg/Danger/Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Danger/Secondary"}</code>
+      </td>
+      <td>{"Bg/Danger/Secondary"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Danger/Secondary Hover"}</code>
+      </td>
+      <td>{"Bg/Danger/Secondary Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Danger/Tertiary"}</code>
+      </td>
+      <td>{"Bg/Danger/Tertiary"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Danger/Tertiary Hover"}</code>
+      </td>
+      <td>{"Bg/Danger/Tertiary Hover"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Disabled/Default"}</code>
+      </td>
+      <td>{"Bg/Disabled/Default"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Utilities/Scrim"}</code>
+      </td>
+      <td>{"Bg/Utilities/Scrim"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Utilities/Blanket"}</code>
+      </td>
+      <td>{"Bg/Utilities/Blanket"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Utilities/Overlay"}</code>
+      </td>
+      <td>{"Bg/Utilities/Overlay"}</td>
+    </tr>
+    <tr>
+      <td>
+        <code>{"Background/Utilities/Measurement"}</code>
+      </td>
+      <td>{"Bg/Utilities/Measurement"}</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+  {
+    "table.uk-table { width: 100%; border-collapse: collapse; }\ntable.uk-table tr, table.uk-table tr:nth-of-type(2n) { background: transparent; border: 0; }\ntable.uk-table tr th, table.uk-table tr td { border: 0; border-bottom: 1px solid color-mix(in srgb, currentColor 14%, transparent); padding: 10px 16px 10px 0; text-align: left; vertical-align: middle; }\ntable.uk-table tr th { font-weight: 600; border-bottom-color: color-mix(in srgb, currentColor 30%, transparent); }\ntable.uk-table tr th:last-child, table.uk-table tr td:last-child { padding-right: 0; }\ntable.uk-table code { font-size: 12.5px; }"
+  }
+</style>

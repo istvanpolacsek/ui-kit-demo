@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "fonts": [
+    {
+      "family": "Geist",
+      "provider": "fontsource",
+      "id": "geist",
+      "variable": true,
+      "category": "sans-serif",
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ]
+    },
+    {
+      "family": "Inter",
+      "provider": "fontsource",
+      "id": "inter",
+      "variable": true,
+      "category": "sans-serif",
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ]
+    },
+    {
+      "family": "Roboto Mono",
+      "provider": "fontsource",
+      "id": "roboto-mono",
+      "variable": true,
+      "category": "monospace",
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ]
+    }
+  ],
+  "unresolved": []
+}
