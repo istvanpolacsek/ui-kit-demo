@@ -1,0 +1,33 @@
+{
+  "framework": "react",
+  "styling": "styled-components",
+  "libraryName": "ui-kit-demo",
+  "dependencies": {
+    "install": true
+  },
+  "stories": {
+    "groupByPage": true
+  },
+  "theme": {
+    "cssReset": true,
+    "brand": {
+      "title": "ui-kit-demo",
+      "image": "src/assets/Bluejay-Logo/Bluejay-Logo.svg",
+      "colorToken": "Brand/Peach Scale/60",
+      "surfaceToken": "Brand/Grey"
+    }
+  },
+  "inputs": {
+    "design": ".syncline/design.json",
+    "enriched": ".syncline/design.enriched.json",
+    "assets": ".syncline/assets.json"
+  },
+  "paths": {
+    "components": "src/components",
+    "assetsRoot": "src",
+    "theme": "src/providers/ThemeProvider",
+    "docs": "src/docs",
+    "storybook": ".storybook",
+    "tsconfig": "tsconfig.json"
+  }
+}
