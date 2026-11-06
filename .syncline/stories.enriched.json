@@ -1,0 +1,843 @@
+{
+  "promptVersion": "v3:claude-sonnet-5-5",
+  "entries": {
+    "Summary Card": {
+      "hash": "18105fc63bc23089faac55805e402b287f9199b610f8fea91d595fadd0597208",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom client and contact text",
+            "args": [
+              {
+                "prop": "client",
+                "value": "Microsoft"
+              },
+              {
+                "prop": "contact",
+                "value": "Jane Cooper"
+              },
+              {
+                "prop": "owner",
+                "value": "Marcus"
+              },
+              {
+                "prop": "logo",
+                "value": "Microsoft"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Microsoft"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Jane Cooper"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Marcus"
+              }
+            ]
+          },
+          {
+            "name": "Long summary text",
+            "args": [
+              {
+                "prop": "summary",
+                "value": "Amazon requested a revised proposal with extended support terms. Procurement review is pending and a decision is expected by the end of next month."
+              },
+              {
+                "prop": "client",
+                "value": "Amazon"
+              },
+              {
+                "prop": "logo",
+                "value": "Amazon"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Amazon requested a revised proposal with extended support terms. Procurement review is pending and a decision is expected by the end of next month."
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Amazon"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Summary Item": {
+      "hash": "05711a4a5a121aa5fc18167f8e1330b9fffb56318864bdb1bc058401eea28363",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom label and value",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Contract Value"
+              },
+              {
+                "prop": "value",
+                "value": "$12,500"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Contract Value"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "$12,500"
+              }
+            ]
+          },
+          {
+            "name": "Long value text",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Next Step"
+              },
+              {
+                "prop": "value",
+                "value": "Send the revised proposal and pricing breakdown to the procurement team for final review"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Next Step"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Send the revised proposal and pricing breakdown to the procurement team for final review"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Activity Timeline": {
+      "hash": "8c58c9400ea70a9bf8646fb00f3359804923e6e6d55ff33216777ef099fbb3a5",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Long summary and custom contributor",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Contract Signed"
+              },
+              {
+                "prop": "summary",
+                "value": "Contract signed by Arlene after final legal review. Includes enterprise pricing tier, onboarding package, and a 24-month support agreement with quarterly check-ins."
+              },
+              {
+                "prop": "lastContributorName",
+                "value": "Marcus Lee"
+              },
+              {
+                "prop": "date",
+                "value": "Oct 12, 2026 – 02:45 PM"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Oct 12, 2026 – 02:45 PM"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Contract Signed"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Contract signed by Arlene after final legal review. Includes enterprise pricing tier, onboarding package, and a 24-month support agreement with quarterly check-ins."
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Marcus Lee"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Logo": {
+      "hash": "0b85493c343eaeeedb06f598d133fdce4fe65b4f41d2ba782b66200e06b4a8fd",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Button / Primary": {
+      "hash": "ce6df2a08af98c1b985c3ca05fc425ca9259279ce02880af15cf3c6295a2c957",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom label text",
+            "args": [
+              {
+                "prop": "text",
+                "value": "Save changes"
+              },
+              {
+                "prop": "hasText",
+                "value": true
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Save changes"
+              }
+            ]
+          },
+          {
+            "name": "Keyboard focus",
+            "args": [],
+            "steps": [
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Tag": {
+      "hash": "50a22882380c0af429447ff89e3fb13d6f424369a1b790af6dc3e6ed8097f406",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom label with success status",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Payment received"
+              },
+              {
+                "prop": "status",
+                "value": "Success"
+              },
+              {
+                "prop": "type",
+                "value": "Bold"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Payment received"
+              }
+            ]
+          },
+          {
+            "name": "Long label in light warning",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Your subscription will expire in three days"
+              },
+              {
+                "prop": "status",
+                "value": "Warning"
+              },
+              {
+                "prop": "type",
+                "value": "Light"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Your subscription will expire in three days"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Icon": {
+      "hash": "be733cdd3e300a67b2d5cf90749143a2b1404e1d3f1d1131ec507c761be2bea5",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Tab": {
+      "hash": "93e311b474b16d21a90f1da8986093d56f37e795f47935cf9d91f26f147300d8",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom label",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Archived deals"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Archived deals"
+              }
+            ]
+          },
+          {
+            "name": "Selected state with custom label",
+            "args": [
+              {
+                "prop": "state",
+                "value": "Selected"
+              },
+              {
+                "prop": "label",
+                "value": "Open deals"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Open deals"
+              },
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Nav Bar": {
+      "hash": "776906d8ffcca5360bc51780684bdad224f96e5db9995058b4640a0a24548f88",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Profile Picture": {
+      "hash": "a9cc3576295b7571b7026bfd72797ce6f4d5e28e9daa650234232b2890ab91ec",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Progress / Main": {
+      "hash": "7880a562b2a3c7ab0d6f24b9dba4b5517127c8cf3c397a5171c1eca8c51f54b5",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Progress Bar": {
+      "hash": "12dd17daabf12e2af7a56fabffe6b30d515a3d9efda1c553cc4ff6eb69a8ada9",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Bar Graph": {
+      "hash": "1b32700cc0f3e47014c57bab11221392818e8a2e039d163e6cccb9da8698100e",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom amount and label",
+            "args": [
+              {
+                "prop": "amount",
+                "value": "€25k"
+              },
+              {
+                "prop": "label",
+                "value": "Revenue"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "€25k"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Revenue"
+              }
+            ]
+          },
+          {
+            "name": "Half progress",
+            "args": [
+              {
+                "prop": "progress",
+                "value": 50
+              },
+              {
+                "prop": "amount",
+                "value": "€5k"
+              },
+              {
+                "prop": "label",
+                "value": "Budget used"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "€5k"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "Budget used"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "CRM Card": {
+      "hash": "47405243e9e33c3acf6a523740ce728554da183b13f8a9523c4b75f7bedd6999",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom client and contact text",
+            "args": [
+              {
+                "prop": "client",
+                "value": "Netflix Studios"
+              },
+              {
+                "prop": "contact",
+                "value": "John Smith"
+              },
+              {
+                "prop": "leadValue",
+                "value": "$250,000"
+              },
+              {
+                "prop": "owner",
+                "value": "Maria Lopez"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Netflix Studios"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "John Smith"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "$250,000"
+              },
+              {
+                "action": "expectText",
+                "target": "t5",
+                "value": "Maria Lopez"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Bluejay Logo": {
+      "hash": "7a82e131c645cd8ebb44a3a4cafcf7ed455ed0fbc72a123264247e6c9148280e",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Search bar": {
+      "hash": "2e90bbcd4cb988253138d2c4e048cee9e4f2494a48661d476808764ad6bf8060",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Type a search query",
+            "steps": [
+              {
+                "action": "click",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              },
+              {
+                "action": "type",
+                "target": "t1",
+                "value": "invoice"
+              },
+              {
+                "action": "expectValue",
+                "target": "t1",
+                "value": "invoice"
+              }
+            ]
+          },
+          {
+            "name": "Clear typed query",
+            "steps": [
+              {
+                "action": "type",
+                "target": "t1",
+                "value": "contract"
+              },
+              {
+                "action": "expectValue",
+                "target": "t1",
+                "value": "contract"
+              },
+              {
+                "action": "clear",
+                "target": "t1"
+              },
+              {
+                "action": "expectValue",
+                "target": "t1",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Alert": {
+      "hash": "08ce65bf8e346de542bdef03a7b72e479b4aa7d7b6d29e0427ccc2b370029c46",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Filter Item": {
+      "hash": "88909ba1d83b3e1b91e5911a2112e49cd09321acdaa47c1c5d10695a0882c34e",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom label",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Category"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Category"
+              }
+            ]
+          },
+          {
+            "name": "Active with long label",
+            "args": [
+              {
+                "prop": "isActive",
+                "value": true
+              },
+              {
+                "prop": "label",
+                "value": "Recently updated items"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Recently updated items"
+              },
+              {
+                "action": "focus",
+                "target": "t1"
+              },
+              {
+                "action": "expectFocused",
+                "target": "t1"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Filter Bar": {
+      "hash": "132dc802e1d37bcdbeedbe5dacfb56512c8fc5338590837a6ca2accc0a5278da",
+      "enrichment": {
+        "stories": []
+      }
+    },
+    "Progress": {
+      "hash": "1f858b5b7409c00019b97cf5b872a1cfcab9a41fa15b4ed15c134d4794bfacfd",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom label and amount",
+            "args": [
+              {
+                "prop": "label",
+                "value": "Fundraiser goal"
+              },
+              {
+                "prop": "amount",
+                "value": "€25k"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Fundraiser goal"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "€25k"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Pipeline Item ": {
+      "hash": "f24accf59694435bd8b427ae47f3dd945f60e9183e009bd50788a740baae9aa7",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom title and description",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Expenses"
+              },
+              {
+                "prop": "description",
+                "value": "$250,00"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Expenses"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "$250,00"
+              }
+            ]
+          },
+          {
+            "name": "Error status with bold tag",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Overdue payments"
+              },
+              {
+                "prop": "description",
+                "value": "$75,50"
+              },
+              {
+                "prop": "type",
+                "value": "Bold"
+              },
+              {
+                "prop": "status",
+                "value": "Error"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Overdue payments"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "$75,50"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Risky Deal": {
+      "hash": "e6ce9fc8b55a3d8c452dccc97e4504fb5bc88b32bd0cd9b9ef63d7f5a36076b9",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Long client and activity text",
+            "args": [
+              {
+                "prop": "client",
+                "value": "Global Technology Holdings International"
+              },
+              {
+                "prop": "activity",
+                "value": "Multi-Region Enterprise Platform Expansion and Renewal"
+              },
+              {
+                "prop": "totalValue",
+                "value": "$1,248,500"
+              },
+              {
+                "prop": "timeline",
+                "value": "Last activity 45 days ago"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Global Technology Holdings International"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Multi-Region Enterprise Platform Expansion and Renewal"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "$1,248,500"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Last activity 45 days ago"
+              }
+            ]
+          },
+          {
+            "name": "Different client with Netflix logo",
+            "args": [
+              {
+                "prop": "client",
+                "value": "Netflix"
+              },
+              {
+                "prop": "logo",
+                "value": "Netflix"
+              },
+              {
+                "prop": "activity",
+                "value": "Contract Renewal"
+              },
+              {
+                "prop": "totalValue",
+                "value": "$12,000"
+              },
+              {
+                "prop": "timeline",
+                "value": "Last activity 3 days ago"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Netflix"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Contract Renewal"
+              },
+              {
+                "action": "expectText",
+                "target": "t3",
+                "value": "$12,000"
+              },
+              {
+                "action": "expectText",
+                "target": "t4",
+                "value": "Last activity 3 days ago"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    },
+    "Contact Card": {
+      "hash": "5c12e13dab1b3cbdffc08e004c015f2119d03eff793c17de95f1d838d607f568",
+      "enrichment": {
+        "stories": [
+          {
+            "name": "Custom title and description",
+            "args": [
+              {
+                "prop": "title",
+                "value": "Emergency Contact"
+              },
+              {
+                "prop": "description",
+                "value": "Courtney Henry – Operations Manager"
+              }
+            ],
+            "steps": [
+              {
+                "action": "expectText",
+                "target": "t1",
+                "value": "Emergency Contact"
+              },
+              {
+                "action": "expectText",
+                "target": "t2",
+                "value": "Courtney Henry – Operations Manager"
+              }
+            ]
+          }
+        ]
+      },
+      "verified": true
+    }
+  }
+}
